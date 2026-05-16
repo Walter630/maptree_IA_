@@ -1,0 +1,714 @@
+{
+  "generated_at": "2026-04-11T10:46:35.955639",
+  "total_records": 19,
+  "sources": {
+    "soil": "SoilGrids v2 REST API (ISRIC) / fallback Caatinga-CE",
+    "climate": "Open-Meteo Historical API / fallback INMET Tabuleiro do Norte",
+    "species": "Literatura florestal + TRY Plant Trait Database"
+  },
+  "trees": [
+    {
+      "latitude": -5.233333,
+      "longitude": -38.116667,
+      "species": {
+        "scientificName": "Croton blanchetianus",
+        "commonName": "Croton",
+        "family": "Euphorbiaceae",
+        "heightAverage": 5.0,
+        "growthRateK": 0.25
+      },
+      "age": "2010-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 2010,
+        "locality": "nan",
+        "notes": "nan",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:45:27.654952",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.24667,
+      "longitude": -38.1306,
+      "species": {
+        "scientificName": "Bauhinia",
+        "commonName": "Bauhinia",
+        "family": "Fabaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "2014-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 2014,
+        "locality": "Próximo ao entroncamento.",
+        "notes": "<nO>Inflorescência: botões florais verdes Fruto: passados marrons Habitat: Caatinga Habito: árvore</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:45:31.764944",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.421111,
+      "longitude": -37.995,
+      "species": {
+        "scientificName": "Ipomoea",
+        "commonName": "Ipomoea",
+        "family": "Convolvulaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "2020-01-01T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "MachineObservation",
+        "year_collected": null,
+        "locality": "nan",
+        "notes": "nan",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:45:36.050536",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.310833,
+      "longitude": -38.173889,
+      "species": {
+        "scientificName": "Canavalia brasiliensis",
+        "commonName": "Canavalia",
+        "family": "Leguminosae-Pap.",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "2008-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 2008,
+        "locality": "Br 116, altura de Tabuleiro.",
+        "notes": "<nO>herbácea trepadeira; coletada em caatinga antropizada; relevo plano; substrato cristalino; frequente; flor roxa; n.v. feijão</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:45:40.285818",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.254167,
+      "longitude": -38.166667,
+      "species": {
+        "scientificName": "Centrosema pascuorum",
+        "commonName": "Centrosema",
+        "family": "Fabaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "1987-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 1987,
+        "locality": "nan",
+        "notes": "<nO>Hábito de crescimento: volúvel; cor do fruto: marrom-claro</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:45:44.363353",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.304722,
+      "longitude": -37.873611,
+      "species": {
+        "scientificName": "Ipomoea bahiensis",
+        "commonName": "Ipomoea",
+        "family": "Convolvulaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "2020-01-01T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "MachineObservation",
+        "year_collected": null,
+        "locality": "Chapada do Apodi. Margem de estrada",
+        "notes": "nan",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:45:49.443903",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.26667,
+      "longitude": -38.16667,
+      "species": {
+        "scientificName": "Centrosema pascuorum",
+        "commonName": "Centrosema",
+        "family": "Fabaceae Faboideae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "1987-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 1987,
+        "locality": "Rodovia Juazeiro do Norte -Russas à 5 km sul do rio Jaguaribe (BR - 116).",
+        "notes": "<nO>Bom desenvolvimento vegetativo. Grande produção de sementes, produção de frutos na base da planta. Plantas bastante ramificadas. Produção de frutos subterrâneos. Comida pelo gado. Germoplasma obtido de 5 plantas. Coleta de solo.</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:45:53.927467",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.266667,
+      "longitude": -38.166667,
+      "species": {
+        "scientificName": "Stylosanthes humilis",
+        "commonName": "Stylosanthes",
+        "family": "Fabaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "1987-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 1987,
+        "locality": "Rodovia Juazeiro do Norte-Russa à 6 km sul do rio Jaguaribe (BR-116)",
+        "notes": "nan",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:45:58.188972",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.343264,
+      "longitude": -37.9921,
+      "species": {
+        "scientificName": "Chamaecrista",
+        "commonName": "Chamaecrista",
+        "family": "Fabaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "2007-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 2007,
+        "locality": "Temembé, lago prox a pousada solar.",
+        "notes": "<nO>Erva rastejante. Flores amarelas.; Caatinga.</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:02.175932",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.229047,
+      "longitude": -38.159981,
+      "species": {
+        "scientificName": "Celtis spinosa",
+        "commonName": "Celtis",
+        "family": "Cannabaceae",
+        "heightAverage": 9.0,
+        "growthRateK": 0.12
+      },
+      "age": "2013-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 2013,
+        "locality": "congl. 219, sub. 4, árv. 1.&nf;Solos rasos.",
+        "notes": "<nO>Inventário Florestal Nacional - CE; Arbusto; casca com estrias verticais, entre casca verde e lenho claro; flor amarela, fruto verde.&nf;Dups RB.; Caatinga em estágio inicial.</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:06.464979",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.399994,
+      "longitude": -37.980008,
+      "species": {
+        "scientificName": "Bacopa gratioloides",
+        "commonName": "Bacopa",
+        "family": "Plantaginaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "2013-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 2013,
+        "locality": "congl. 238, sub. 3, árv. 1H.",
+        "notes": "<nO>Inventário Florestal Nacional - CE; Herbácea.</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:10.695528",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.35,
+      "longitude": -38.1,
+      "species": {
+        "scientificName": "Pheidole jelskii",
+        "commonName": "Pheidole",
+        "family": "Formicidae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "2020-01-01T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": null,
+        "locality": "Rocha",
+        "notes": "nan",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:14.963516",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.266667,
+      "longitude": -38.166667,
+      "species": {
+        "scientificName": "Centrosema pascuorum",
+        "commonName": "Centrosema",
+        "family": "Fabaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "1987-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 1987,
+        "locality": "Rodovia Juazeiro do norte - russa; a 5 km sul do Rio Jaguaribe (Br 116).",
+        "notes": "<nO>volúvel (estolonifera), fruto marrom - claro, solo arenoso, litolítico. Comum</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:14.963959",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.304722,
+      "longitude": -37.873611,
+      "species": {
+        "scientificName": "Justicia aequilabris",
+        "commonName": "Justicia",
+        "family": "Acanthaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "2015-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 2015,
+        "locality": "Chapada do Apodi.",
+        "notes": "<nO>Subarbusto ereto. Caules castanhos a esverdeados. Folhas cartáceas. Flores com cálice verde e corola vermelha. Habitat: Caatinga arbustiva Habito: Subarbusto</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:14.964167",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.311389,
+      "longitude": -38.161667,
+      "species": {
+        "scientificName": "Riccia vitalii",
+        "commonName": "Riccia",
+        "family": "Ricciaceae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "1972-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 1972,
+        "locality": "nan",
+        "notes": "<nO>Growing on thin layer up soil covering rock substratum. Exc.: SP 087724</nO>",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:19.343557",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.324167,
+      "longitude": -37.879167,
+      "species": {
+        "scientificName": "Clitoria ternatea var. ternatea",
+        "commonName": "Clitoria",
+        "family": "Leguminosae Subfam. Papilionoideae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "1997-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 1997,
+        "locality": "Chapada do Apodi. Fazenda Mato Alto-Manga do Cedro.",
+        "notes": "nan",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:23.431762",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.314167,
+      "longitude": -37.8925,
+      "species": {
+        "scientificName": "Clitoria ternatea var. ternatea",
+        "commonName": "Clitoria",
+        "family": "Leguminosae Subfam. Papilionoideae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "1997-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 1997,
+        "locality": "Chapada do Apodi. Fazenda Mato Alto (Manga do Cedro).",
+        "notes": "nan",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:27.465329",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.326111,
+      "longitude": -37.885,
+      "species": {
+        "scientificName": "Bauhinia cheilantha",
+        "commonName": "Bauhinia",
+        "family": "Leguminosae Subfam. Cercidoideae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "1997-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 1997,
+        "locality": "Chapada do Apodí. Faz. Mato Alto (Manga do Cedro).",
+        "notes": "nan",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:31.655616",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    },
+    {
+      "latitude": -5.2275,
+      "longitude": -38.197778,
+      "species": {
+        "scientificName": "Hypostomus sertanejo",
+        "commonName": "Hypostomus",
+        "family": "Loricariidae",
+        "heightAverage": 8.0,
+        "growthRateK": 0.14
+      },
+      "age": "2011-06-15T00:00:00",
+      "status": "NORMAL",
+      "annualRainfall": 680.0,
+      "altitude": 150.0,
+      "avgTemperature": 27.8,
+      "soil": {
+        "depth": 0.8,
+        "inclination": 5.0,
+        "quality": "REGULAR",
+        "coverage": 0.2
+      },
+      "_meta": {
+        "source_record": "PreservedSpecimen",
+        "year_collected": 2011,
+        "locality": "Rio Jaguaribe",
+        "notes": "nan",
+        "soil_source": "soilgrids_v2",
+        "climate_source": "fallback_inmet_tabuleiro_norte",
+        "enriched_at": "2026-04-11T10:46:35.955472",
+        "soil_raw": {
+          "clay_pct": null,
+          "sand_pct": null,
+          "silt_pct": null,
+          "ph": null
+        }
+      }
+    }
+  ]
+}

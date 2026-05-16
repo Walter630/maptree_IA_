@@ -1,0 +1,20 @@
+scientificName,family,latitude,longitude,age_date,heightAverage,growthRateK,annualRainfall,avgTemperature,altitude,soil_depth,soil_inclination,soil_quality,soil_coverage,soil_source,climate_source
+Croton blanchetianus,Euphorbiaceae,-5.233333,-38.116667,2010-06-15T00:00:00,5.0,0.25,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Bauhinia,Fabaceae,-5.24667,-38.1306,2014-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Ipomoea,Convolvulaceae,-5.421111,-37.995,2020-01-01T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Canavalia brasiliensis,Leguminosae-Pap.,-5.310833,-38.173889,2008-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Centrosema pascuorum,Fabaceae,-5.254167,-38.166667,1987-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Ipomoea bahiensis,Convolvulaceae,-5.304722,-37.873611,2020-01-01T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Centrosema pascuorum,Fabaceae Faboideae,-5.26667,-38.16667,1987-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Stylosanthes humilis,Fabaceae,-5.266667,-38.166667,1987-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Chamaecrista,Fabaceae,-5.343264,-37.9921,2007-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Celtis spinosa,Cannabaceae,-5.229047,-38.159981,2013-06-15T00:00:00,9.0,0.12,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Bacopa gratioloides,Plantaginaceae,-5.399994,-37.980008,2013-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Pheidole jelskii,Formicidae,-5.35,-38.1,2020-01-01T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Centrosema pascuorum,Fabaceae,-5.266667,-38.166667,1987-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Justicia aequilabris,Acanthaceae,-5.304722,-37.873611,2015-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Riccia vitalii,Ricciaceae,-5.311389,-38.161667,1972-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Clitoria ternatea var. ternatea,Leguminosae Subfam. Papilionoideae,-5.324167,-37.879167,1997-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Clitoria ternatea var. ternatea,Leguminosae Subfam. Papilionoideae,-5.314167,-37.8925,1997-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Bauhinia cheilantha,Leguminosae Subfam. Cercidoideae,-5.326111,-37.885,1997-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte
+Hypostomus sertanejo,Loricariidae,-5.2275,-38.197778,2011-06-15T00:00:00,8.0,0.14,680.0,27.8,150.0,0.8,5.0,REGULAR,0.2,soilgrids_v2,fallback_inmet_tabuleiro_norte

@@ -1,0 +1,986 @@
+[
+  {
+    "name": "Croton blanchetianus",
+    "family": "Euphorbiaceae",
+    "lat": -5.233333,
+    "lng": -38.116667,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 16
+    },
+    "notes": null
+  },
+  {
+    "name": "Bauhinia",
+    "family": "Fabaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Inflorescência: botões florais verdes Fruto: passados marrons Habitat: Caatinga Habito: árvore</nO>"
+  },
+  {
+    "name": "Clematicissus pruinata",
+    "family": "Vitaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": null
+  },
+  {
+    "name": "Cordiera",
+    "family": "Rubiaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Arbusto, ca. 1m, caule acinzentado. Folhas: levemente discolores Fruto: imaturos esverdeados Indivíduo feminino Habitat: Caatinga Habito: Arbusto</nO>"
+  },
+  {
+    "name": "Erythroxylum nummularia",
+    "family": "Erythroxylaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Folhas: discolores Fruto: verdes Habitat: Caatinga 28Km de Tabuleiro do Norte, Caminho Vilarejo da Serra. Grandes áreas de monocultura de Banana, Fabrica de cimento, retirada de madeira. Fazeda de frutas Habito: árvore</nO>"
+  },
+  {
+    "name": "Ipomoea",
+    "family": "Convolvulaceae",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 10
+    },
+    "notes": null
+  },
+  {
+    "name": "Canavalia brasiliensis",
+    "family": "Leguminosae-Pap.",
+    "lat": -5.310833,
+    "lng": -38.173889,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 18
+    },
+    "notes": "<nO>herbácea trepadeira; coletada em caatinga antropizada; relevo plano; substrato cristalino; frequente; flor roxa; n.v. feijão</nO>"
+  },
+  {
+    "name": "Centrosema pascuorum",
+    "family": "Fabaceae",
+    "lat": -5.254167,
+    "lng": -38.166667,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 39
+    },
+    "notes": "<nO>Hábito de crescimento: volúvel; cor do fruto: marrom-claro</nO>"
+  },
+  {
+    "name": "Piptadenia moniliformis",
+    "family": "Leguminosae-Mim.",
+    "lat": -5.310833,
+    "lng": -38.173889,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 18
+    },
+    "notes": "<nO>arbórea de 2m de altura; coletada em caatinga antropizada; relevo plano; substrato cristalino; frequente. flor amarela; n.v. catanduva.</nO>"
+  },
+  {
+    "name": "Wedelia sp.",
+    "family": "Asteraceae",
+    "lat": -5.310833,
+    "lng": -38.173889,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 18
+    },
+    "notes": "<nO>eErva; coletada em caatinga; rara; substrato cristalino; relevo plano; folha compridas estreitas pilosas, pares; flor amarela pedicelada em disco.</nO>"
+  },
+  {
+    "name": "Wedelia sp.",
+    "family": "Asteraceae",
+    "lat": -5.310833,
+    "lng": -38.173889,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 18
+    },
+    "notes": "<nO>erva; coletada em caatinga; frequente; substrato cristalino; relevo plano; folha pilares quebradiças; flor amarela, flor em disco. .</nO>"
+  },
+  {
+    "name": "Ipomoea bahiensis",
+    "family": "Convolvulaceae",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 10
+    },
+    "notes": null
+  },
+  {
+    "name": "Centrosema pascuorum",
+    "family": "Fabaceae Faboideae",
+    "lat": -5.26667,
+    "lng": -38.16667,
+    "city": "TABULEIRO DO NORTE",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 39
+    },
+    "notes": "<nO>Bom desenvolvimento vegetativo. Grande produção de sementes, produção de frutos na base da planta. Plantas bastante ramificadas. Produção de frutos subterrâneos. Comida pelo gado. Germoplasma obtido de 5 plantas. Coleta de solo.</nO>"
+  },
+  {
+    "name": "Stylosanthes humilis",
+    "family": "Fabaceae Faboideae",
+    "lat": -5.26667,
+    "lng": -38.16667,
+    "city": "TABULEIRO DO NORTE",
+    "prediction": {
+      "risk_status": "TO_PRUNE",
+      "age_years": 39
+    },
+    "notes": "<nO>Bom desenvolvimento vegetativo. Ramos com 60 cm. Presença de antracnose.Germoplasma obtido de 1 planta.</nO>"
+  },
+  {
+    "name": "Senna trachypus",
+    "family": "Leguminosae-Caes.",
+    "lat": -5.310833,
+    "lng": -38.173889,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 19
+    },
+    "notes": "<nO>arboreo; coletada em caatinga; relevo ondulado; substrato cristalino; abundante; interesse econômico: madeira e forragem. flor amarela; n.v. canafístula.</nO>"
+  },
+  {
+    "name": "Hybanthus calceolaria",
+    "family": "Violaceae",
+    "lat": -5.310833,
+    "lng": -38.173889,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 18
+    },
+    "notes": "<nO>erva pilosa; coletada em caatinga; frequente; substrato cristalino; relevo plano; flor lilás.</nO>"
+  },
+  {
+    "name": "Mimosa sensitiva",
+    "family": "Leguminosae-Mim.",
+    "lat": -5.310833,
+    "lng": -38.173889,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 18
+    },
+    "notes": "<nO>herbácea volúvel; coletada em caatinga antropizada; relevo plano; substrato cristalino; frequente; flor roxa; n.v. malícia.</nO>"
+  },
+  {
+    "name": "Dioscorea",
+    "family": "Dioscoreaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": null
+  },
+  {
+    "name": "Stylosanthes humilis",
+    "family": "Fabaceae",
+    "lat": -5.266667,
+    "lng": -38.166667,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 39
+    },
+    "notes": null
+  },
+  {
+    "name": "Auxemma glazioviana",
+    "family": "Boraginaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 49
+    },
+    "notes": null
+  },
+  {
+    "name": "Centrosema brasilianum",
+    "family": "Fabaceae Faboideae",
+    "lat": -5.26667,
+    "lng": -38.16667,
+    "city": "TABULEIRO DO NORTE",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 39
+    },
+    "notes": "<nO>Bom desenvolvimento vegetativo. Bastante ramificada, ramos muito compridos. Germoplasma obtido de 2 plantas. Coleta de solo.</nO>"
+  },
+  {
+    "name": "Unknown",
+    "family": "Acanthaceae",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 11
+    },
+    "notes": null
+  },
+  {
+    "name": "Chamaecrista",
+    "family": "Fabaceae",
+    "lat": -5.343264,
+    "lng": -37.9921,
+    "city": "Icapuí",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 19
+    },
+    "notes": "<nO>Erva rastejante. Flores amarelas.; Caatinga.</nO>"
+  },
+  {
+    "name": "Ruellia asperula",
+    "family": "Acanthaceae",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 11
+    },
+    "notes": null
+  },
+  {
+    "name": "Centrosema pascuorum",
+    "family": "Fabaceae",
+    "lat": -5.266667,
+    "lng": -38.166667,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 39
+    },
+    "notes": "<nO><ll>habitat:</ll> Caatinga</nO>"
+  },
+  {
+    "name": "Lantana achyranthifolia",
+    "family": "Verbenaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 23
+    },
+    "notes": "<nO>Subarbusto, flor branca com miolo amarelo, material coletado folha e flor.</nO>"
+  },
+  {
+    "name": "Lippia origanoides",
+    "family": "Verbenaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 16
+    },
+    "notes": "<nO>Arbusto; flor branca.</nO>"
+  },
+  {
+    "name": "Machaonia brasiliensis",
+    "family": "Rubiaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 19
+    },
+    "notes": "<nO>Arbusto.</nO>"
+  },
+  {
+    "name": "Pectis elongata",
+    "family": "Asteraceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 30
+    },
+    "notes": "<nO>Caatinga</nO>"
+  },
+  {
+    "name": "Apuleia leiocarpa",
+    "family": "Fabaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 69
+    },
+    "notes": "<nO>. Flor Branca.</nO>"
+  },
+  {
+    "name": "Celtis spinosa",
+    "family": "Cannabaceae",
+    "lat": -5.229047,
+    "lng": -38.159981,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 13
+    },
+    "notes": "<nO>Inventário Florestal Nacional - CE; Arbusto; casca com estrias verticais, entre casca verde e lenho claro; flor amarela, fruto verde.&nf;Dups RB.; Caatinga em estágio inicial.</nO>"
+  },
+  {
+    "name": "Tephrosia purpurea",
+    "family": "Fabaceae",
+    "lat": -5.229047,
+    "lng": -38.159981,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 13
+    },
+    "notes": "<nO>Inventário Florestal Nacional - CE; Subarbusto de fruto marrom.&nf;Dups RB.; Caatinga em estágio inicial.</nO>"
+  },
+  {
+    "name": "Croton blanchetianus",
+    "family": "Euphorbiaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 16
+    },
+    "notes": "<nO>Arbusto.</nO>"
+  },
+  {
+    "name": "Senna martiana",
+    "family": "Fabaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 23
+    },
+    "notes": "<nO>Arbusto, frequência bastante. Flor Amarela. Fruto Verde-marrom</nO>"
+  },
+  {
+    "name": "Senna martiana",
+    "family": "Fabaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 49
+    },
+    "notes": "<nO>Arbusto</nO>"
+  },
+  {
+    "name": "Jacquemontia evolvuloides",
+    "family": "Convolvulaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 4
+    },
+    "notes": "<nO>Herbácea.</nO>"
+  },
+  {
+    "name": "Lippia origanoides",
+    "family": "Verbenaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 23
+    },
+    "notes": "<nO>Arbusto alto, flor creme, muito frequente.</nO>"
+  },
+  {
+    "name": "Geoffroea spinosa",
+    "family": "Fabaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 27
+    },
+    "notes": "<nO>Árvore mediana.. Flor Amarela.</nO>"
+  },
+  {
+    "name": "Harpochilus paraibanus",
+    "family": "Acanthaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 23
+    },
+    "notes": "<nO>Erva, flor amarela pálida.</nO>"
+  },
+  {
+    "name": "Harpochilus paraibanus",
+    "family": "Acanthaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 16
+    },
+    "notes": "<nO>Arbusto; flor amarela.</nO>"
+  },
+  {
+    "name": "Bacopa gratioloides",
+    "family": "Plantaginaceae",
+    "lat": -5.399994,
+    "lng": -37.980008,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 13
+    },
+    "notes": "<nO>Inventário Florestal Nacional - CE; Herbácea.</nO>"
+  },
+  {
+    "name": "Borreria apodiensis",
+    "family": "Rubiaceae",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "CRITICAL",
+      "age_years": 11
+    },
+    "notes": "<nO>Projeto PPBio-Semiárido (Processo CNPq 457427/2012-4).; Erva ereta, 5-15 cm alt.; caules verde-amarelados; folhas herbáceas; flores com cálice verde-claro e corola alva; frutos imaturos, verde-claros. Coletada em ambiente seco, sob es</nO>"
+  },
+  {
+    "name": "Dicliptera ciliaris",
+    "family": "Acanthaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 30
+    },
+    "notes": "<nO>Caatinga/Mata úmida</nO>"
+  },
+  {
+    "name": "Pheidole jelskii",
+    "family": "Formicidae",
+    "lat": -5.35,
+    "lng": -38.1,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 10
+    },
+    "notes": null
+  },
+  {
+    "name": "Pheidole jelskii",
+    "family": "Formicidae",
+    "lat": -5.35,
+    "lng": -38.1,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 10
+    },
+    "notes": null
+  },
+  {
+    "name": "Varronia leucocephala",
+    "family": "Cordiaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Folhas: discolores Cálice: verde Corola: alva Habitat: Caatinga Habito: Arbusto escandente</nO>"
+  },
+  {
+    "name": "Heliotropium",
+    "family": "Boraginaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Arbusto escandente 2m, raro; flores esverdeadas.;Caatinga.</nO>"
+  },
+  {
+    "name": "Combretum leprosum",
+    "family": "Combretaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Arbusto escandente ca. 2-3m, muito frequente. Cálice verde e corola amarela;Caatinga</nO>"
+  },
+  {
+    "name": "Cenostigma pyramidale",
+    "family": "Fabaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Árvore ca. 3m. Flores amarelas, com um guia de néctar viscoso, frutos verdes;</nO>"
+  },
+  {
+    "name": "Anadenanthera colubrina cebil",
+    "family": "Fabaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 20
+    },
+    "notes": "<nO>árvore, mais ou menos 5m, independente, flor creme, fruto marrom, frequência rara. Usos: forrageiro, medicinal</nO>"
+  },
+  {
+    "name": "Centrosema pascuorum",
+    "family": "Fabaceae",
+    "lat": -5.2666667,
+    "lng": -38.1666667,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 39
+    },
+    "notes": "<nO>volúvel (estolonifera), fruto marrom - claro, solo arenoso, litolítico. Comum</nO>"
+  },
+  {
+    "name": "Justicia aequilabris",
+    "family": "Acanthaceae",
+    "lat": -5.3047222,
+    "lng": -37.8736111,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 11
+    },
+    "notes": "<nO>Subarbusto ereto. Caules castanhos a esverdeados. Folhas cartáceas. Flores com cálice verde e corola vermelha. Habitat: Caatinga arbustiva Habito: Subarbusto</nO>"
+  },
+  {
+    "name": "Riccia vitalii",
+    "family": "Ricciaceae",
+    "lat": -5.311389,
+    "lng": -38.161667,
+    "city": "Alto Santo",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 54
+    },
+    "notes": "<nO>Growing on thin layer up soil covering rock substratum. Exc.: SP 087724</nO>"
+  },
+  {
+    "name": "Riccia vitalii",
+    "family": "Ricciaceae",
+    "lat": -5.311389,
+    "lng": -38.161667,
+    "city": "Alto Santo",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 54
+    },
+    "notes": "<nO>Doação duplicata SP 087724; Growing on thin layer up soil covering rock substratum.</nO>"
+  },
+  {
+    "name": "Riccia vitalii",
+    "family": "Ricciaceae",
+    "lat": -5.311389,
+    "lng": -38.161667,
+    "city": "Alto Santo",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 54
+    },
+    "notes": "<nO>Doação duplicata SP 087724; Growing on thin layer up soil covering rock substratum.</nO>"
+  },
+  {
+    "name": "Justicia",
+    "family": "Acanthaceae",
+    "lat": -5.233333,
+    "lng": -38.116667,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 16
+    },
+    "notes": "<nO>flor amarela.</nO>"
+  },
+  {
+    "name": "Tacinga inamoena",
+    "family": "Cactaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 14
+    },
+    "notes": "<nO>Planta subarbustiva com cladódios orbiculares ou obovados. Caule principal, ereto ou em expansão, espinhos ausentes, numerosos gloquídios principalmente escondidos dentro das aréolas. Flores perto do ápice de segmentos terminais, pericarpelo globoso, alaranjada, estames expostos. Frutos com aproximadamente 40mm de diâmetro, globoso, variando do amarelo ao laranja fosco, polpa funicular transluzente, com muitas sementes por fruto, de 3mm de diâmetro, comestível.;</nO>"
+  },
+  {
+    "name": "Dioscorea",
+    "family": "Dioscoreaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Sobre mofumbo, indivíduo com flores masculinas. Trepadeira, flor verde;</nO>"
+  },
+  {
+    "name": "Herissantia tiubae",
+    "family": "Malvaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Arbusto ca. 1,5-2m nas frestas da rocha calcárea. Folhas levemente discolores, cálice verde, corola alva, estames amarelos;</nO>"
+  },
+  {
+    "name": "Erythroxylum nummularia",
+    "family": "Erythroxylaceae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": "<nO>Árvore ca. 3m, folhas discolores, frutos verdes. Raro, no calcáreo.;Lajedo com afloramento</nO>"
+  },
+  {
+    "name": "Ipomoea bahiensis",
+    "family": "Convolvulaceae",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 11
+    },
+    "notes": null
+  },
+  {
+    "name": "Geoffroea spinosa",
+    "family": "Leguminosae Subfam. Papilionoideae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 27
+    },
+    "notes": null
+  },
+  {
+    "name": "Ruellia asperula",
+    "family": "Acanthaceae",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 11
+    },
+    "notes": "<nO>Melosa.</nO>"
+  },
+  {
+    "name": "Cardiospermum corindum",
+    "family": "Sapindaceae",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 11
+    },
+    "notes": null
+  },
+  {
+    "name": "Borreria apodiensis",
+    "family": "Rubiaceae",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 11
+    },
+    "notes": null
+  },
+  {
+    "name": "Clitoria ternatea var. ternatea",
+    "family": "Leguminosae Subfam. Papilionoideae",
+    "lat": -5.324167,
+    "lng": -37.879167,
+    "city": "Quixeré",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 29
+    },
+    "notes": null
+  },
+  {
+    "name": "Clitoria ternatea var. ternatea",
+    "family": "Leguminosae Subfam. Papilionoideae",
+    "lat": -5.314167,
+    "lng": -37.8925,
+    "city": "Quixeré",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 29
+    },
+    "notes": null
+  },
+  {
+    "name": "Pseudobombax",
+    "family": "Malvaceae",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": null
+  },
+  {
+    "name": "Bauhinia cheilantha",
+    "family": "Leguminosae Subfam. Cercidoideae",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": null
+  },
+  {
+    "name": "Ipomoea incarnata",
+    "family": "Convolvulaceae",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": null
+  },
+  {
+    "name": "Stylosanthes",
+    "family": "Leguminosae Subfam. Papilionoideae",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": null
+  },
+  {
+    "name": "Senna martiana",
+    "family": "Leguminosae Subfam. Caesalpinioideae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 49
+    },
+    "notes": null
+  },
+  {
+    "name": "Senna macranthera var. pudibunda",
+    "family": "Leguminosae Subfam. Caesalpinioideae",
+    "lat": -5.324167,
+    "lng": -37.879167,
+    "city": "Quixeré",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 29
+    },
+    "notes": null
+  },
+  {
+    "name": "Senna martiana",
+    "family": "Leguminosae Subfam. Caesalpinioideae",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 49
+    },
+    "notes": null
+  },
+  {
+    "name": "Jatropha ribifolia",
+    "family": "Euphorbiaceae",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": null
+  },
+  {
+    "name": "Macroptilium lathyroides",
+    "family": "Leguminosae Subfam. Papilionoideae",
+    "lat": -5.314167,
+    "lng": -37.8925,
+    "city": "Quixeré",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 29
+    },
+    "notes": null
+  },
+  {
+    "name": "Centrosema pascuorum",
+    "family": "Leguminosae Subfam. Papilionoideae",
+    "lat": -5.266667,
+    "lng": -38.166667,
+    "city": "Juazeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 47
+    },
+    "notes": null
+  },
+  {
+    "name": "Bauhinia cheilantha",
+    "family": "Leguminosae Subfam. Cercidoideae",
+    "lat": -5.326111,
+    "lng": -37.885,
+    "city": "Quixeré",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 29
+    },
+    "notes": null
+  },
+  {
+    "name": "Bauhinia pulchella",
+    "family": "Leguminosae Subfam. Cercidoideae",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 11
+    },
+    "notes": null
+  },
+  {
+    "name": "Cordiera",
+    "family": "Rubiaceae",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": null
+  },
+  {
+    "name": "Croton heliotropiifolius",
+    "family": "Euphorbiaceae",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 12
+    },
+    "notes": null
+  },
+  {
+    "name": "Hypostomus sertanejo",
+    "family": "Loricariidae",
+    "lat": -5.2275,
+    "lng": -38.1977778,
+    "city": "Tabuleiro Do Norte",
+    "prediction": {
+      "risk_status": "NORMAL",
+      "age_years": 15
+    },
+    "notes": null
+  }
+]

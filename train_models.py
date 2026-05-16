@@ -1,0 +1,176 @@
+"""
+MapTree - Treinamento dos Modelos de IA
+Treina 3 modelos:
+  1. Regressão: estimar altura atual da árvore
+  2. Regressão: prever dias até atingir o fio
+  3. Classificação: classificar risco (NORMAL / UNDER_OBSERVATION / TO_PRUNE)
+"""
+
+import numpy as np
+import pandas as pd
+import joblib
+import os
+from sklearn.ensemble import GradientBoostingRegressor, RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.metrics import mean_absolute_error, r2_score, classification_report
+from generate_data import generate_dataset
+
+# ─── Preparação ────────────────────────────────────────────────────────────────
+
+print("🌳 MapTree - Treinamento de modelos\n")
+
+# Gera ou carrega dataset
+if os.path.exists("tree_dataset.csv"):
+    print("📂 Carregando dataset existente...")
+    df = pd.read_csv("tree_dataset.csv")
+else:
+    print("⚙️  Gerando dataset sintético...")
+    df = generate_dataset(n_samples=3000)
+    df.to_csv("tree_dataset.csv", index=False)
+
+print(f"✅ Dataset: {len(df)} amostras\n")
+
+# ─── Feature Engineering ──────────────────────────────────────────────────────
+
+# Encoding de variáveis categóricas
+soil_quality_map = {"GOOD": 2, "REGULAR": 1, "BAD": 0}
+df["soil_quality_enc"] = df["soil_quality"].map(soil_quality_map)
+
+# Features base (o que chega do MongoDB via NestJS)
+BASE_FEATURES = [
+    "age_years",
+    "species_height_max",
+    "species_k",
+    "pruning_count",
+    "soil_depth",
+    "soil_inclination",
+    "soil_quality_enc",
+    "soil_coverage",
+    "annual_rainfall",
+    "altitude",
+    "avg_temperature",
+    "has_fertilization",
+    "has_irrigation",
+    "nearby_trees_count",
+    "avg_neighbor_distance",
+    "fibonacci_modifier",    # calculado antes de chamar o modelo
+    "canopy_ratio",          # calculado antes de chamar o modelo
+]
+
+# ─── MODELO 1: Estimativa de Altura ──────────────────────────────────────────
+
+print("=" * 50)
+print("📏 MODELO 1: Estimativa de Altura")
+print("=" * 50)
+
+X_height = df[BASE_FEATURES]
+y_height = df["estimated_height"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X_height, y_height, test_size=0.2, random_state=42
+)
+
+model_height = GradientBoostingRegressor(
+    n_estimators=200,
+    learning_rate=0.1,
+    max_depth=5,
+    random_state=42
+)
+model_height.fit(X_train, y_train)
+
+y_pred = model_height.predict(X_test)
+mae = mean_absolute_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print(f"MAE (erro médio): {mae:.3f} metros")
+print(f"R²: {r2:.4f}")
+
+# Feature importance
+importance = pd.Series(
+    model_height.feature_importances_,
+    index=BASE_FEATURES
+).sort_values(ascending=False)
+print("\nTop 5 features mais importantes:")
+print(importance.head(5))
+
+# ─── MODELO 2: Dias até o Fio ────────────────────────────────────────────────
+
+print("\n" + "=" * 50)
+print("⚡ MODELO 2: Dias até atingir o fio")
+print("=" * 50)
+
+# Só treinar com árvores que VÃO atingir o fio (will_reach_wire = 1)
+df_wire = df[df["will_reach_wire"] == 1].copy()
+print(f"Amostras que atingirão o fio: {len(df_wire)}")
+
+X_wire = df_wire[BASE_FEATURES]
+y_wire = df_wire["days_to_wire"]
+
+X_train_w, X_test_w, y_train_w, y_test_w = train_test_split(
+    X_wire, y_wire, test_size=0.2, random_state=42
+)
+
+model_wire = GradientBoostingRegressor(
+    n_estimators=200,
+    learning_rate=0.08,
+    max_depth=5,
+    random_state=42
+)
+model_wire.fit(X_train_w, y_train_w)
+
+y_pred_w = model_wire.predict(X_test_w)
+mae_w = mean_absolute_error(y_test_w, y_pred_w)
+r2_w = r2_score(y_test_w, y_pred_w)
+
+print(f"MAE (erro médio): {mae_w:.1f} dias (~{mae_w/30:.1f} meses)")
+print(f"R²: {r2_w:.4f}")
+
+# ─── MODELO 3: Classificação de Risco ───────────────────────────────────────
+
+print("\n" + "=" * 50)
+print("🚦 MODELO 3: Classificação de Risco")
+print("=" * 50)
+
+# Adiciona altura estimada como feature (ela é output do modelo 1)
+FEATURES_RISK = BASE_FEATURES + ["estimated_height"]
+
+X_risk = df[FEATURES_RISK]
+y_risk = df["risk_status"]
+
+le = LabelEncoder()
+y_risk_enc = le.fit_transform(y_risk)
+
+X_train_r, X_test_r, y_train_r, y_test_r = train_test_split(
+    X_risk, y_risk_enc, test_size=0.2, random_state=42, stratify=y_risk_enc
+)
+
+model_risk = RandomForestClassifier(
+    n_estimators=200,
+    max_depth=8,
+    random_state=42,
+    class_weight="balanced"
+)
+model_risk.fit(X_train_r, y_train_r)
+
+y_pred_r = model_risk.predict(X_test_r)
+print(classification_report(y_test_r, y_pred_r, target_names=le.classes_))
+
+# ─── Salvando os modelos ──────────────────────────────────────────────────────
+
+print("=" * 50)
+print("💾 Salvando modelos...")
+
+os.makedirs("models", exist_ok=True)
+
+joblib.dump(model_height, "models/model_height.pkl")
+joblib.dump(model_wire, "models/model_wire_days.pkl")
+joblib.dump(model_risk, "models/model_risk.pkl")
+joblib.dump(le, "models/risk_label_encoder.pkl")
+joblib.dump(BASE_FEATURES, "models/base_features.pkl")
+joblib.dump(FEATURES_RISK, "models/risk_features.pkl")
+
+print("✅ Modelos salvos em ./models/")
+print("\nArquivos:")
+for f in os.listdir("models"):
+    print(f"  - {f}")
