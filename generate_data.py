@@ -9,6 +9,7 @@ GOLDEN_ANGLE = 137.5
 WIRE_HEIGHT = 6.5     
 FIBONACCI = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 
+
 SPECIES_DATA = [
     {"name": "Algaroba", "scientific": "Prosopis juliflora", "height_max": 12.0, "k": 0.18},
     {"name": "Catingueira", "scientific": "Caesalpinia pyramidalis", "height_max": 8.0, "k": 0.15},
@@ -46,7 +47,7 @@ def simular_crescimento_fibonacci(altura_atual: float, altura_fio: float, taxa_k
         
         historico.append({"mes": meses, "altura": round(altura_simulada, 3)})
         
-        if meses > 1200: break # Safety break (100 anos)
+        if meses > 1200: break # Safety break (100 anos))
 
     return {"meses_ate_o_fio": meses, "altura_final": round(altura_simulada, 2), "historico": historico}
 
