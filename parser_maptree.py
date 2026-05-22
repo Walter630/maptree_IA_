@@ -4,7 +4,7 @@ import requests
 from typing import Optional
 
 API_URL = "http://localhost:8000"
-session = request.Session()
+session = requests.Session()
 
 def carregar_modelos_ia():
     try:

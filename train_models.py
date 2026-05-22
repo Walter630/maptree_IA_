@@ -1,9 +1,17 @@
 """
 MapTree - Treinamento dos Modelos de IA
-Treina 3 modelos:
+Treina 4 modelos:
   1. Regressão: estimar altura atual da árvore
-  2. Regressão: prever dias até atingir o fio
-  3. Classificação: classificar risco (NORMAL / UNDER_OBSERVATION / TO_PRUNE)
+  2. Regressão: estimar crescimento anual
+  3. Regressão: prever dias até atingir o fio
+  4. Classificação: classificar risco
+
+Fluxo:
+  python3 generate_data.py
+  python3 train_models.py
+
+Sempre retreine depois de mudar generate_data.py, BASE_FEATURES ou as fontes
+reais de especie/solo/clima.
 """
 
 import numpy as np
@@ -33,11 +41,18 @@ print(f"✅ Dataset: {len(df)} amostras\n")
 
 # ─── Feature Engineering ──────────────────────────────────────────────────────
 
+required_generated_columns = {"wire_height", "annual_growth_m", "height_next_year"}
+if not required_generated_columns.issubset(df.columns):
+    print("⚙️  Dataset antigo detectado. Regenerando com features de fio e crescimento anual...")
+    df = generate_dataset(n_samples=3000)
+    df.to_csv("tree_dataset.csv", index=False)
+
 # Encoding de variáveis categóricas
 soil_quality_map = {"GOOD": 2, "REGULAR": 1, "BAD": 0}
 df["soil_quality_enc"] = df["soil_quality"].map(soil_quality_map)
 
-# Features base (o que chega do MongoDB via NestJS)
+# Features base: devem bater com api.build_features().
+# Ordem importa porque os modelos sao treinados com esses nomes/colunas.
 BASE_FEATURES = [
     "age_years",
     "species_height_max",
@@ -54,11 +69,14 @@ BASE_FEATURES = [
     "has_irrigation",
     "nearby_trees_count",
     "avg_neighbor_distance",
+    "wire_height",
     "fibonacci_modifier",    # calculado antes de chamar o modelo
     "canopy_ratio",          # calculado antes de chamar o modelo
 ]
 
 # ─── MODELO 1: Estimativa de Altura ──────────────────────────────────────────
+# Aprende a aproximar a formula botanica de altura atual a partir de especie,
+# idade, solo, clima, manejo, competicao e altura do fio/contexto.
 
 print("=" * 50)
 print("📏 MODELO 1: Estimativa de Altura")
@@ -94,7 +112,37 @@ importance = pd.Series(
 print("\nTop 5 features mais importantes:")
 print(importance.head(5))
 
+# ─── MODELO 1B: Crescimento Anual ────────────────────────────────────────────
+# Estima quantos metros a arvore tende a crescer nos proximos 12 meses.
+
+print("\n" + "=" * 50)
+print("🌱 MODELO 1B: Crescimento anual estimado")
+print("=" * 50)
+
+X_growth = df[BASE_FEATURES]
+y_growth = df["annual_growth_m"]
+
+X_train_g, X_test_g, y_train_g, y_test_g = train_test_split(
+    X_growth, y_growth, test_size=0.2, random_state=42
+)
+
+model_growth = GradientBoostingRegressor(
+    n_estimators=180,
+    learning_rate=0.08,
+    max_depth=4,
+    random_state=42
+)
+model_growth.fit(X_train_g, y_train_g)
+
+y_pred_g = model_growth.predict(X_test_g)
+mae_g = mean_absolute_error(y_test_g, y_pred_g)
+r2_g = r2_score(y_test_g, y_pred_g)
+
+print(f"MAE (erro médio): {mae_g:.3f} m/ano")
+print(f"R²: {r2_g:.4f}")
+
 # ─── MODELO 2: Dias até o Fio ────────────────────────────────────────────────
+# Treina apenas em arvores que biologicamente podem atingir o fio.
 
 print("\n" + "=" * 50)
 print("⚡ MODELO 2: Dias até atingir o fio")
@@ -127,6 +175,8 @@ print(f"MAE (erro médio): {mae_w:.1f} dias (~{mae_w/30:.1f} meses)")
 print(f"R²: {r2_w:.4f}")
 
 # ─── MODELO 3: Classificação de Risco ───────────────────────────────────────
+# Classificador auxiliar. A API ainda aplica regra deterministica por cima para
+# nao reduzir risco em casos de seguranca operacional.
 
 print("\n" + "=" * 50)
 print("🚦 MODELO 3: Classificação de Risco")
@@ -164,6 +214,7 @@ print("💾 Salvando modelos...")
 os.makedirs("models", exist_ok=True)
 
 joblib.dump(model_height, "models/model_height.pkl")
+joblib.dump(model_growth, "models/model_annual_growth.pkl")
 joblib.dump(model_wire, "models/model_wire_days.pkl")
 joblib.dump(model_risk, "models/model_risk.pkl")
 joblib.dump(le, "models/risk_label_encoder.pkl")
