@@ -1,14 +1,38 @@
+"""
+MapTree - Geração real de dataset e lógica de crescimento.
+
+Regras deste módulo:
+- Não inventar dados de árvore, solo ou clima quando houver fonte real disponível.
+- Usar apenas:
+  1) registros locais reais (enriched_trees.csv, dados_tabuleiro.csv, arvores_plantae.csv)
+  2) APIs reais quando necessário e quando disponíveis
+  3) agregações derivadas de dados reais já coletados (média por espécie/gênero/família)
+- Se algo essencial não puder ser obtido de forma real, o registro é ignorado.
+
+Este arquivo também expõe as funções usadas pela API FastAPI.
+"""
+
+from __future__ import annotations
+
 import math
 import os
 import random
+from collections import defaultdict
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Optional
 
 import numpy as np
 import pandas as pd
 
+try:
+    from enrich_soil_climate import fetch_climate, fetch_soil
+except Exception:  # pragma: no cover
+    fetch_climate = None
+    fetch_soil = None
 
-# Este modulo centraliza a logica de dominio usada para gerar o dataset de treino.
-# A API importa varias funcoes daqui, entao qualquer mudanca nas formulas abaixo
-# deve ser acompanhada por novo treino em train_models.py.
+BASE_DIR = Path(__file__).resolve().parent
+CURRENT_YEAR = datetime.now().year
 
 GOLDEN_ANGLE = 137.5
 WIRE_HEIGHT = 6.5
@@ -21,45 +45,60 @@ WIRE_HEIGHT_BY_CONTEXT = {
 FIBONACCI = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 PHI = (1 + math.sqrt(5)) / 2
 
-
-SPECIES_DATA = [
-    {"name": "Algaroba", "scientific": "Prosopis juliflora", "height_max": 12.0, "k": 0.18},
-    {"name": "Catingueira", "scientific": "Caesalpinia pyramidalis", "height_max": 8.0, "k": 0.15},
-    {"name": "Juazeiro", "scientific": "Ziziphus joazeiro", "height_max": 10.0, "k": 0.12},
-    {"name": "Oiticica", "scientific": "Licania rigida", "height_max": 15.0, "k": 0.10},
-    {"name": "Craibeira", "scientific": "Tabebuia aurea", "height_max": 14.0, "k": 0.11},
-    {"name": "Sabiá", "scientific": "Mimosa caesalpiniifolia", "height_max": 9.0, "k": 0.20},
-    {"name": "Angico", "scientific": "Anadenanthera colubrina", "height_max": 18.0, "k": 0.09},
-    {"name": "Nim", "scientific": "Azadirachta indica", "height_max": 13.0, "k": 0.16},
-    {"name": "Carnauba", "scientific": "Copernicia prunifera", "height_max": 15.0, "k": 0.08},
-    {"name": "Croton", "scientific": "Croton blanchetianus", "height_max": 5.0, "k": 0.25},
-    {"name": "Bauhinia", "scientific": "Bauhinia", "height_max": 8.0, "k": 0.14},
-    {"name": "Piptadenia", "scientific": "Piptadenia moniliformis", "height_max": 7.0, "k": 0.18},
-    {"name": "Cenostigma", "scientific": "Cenostigma pyramidale", "height_max": 7.0, "k": 0.16},
-    {"name": "Geoffroea", "scientific": "Geoffroea spinosa", "height_max": 10.0, "k": 0.12},
-    {"name": "Apuleia", "scientific": "Apuleia leiocarpa", "height_max": 20.0, "k": 0.08},
-]
-
-SPECIES_BY_NAME = {sp["scientific"].lower(): sp for sp in SPECIES_DATA}
-SPECIES_BY_GENUS = {sp["scientific"].split()[0].lower(): sp for sp in SPECIES_DATA}
-FAMILY_DEFAULTS = {
-    "Arecaceae": {"name": "Palmeira", "scientific": "Arecaceae sp.", "height_max": 14.0, "k": 0.08},
-    "Fabaceae": {"name": "Fabaceae", "scientific": "Fabaceae sp.", "height_max": 10.0, "k": 0.13},
-    "Euphorbiaceae": {"name": "Euphorbiaceae", "scientific": "Euphorbiaceae sp.", "height_max": 6.0, "k": 0.20},
-    "Combretaceae": {"name": "Combretaceae", "scientific": "Combretaceae sp.", "height_max": 7.0, "k": 0.16},
-    "Boraginaceae": {"name": "Boraginaceae", "scientific": "Boraginaceae sp.", "height_max": 8.0, "k": 0.13},
+# Famílias priorizadas para o caso de uso de arborização/poda.
+# Evita incluir ocorrências de Plantae que não são árvore (ervas, gramíneas, etc.).
+ALLOWED_TREE_FAMILIES = {
+    "fabaceae",
+    "euphorbiaceae",
+    "boraginaceae",
+    "rubiaceae",
+    "combretaceae",
+    "arecaceae",
+    "bignoniaceae",
+    "anacardiaceae",
+    "myrtaceae",
 }
+
+# Gêneros arbóreos aceitos para treino (curadoria inicial).
+ALLOWED_TREE_GENERA = {
+    "croton",
+    "bauhinia",
+    "piptadenia",
+    "senna",
+    "celtis",
+    "auxemma",
+    "combretum",
+    "cenostigma",
+    "geoffroea",
+    "apuleia",
+    "varronia",
+    "erythroxylum",
+    "copernicia",
+    "tabebuia",
+    "anadenanthera",
+    "mimosa",
+    "ziziphus",
+    "prosopis",
+    "licania",
+    "azadirachta",
+}
+
+def _read_csv(path: Path, sep: str = ",") -> pd.DataFrame:
+    if not path.exists():
+        return pd.DataFrame()
+    return pd.read_csv(path, sep=sep)
+
+
+def _is_valid_number(value: Any) -> bool:
+    return value is not None and pd.notna(value)
+
+
+def _norm_text(value: Any) -> str:
+    return str(value).strip().lower() if _is_valid_number(value) else ""
 
 
 def fibonacci_growth_modifier(pruning_count: int) -> float:
-    """
-    Calcula o efeito das podas sobre o crescimento.
-
-    A sequencia de Fibonacci e usada apenas como um ajuste moderado de ciclo,
-    nao como crescimento livre. O peso principal e uma penalidade acumulada:
-    muitas podas reduzem vigor esperado e evitam previsoes irreais.
-    Retorno: multiplicador entre 0.65 e 1.08.
-    """
+    """Multiplicador suave baseado no número de podas registradas."""
     pruning_count = max(0, int(pruning_count or 0))
     if pruning_count == 0:
         return 1.0
@@ -72,44 +111,32 @@ def fibonacci_growth_modifier(pruning_count: int) -> float:
 
 
 def soil_modifier(depth: float, inclination: float, quality: str, coverage: float) -> float:
-    """
-    Converte condicoes de solo em multiplicador de crescimento.
-
-    Campos:
-    - depth: profundidade util do solo em metros.
-    - inclination: inclinacao do terreno em graus.
-    - quality: GOOD, REGULAR ou BAD.
-    - coverage: impermeabilizacao/cobertura do solo de 0.0 a 1.0.
-    """
     quality_map = {"GOOD": 1.12, "REGULAR": 1.0, "BAD": 0.74}
     q = quality_map.get(str(quality).upper(), 1.0)
-    depth_mod = min(max(depth, 0.2) / 1.4, 1.08)
-    slope_mod = max(0.75, 1.0 - (max(inclination, 0) / 90.0) * 0.35)
-    coverage_mod = max(0.58, 1.0 - max(0.0, min(coverage, 1.0)) * 0.42)
+    depth_mod = min(max(float(depth), 0.2) / 1.4, 1.08)
+    slope_mod = max(0.75, 1.0 - (max(float(inclination), 0) / 90.0) * 0.35)
+    coverage_mod = max(0.58, 1.0 - max(0.0, min(float(coverage), 1.0)) * 0.42)
     return round(q * depth_mod * slope_mod * coverage_mod, 4)
 
 
 def climate_modifier(annual_rainfall: float, altitude: float, avg_temperature: float) -> float:
-    """
-    Converte clima em multiplicador de crescimento.
+    rain = float(annual_rainfall)
+    temp = float(avg_temperature)
+    alt = float(altitude)
 
-    A regra privilegia faixa de chuva e temperatura compativel com especies
-    urbanas/caatinga. Valores extremos reduzem o crescimento esperado.
-    """
-    if annual_rainfall < 350:
+    if rain < 350:
         rain_mod = 0.72
-    elif annual_rainfall > 1300:
+    elif rain > 1300:
         rain_mod = 0.9
     else:
-        rain_mod = 0.9 + min(annual_rainfall, 900) / 900 * 0.18
+        rain_mod = 0.9 + min(rain, 900) / 900 * 0.18
 
-    temp_mod = 0.78 if avg_temperature < 18 or avg_temperature > 35 else 1.0
-    alt_mod = 1.0 if altitude < 600 else 0.92
+    temp_mod = 0.78 if temp < 18 or temp > 35 else 1.0
+    alt_mod = 1.0 if alt < 600 else 0.92
     return round(rain_mod * temp_mod * alt_mod, 4)
 
 
 def management_modifier(has_fertilization: bool, has_irrigation: bool) -> float:
-    """Aplica bonus simples quando ha adubacao e/ou irrigacao registradas."""
     mod = 1.0
     if has_fertilization:
         mod += 0.08
@@ -119,13 +146,6 @@ def management_modifier(has_fertilization: bool, has_irrigation: bool) -> float:
 
 
 def canopy_competition_modifier(nearby_trees_count: int, avg_neighbor_distance: float) -> dict:
-    """
-    Estima competicao por copa entre arvores proximas.
-
-    Retorna:
-    - canopy_ratio: relacao largura/altura esperada da copa.
-    - growth_modifier: reducao de crescimento por competicao lateral.
-    """
     count = max(0, int(nearby_trees_count or 0))
     distance = max(float(avg_neighbor_distance or 0), 0.1)
 
@@ -140,135 +160,30 @@ def canopy_competition_modifier(nearby_trees_count: int, avg_neighbor_distance: 
 
 
 def estimate_height(age_years: float, height_max: float, species_k: float, total_modifier: float) -> float:
-    """
-    Estima altura atual por curva assintotica.
-
-    A arvore cresce rapido quando jovem e desacelera ao se aproximar da altura
-    maxima da especie. Isso evita que idade alta gere altura infinita.
-    """
     age = max(0.0, float(age_years))
-    adjusted_k = max(0.01, species_k * total_modifier)
-    height = height_max * (1.0 - math.exp(-adjusted_k * age))
-    return round(min(height, height_max * 1.03), 2)
+    adjusted_k = max(0.01, float(species_k) * float(total_modifier))
+    height = float(height_max) * (1.0 - math.exp(-adjusted_k * age))
+    return round(min(height, float(height_max) * 1.03), 2)
 
 
 def estimate_annual_growth(current_height: float, height_max: float, species_k: float, total_modifier: float) -> float:
-    """Crescimento esperado nos proximos 12 meses, limitado pela altura maxima."""
     current_height = max(0.0, float(current_height))
-    remaining = max(0.0, height_max - current_height)
-    yearly_k = max(0.01, species_k * total_modifier)
+    remaining = max(0.0, float(height_max) - current_height)
+    yearly_k = max(0.01, float(species_k) * float(total_modifier))
     return round(remaining * (1.0 - math.exp(-yearly_k)), 3)
 
 
-def get_species_profile(scientific_name: str | None, family: str | None = None) -> dict:
-    """
-    Busca perfil de especie por nome cientifico, genero ou familia.
-
-    Quando nao ha match, usa fallback de familia ou uma especie conhecida.
-    Este ponto deve ser melhorado com uma tabela botanica validada pelo time.
-    """
-    name = str(scientific_name or "").strip()
-    if name:
-        exact = SPECIES_BY_NAME.get(name.lower())
-        if exact:
-            return exact
-        genus = name.split()[0].lower()
-        if genus in SPECIES_BY_GENUS:
-            return SPECIES_BY_GENUS[genus]
-    return FAMILY_DEFAULTS.get(str(family or "").strip(), random.choice(SPECIES_DATA))
-
-
-def choose_wire_context(locality: str | None = None) -> tuple[str, float]:
-    """
-    Escolhe altura de fio por contexto aproximado da localidade.
-
-    Os valores atuais sao parametros operacionais para treino inicial, nao laudo
-    normativo. Substituir por norma da distribuidora/ABNT quando disponivel.
-    """
-    text = str(locality or "").lower()
-    if any(token in text for token in ("rodovia", "br ", "estrada", "highway")):
-        context = "ROAD_CROSSING"
-    elif any(token in text for token in ("rural", "fazenda", "sitio", "sítio", "serra")):
-        context = "RURAL_DISTRIBUTION"
-    else:
-        context = random.choices(
-            ["URBAN_LOW_VOLTAGE", "URBAN_MEDIUM_VOLTAGE", "RURAL_DISTRIBUTION"],
-            weights=[0.62, 0.28, 0.10],
-        )[0]
-    return context, WIRE_HEIGHT_BY_CONTEXT[context]
-
-
-def normalize_location_key(lat: float | None, lon: float | None, locality: str | None = None, precision: int = 5) -> str | None:
-    """
-    Gera chave estavel para detectar duplicidade de localidade.
-
-    precision=5 agrupa coordenadas dentro de aproximadamente 1 metro. Essa
-    tolerancia remove repeticoes de coleta/importacao sem juntar quarteiroes
-    diferentes. Quando nao ha coordenada, usa a localidade textual normalizada.
-    """
-    if lat is not None and lon is not None and pd.notna(lat) and pd.notna(lon):
-        return f"{round(float(lat), precision)}:{round(float(lon), precision)}"
-    text = str(locality or "").strip().lower()
-    return text or None
-
-
-def _load_real_seed_records() -> list[dict]:
-    """
-    Carrega sementes reais locais para o dataset.
-
-    Fontes atuais:
-    - enriched_trees.csv: dados ja enriquecidos com solo/clima.
-    - arvores_plantae.csv: ocorrencias botanicas exportadas do GBIF/Plantae.
-
-    Registros duplicados por coordenada/localidade sao ignorados para reduzir
-    vies de repeticao no treino.
-    """
-    records = []
-    seen_locations = set()
-    if os.path.exists("enriched_trees.csv"):
-        df = pd.read_csv("enriched_trees.csv")
-        for _, row in df.iterrows():
-            loc_key = normalize_location_key(row.get("latitude"), row.get("longitude"), row.get("scientificName"))
-            if loc_key and loc_key in seen_locations:
-                continue
-            if loc_key:
-                seen_locations.add(loc_key)
-            records.append({
-                "scientific": row.get("scientificName"),
-                "family": row.get("family"),
-                "height_max": row.get("heightAverage"),
-                "k": row.get("growthRateK"),
-                "soil_depth": row.get("soil_depth"),
-                "soil_inclination": row.get("soil_inclination"),
-                "soil_quality": row.get("soil_quality"),
-                "soil_coverage": row.get("soil_coverage"),
-                "annual_rainfall": row.get("annualRainfall"),
-                "altitude": row.get("altitude"),
-                "avg_temperature": row.get("avgTemperature"),
-            })
-
-    if os.path.exists("arvores_plantae.csv"):
-        df = pd.read_csv("arvores_plantae.csv", nrows=1200)
-        for _, row in df.dropna(subset=["scientificName"]).iterrows():
-            loc_key = normalize_location_key(
-                row.get("decimalLatitude"),
-                row.get("decimalLongitude"),
-                row.get("locality") or row.get("municipality") or row.get("scientificName"),
-            )
-            if loc_key and loc_key in seen_locations:
-                continue
-            if loc_key:
-                seen_locations.add(loc_key)
-            sp = get_species_profile(row.get("scientificName"), row.get("family"))
-            records.append({
-                "scientific": row.get("scientificName"),
-                "family": row.get("family"),
-                "height_max": sp["height_max"],
-                "k": sp["k"],
-                "year": row.get("year"),
-                "locality": row.get("locality") or row.get("municipality"),
-            })
-    return records
+def classify_risk(estimated_height: float, wire_height: float, days_to_wire: float, will_reach_wire: int) -> str:
+    ratio = estimated_height / wire_height if wire_height else 0
+    if ratio >= 1.0 or days_to_wire == 0:
+        return "CRITICAL"
+    if will_reach_wire and days_to_wire <= 180:
+        return "TO_PRUNE"
+    if ratio >= 0.85 or (will_reach_wire and days_to_wire <= 365):
+        return "UNDER_OBSERVATION"
+    if ratio >= 0.72:
+        return "TO_PRUNE"
+    return "NORMAL"
 
 
 def simular_crescimento_fibonacci(
@@ -279,13 +194,7 @@ def simular_crescimento_fibonacci(
     modifier: float = 1.0,
     max_months: int = 1200,
 ) -> dict:
-    """
-    Simula crescimento mensal ate a altura do fio.
-
-    Usa crescimento assintotico: quanto mais perto da altura maxima da especie,
-    menor o ganho mensal. Se a altura maxima ajustada nao chega ao fio, retorna
-    meses_ate_o_fio=None.
-    """
+    """Simula crescimento mensal até o fio usando parâmetros reais/derivados."""
     if altura_atual >= altura_fio:
         return {"meses_ate_o_fio": 0, "altura_final": round(altura_atual, 2), "historico": []}
 
@@ -297,7 +206,7 @@ def simular_crescimento_fibonacci(
     altura = float(altura_atual)
     historico = []
     fib_mod = fibonacci_growth_modifier(0)
-    monthly_k = max(0.001, taxa_k * modifier * fib_mod) / 12.0
+    monthly_k = max(0.001, float(taxa_k) * float(modifier) * fib_mod) / 12.0
 
     while altura < altura_fio and meses < max_months:
         remaining = max(effective_max - altura, 0)
@@ -316,82 +225,361 @@ def simular_crescimento_fibonacci(
     return {"meses_ate_o_fio": meses, "altura_final": round(altura, 2), "historico": historico}
 
 
-def classify_risk(estimated_height: float, wire_height: float, days_to_wire: float, will_reach_wire: int) -> str:
-    """
-    Classifica risco operacional para poda.
-
-    CRITICAL: ja atingiu/ultrapassou o fio.
-    TO_PRUNE: precisa entrar em rota de poda.
-    UNDER_OBSERVATION: monitorar porque esta proxima ou atingira em ate 1 ano.
-    NORMAL: sem acao imediata.
-    """
-    ratio = estimated_height / wire_height if wire_height else 0
-    if ratio >= 1.0 or days_to_wire == 0:
-        return "CRITICAL"
-    if will_reach_wire and days_to_wire <= 180:
-        return "TO_PRUNE"
-    if ratio >= 0.85 or (will_reach_wire and days_to_wire <= 365):
-        return "UNDER_OBSERVATION"
-    if ratio >= 0.72:
-        return "TO_PRUNE"
-    return "NORMAL"
+class RealCatalog:
+    def __init__(self) -> None:
+        self.exact: dict[str, dict[str, float]] = {}
+        self.genus: dict[str, dict[str, float]] = {}
+        self.family: dict[str, dict[str, float]] = {}
+        self.env_by_species: dict[str, dict[str, float]] = {}
+        self.env_by_genus: dict[str, dict[str, float]] = {}
+        self.env_by_family: dict[str, dict[str, float]] = {}
+        self.env_by_location: dict[str, dict[str, float]] = {}
 
 
-def generate_dataset(n_samples: int = 3000, seed: int = 42) -> pd.DataFrame:
-    """
-    Gera dataset de treino com mistura de dados reais e simulacao controlada.
+_CATALOG: RealCatalog | None = None
 
-    Aproximadamente 45% das amostras usam registros reais locais como semente
-    quando os CSVs existem. O restante cobre cenarios sinteticos para dar
-    variabilidade ao modelo. Sempre que este arquivo mudar, rode:
-    python3 generate_data.py
-    python3 train_models.py
+
+def _catalog_key(scientific: str | None = None, family: str | None = None, genus: str | None = None) -> tuple[str, str, str]:
+    return (_norm_text(scientific), _norm_text(family), _norm_text(genus))
+
+
+def _env_key(lat: float | None, lon: float | None) -> str | None:
+    if not _is_valid_number(lat) or not _is_valid_number(lon):
+        return None
+    return f"{round(float(lat), 4)}:{round(float(lon), 4)}"
+
+
+def _build_catalog() -> RealCatalog:
+    global _CATALOG
+    if _CATALOG is not None:
+        return _CATALOG
+
+    catalog = RealCatalog()
+    enriched_path = BASE_DIR / "enriched_trees.csv"
+    df = _read_csv(enriched_path)
+
+    if not df.empty:
+        df = df.copy()
+        # Garantir colunas esperadas
+        for col in ["scientificName", "family", "latitude", "longitude", "heightAverage", "growthRateK", "annualRainfall", "avgTemperature", "altitude", "soil_depth", "soil_inclination", "soil_quality", "soil_coverage"]:
+            if col not in df.columns:
+                df[col] = np.nan
+
+        df["_species_key"] = df["scientificName"].map(_norm_text)
+        df["_family_key"] = df["family"].map(_norm_text)
+        df["_genus_key"] = df["scientificName"].fillna("").astype(str).map(lambda s: _norm_text(s.split()[0]) if s else "")
+        df["_location_key"] = df.apply(lambda r: _env_key(r.get("latitude"), r.get("longitude")), axis=1)
+
+        # Profiles exatos por espécie
+        for species_key, group in df.groupby("_species_key"):
+            if not species_key:
+                continue
+            height_vals = group["heightAverage"].dropna().astype(float)
+            k_vals = group["growthRateK"].dropna().astype(float)
+            if height_vals.empty or k_vals.empty:
+                continue
+            catalog.exact[species_key] = {
+                "height_max": float(height_vals.mean()),
+                "k": float(k_vals.mean()),
+            }
+
+            env_rows = group.dropna(subset=["annualRainfall", "avgTemperature", "altitude", "soil_depth", "soil_inclination", "soil_quality", "soil_coverage"])
+            if not env_rows.empty:
+                catalog.env_by_species[species_key] = {
+                    "annual_rainfall": float(env_rows["annualRainfall"].astype(float).mean()),
+                    "avg_temperature": float(env_rows["avgTemperature"].astype(float).mean()),
+                    "altitude": float(env_rows["altitude"].astype(float).mean()),
+                    "soil_depth": float(env_rows["soil_depth"].astype(float).mean()),
+                    "soil_inclination": float(env_rows["soil_inclination"].astype(float).mean()),
+                    "soil_coverage": float(env_rows["soil_coverage"].astype(float).mean()),
+                    "soil_quality": str(env_rows["soil_quality"].mode().iloc[0]).upper(),
+                }
+
+        # Agregações por gênero e família a partir dos dados reais
+        for label, target in (("_genus_key", catalog.genus), ("_family_key", catalog.family)):
+            for key, group in df.groupby(label):
+                if not key:
+                    continue
+                height_vals = group["heightAverage"].dropna().astype(float)
+                k_vals = group["growthRateK"].dropna().astype(float)
+                if height_vals.empty or k_vals.empty:
+                    continue
+                target[key] = {
+                    "height_max": float(height_vals.mean()),
+                    "k": float(k_vals.mean()),
+                }
+
+        # Ambiente por coordenada, espécie, gênero e família
+        for _, row in df.iterrows():
+            env = {
+                "annual_rainfall": row.get("annualRainfall"),
+                "avg_temperature": row.get("avgTemperature"),
+                "altitude": row.get("altitude"),
+                "soil_depth": row.get("soil_depth"),
+                "soil_inclination": row.get("soil_inclination"),
+                "soil_quality": row.get("soil_quality"),
+                "soil_coverage": row.get("soil_coverage"),
+            }
+            if all(_is_valid_number(env[k]) for k in ["annual_rainfall", "avg_temperature", "altitude", "soil_depth", "soil_inclination", "soil_coverage"]) and _is_valid_number(env["soil_quality"]):
+                skey = _norm_text(row.get("scientificName"))
+                gkey = _norm_text(str(row.get("scientificName", "")).split()[0] if _is_valid_number(row.get("scientificName")) else "")
+                fkey = _norm_text(row.get("family"))
+                lkey = _env_key(row.get("latitude"), row.get("longitude"))
+                if skey:
+                    catalog.env_by_species.setdefault(skey, env)
+                if gkey:
+                    catalog.env_by_genus.setdefault(gkey, env)
+                if fkey:
+                    catalog.env_by_family.setdefault(fkey, env)
+                if lkey:
+                    catalog.env_by_location.setdefault(lkey, env)
+
+    _CATALOG = catalog
+    return catalog
+
+
+def get_species_profile(scientific_name: str | None, family: str | None = None, genus: str | None = None) -> Optional[dict]:
     """
-    random.seed(seed)
-    np.random.seed(seed)
+    Busca perfil de espécie real com foco em qualidade.
+
+    Regra de segurança: não usar fallback por FAMÍLIA para evitar "forçar"
+    espécies herbáceas/arbustivas a perfis arbóreos por coincidência taxonômica.
+    """
+    catalog = _build_catalog()
+    scientific_key = _norm_text(scientific_name)
+    genus_key = _norm_text(genus) or (_norm_text(str(scientific_name).split()[0]) if scientific_key else "")
+
+    if scientific_key and scientific_key in catalog.exact:
+        return catalog.exact[scientific_key]
+    if genus_key and genus_key in catalog.genus:
+        return catalog.genus[genus_key]
+    return None
+
+
+def choose_wire_context(locality: str | None = None) -> tuple[str, float]:
+    text = _norm_text(locality)
+    if any(token in text for token in ("rodovia", "br ", "estrada", "highway")):
+        context = "ROAD_CROSSING"
+    elif any(token in text for token in ("rural", "fazenda", "sitio", "sítio", "serra", "zona rural")):
+        context = "RURAL_DISTRIBUTION"
+    else:
+        context = "URBAN_LOW_VOLTAGE"
+    return context, WIRE_HEIGHT_BY_CONTEXT[context]
+
+
+def normalize_location_key(lat: float | None, lon: float | None, locality: str | None = None, precision: int = 5) -> str | None:
+    if lat is not None and lon is not None and pd.notna(lat) and pd.notna(lon):
+        return f"{round(float(lat), precision)}:{round(float(lon), precision)}"
+    text = str(locality or "").strip().lower()
+    return text or None
+
+
+def _estimate_age_years(year_value: Any) -> Optional[float]:
+    if not _is_valid_number(year_value):
+        return None
+    try:
+        year_int = int(float(year_value))
+        return max(0.5, float(CURRENT_YEAR - year_int))
+    except Exception:
+        return None
+
+
+def _load_real_seed_records() -> list[dict]:
+    """Carrega apenas registros reais locais, sem fabricar árvores novas."""
+    records: list[dict] = []
+
+    # 1) enriched_trees.csv: base mais confiável para perfil/ambiente real
+    enriched = _read_csv(BASE_DIR / "enriched_trees.csv")
+    if not enriched.empty:
+        for _, row in enriched.iterrows():
+            lat = row.get("latitude")
+            lon = row.get("longitude")
+            if not _is_valid_number(lat) or not _is_valid_number(lon):
+                continue
+            records.append({
+                "source": "enriched_trees",
+                "scientific": row.get("scientificName"),
+                "family": row.get("family"),
+                "genus": str(row.get("scientificName", "")).split()[0] if _is_valid_number(row.get("scientificName")) else "",
+                "lat": float(lat),
+                "lng": float(lon),
+                "year": None,
+                "observed_year": None,
+                "locality": "",
+                "soil_depth": row.get("soil_depth"),
+                "soil_inclination": row.get("soil_inclination"),
+                "soil_quality": row.get("soil_quality"),
+                "soil_coverage": row.get("soil_coverage"),
+                "annual_rainfall": row.get("annualRainfall"),
+                "avg_temperature": row.get("avgTemperature"),
+                "altitude": row.get("altitude"),
+                "height_max": row.get("heightAverage"),
+                "species_k": row.get("growthRateK"),
+                "pruning_count": row.get("pruning_count"),
+                "has_fertilization": row.get("has_fertilization"),
+                "has_irrigation": row.get("has_irrigation"),
+                "nearby_trees_count": row.get("nearby_trees_count"),
+                "avg_neighbor_distance": row.get("avg_neighbor_distance"),
+            })
+
+    # 2) dados_tabuleiro.csv: ocorrências locais reais
+    tab = _read_csv(BASE_DIR / "dados_tabuleiro.csv", sep="\t")
+    if not tab.empty:
+        for _, row in tab.iterrows():
+            lat = row.get("latitude")
+            lon = row.get("longitude")
+            if not _is_valid_number(lat) or not _is_valid_number(lon):
+                continue
+            records.append({
+                "source": "tabuleiro",
+                "scientific": row.get("scientificname"),
+                "family": row.get("family"),
+                "genus": row.get("genus"),
+                "lat": float(lat),
+                "lng": float(lon),
+                "year": row.get("yearcollected"),
+                "observed_year": row.get("yearcollected"),
+                "locality": row.get("locality") or row.get("county") or "",
+                "pruning_count": row.get("pruning_count"),
+                "has_fertilization": row.get("has_fertilization"),
+                "has_irrigation": row.get("has_irrigation"),
+                "nearby_trees_count": row.get("nearby_trees_count"),
+                "avg_neighbor_distance": row.get("avg_neighbor_distance"),
+            })
+
+    # 3) arvores_plantae.csv: ocorrências GBIF reais com Plantae
+    gbif = _read_csv(BASE_DIR / "arvores_plantae.csv", sep=",")
+    if not gbif.empty:
+        gbif = gbif[gbif.get("kingdom").astype(str) == "Plantae"].copy()
+        for _, row in gbif.iterrows():
+            lat = row.get("decimalLatitude")
+            lon = row.get("decimalLongitude")
+            if not _is_valid_number(lat) or not _is_valid_number(lon):
+                continue
+            records.append({
+                "source": "gbif_plantae",
+                "scientific": row.get("scientificName") or row.get("species"),
+                "family": row.get("family"),
+                "genus": row.get("genus"),
+                "lat": float(lat),
+                "lng": float(lon),
+                "year": row.get("year"),
+                "observed_year": row.get("year"),
+                "locality": row.get("locality") or row.get("municipality") or "",
+                "pruning_count": row.get("pruning_count"),
+                "has_fertilization": row.get("has_fertilization"),
+                "has_irrigation": row.get("has_irrigation"),
+                "nearby_trees_count": row.get("nearby_trees_count"),
+                "avg_neighbor_distance": row.get("avg_neighbor_distance"),
+            })
+
+    # Deduplicação simples por coordenada + espécie + origem
+    deduped = []
+    seen = set()
+    for rec in records:
+        key = (rec["source"], round(rec["lat"], 5), round(rec["lng"], 5), _norm_text(rec.get("scientific")))
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(rec)
+    return deduped
+
+
+def _lookup_environment(record: dict) -> Optional[dict]:
+    catalog = _build_catalog()
+    species_key = _norm_text(record.get("scientific"))
+    genus_key = _norm_text(record.get("genus")) or (_norm_text(str(record.get("scientific", "")).split()[0]) if species_key else "")
+    family_key = _norm_text(record.get("family"))
+    location_key = _env_key(record.get("lat"), record.get("lng"))
+
+    for key, bucket in ((location_key, catalog.env_by_location), (species_key, catalog.env_by_species), (genus_key, catalog.env_by_genus), (family_key, catalog.env_by_family)):
+        if key and key in bucket:
+            return bucket[key]
+
+    # Para registros sem ambiente local suficiente, tentar APIs reais apenas quando disponíveis.
+    if fetch_soil is None or fetch_climate is None:
+        return None
+
+    soil = fetch_soil(record["lat"], record["lng"])
+    climate = fetch_climate(record["lat"], record["lng"])
+    if not soil or not climate:
+        return None
+
+    if soil.get("depth") is None or soil.get("quality") is None:
+        return None
+    if climate.get("annual_rainfall") is None or climate.get("avg_temperature") is None or climate.get("altitude") is None:
+        return None
+
+    return {
+        "annual_rainfall": climate["annual_rainfall"],
+        "avg_temperature": climate["avg_temperature"],
+        "altitude": climate["altitude"],
+        "soil_depth": soil["depth"],
+        "soil_inclination": soil.get("inclination", 5.0),
+        "soil_quality": soil["quality"],
+        "soil_coverage": soil.get("coverage", 0.2),
+    }
+
+
+def generate_dataset(n_samples: int = 3000) -> pd.DataFrame:
+    """
+    Gera o dataset de treino somente com base em dados reais e agregações reais.
+
+    n_samples é mantido por compatibilidade, mas o dataset resultante depende da
+    quantidade de registros reais válidos disponíveis.
+    """
+    records = _load_real_seed_records()
     rows = []
-    real_records = _load_real_seed_records()
 
-    for sample_id in range(n_samples):
-        real = random.choice(real_records) if real_records and random.random() < 0.45 else None
-        sp = get_species_profile(real.get("scientific"), real.get("family")) if real else random.choice(SPECIES_DATA)
-        height_max = float(real.get("height_max") if real and pd.notna(real.get("height_max")) else sp["height_max"])
-        species_k = float(real.get("k") if real and pd.notna(real.get("k")) else sp["k"])
+    for sample_id, rec in enumerate(records):
+        family_key = _norm_text(rec.get("family"))
+        genus_key = _norm_text(rec.get("genus")) or _norm_text(str(rec.get("scientific") or "").split()[0])
 
-        if real and pd.notna(real.get("year")):
-            age_years = round(max(0.5, 2026 - int(real["year"]) + random.uniform(-0.5, 0.5)), 2)
-        else:
-            age_years = round(random.uniform(0.5, 45.0), 2)
+        if family_key and family_key not in ALLOWED_TREE_FAMILIES:
+            continue
+        if genus_key and genus_key not in ALLOWED_TREE_GENERA:
+            continue
 
-        pruning_count = random.randint(0, 8)
-        soil_depth = round(float(real.get("soil_depth")) if real and pd.notna(real.get("soil_depth")) else random.uniform(0.3, 2.0), 2)
-        soil_inclination = round(float(real.get("soil_inclination")) if real and pd.notna(real.get("soil_inclination")) else random.uniform(0, 45), 2)
-        soil_quality = str(real.get("soil_quality")) if real and pd.notna(real.get("soil_quality")) else random.choice(["GOOD", "REGULAR", "BAD"])
-        soil_coverage = round(float(real.get("soil_coverage")) if real and pd.notna(real.get("soil_coverage")) else random.uniform(0, 0.9), 2)
-        annual_rainfall = round(float(real.get("annual_rainfall")) if real and pd.notna(real.get("annual_rainfall")) else max(250, random.normalvariate(700, 210)), 1)
-        altitude = round(float(real.get("altitude")) if real and pd.notna(real.get("altitude")) else random.uniform(20, 900), 1)
-        avg_temperature = round(float(real.get("avg_temperature")) if real and pd.notna(real.get("avg_temperature")) else random.normalvariate(27, 3), 1)
-        has_fertilization = random.randint(0, 1)
-        has_irrigation = random.randint(0, 1)
-        nearby_trees_count = random.randint(0, 10)
-        avg_neighbor_distance = round(random.uniform(1.5, 18.0), 1)
-        wire_context, wire_height = choose_wire_context(real.get("locality") if real else None)
+        # 1) Primeiro valida se a espécie/gênero possui perfil real conhecido.
+        # Evita chamadas de API caras para registros que já serão descartados.
+        sp = get_species_profile(rec.get("scientific"), rec.get("family"), rec.get("genus"))
+        if not sp:
+            continue
+
+        # 2) Só então resolve ambiente (local/agregado/API).
+        env = _lookup_environment(rec)
+        if not env:
+            continue
+
+        age_years = _estimate_age_years(rec.get("year"))
+        if age_years is None:
+            # Sem uma data real minimamente confiável, o registro não entra no treino.
+            continue
+
+        # Sem dados reais de manejo/vizinhança na base atual:
+        # usamos modificadores neutros (não aumenta nem reduz crescimento).
+        pruning_count = 0
+        has_fertilization = 0
+        has_irrigation = 0
+        nearby_trees_count = 0
+        avg_neighbor_distance = 999.0
+        wire_context, wire_height = choose_wire_context(rec.get("locality"))
 
         fib_mod = fibonacci_growth_modifier(pruning_count)
-        s_mod = soil_modifier(soil_depth, soil_inclination, soil_quality, soil_coverage)
-        c_mod = climate_modifier(annual_rainfall, altitude, avg_temperature)
+        s_mod = soil_modifier(env["soil_depth"], env["soil_inclination"], env["soil_quality"], env["soil_coverage"])
+        c_mod = climate_modifier(env["annual_rainfall"], env["altitude"], env["avg_temperature"])
         m_mod = management_modifier(bool(has_fertilization), bool(has_irrigation))
         canopy = canopy_competition_modifier(nearby_trees_count, avg_neighbor_distance)
         total_modifier = round(s_mod * c_mod * m_mod * fib_mod * canopy["growth_modifier"], 4)
 
-        estimated_height = estimate_height(age_years, height_max, species_k, total_modifier)
-        annual_growth_m = estimate_annual_growth(estimated_height, height_max, species_k, total_modifier)
-        height_next_year = round(min(height_max * 1.03, estimated_height + annual_growth_m), 2)
+        estimated_height = estimate_height(age_years, sp["height_max"], sp["k"], total_modifier)
+        annual_growth_m = estimate_annual_growth(estimated_height, sp["height_max"], sp["k"], total_modifier)
+        height_next_year = round(min(sp["height_max"] * 1.03, estimated_height + annual_growth_m), 2)
         future = simular_crescimento_fibonacci(
             estimated_height,
             wire_height,
-            species_k,
-            altura_max=height_max * min(1.05, max(0.75, total_modifier)),
+            sp["k"],
+            altura_max=sp["height_max"] * min(1.05, max(0.75, total_modifier)),
             modifier=total_modifier,
         )
         months_to_wire = future["meses_ate_o_fio"]
@@ -401,19 +589,19 @@ def generate_dataset(n_samples: int = 3000, seed: int = 42) -> pd.DataFrame:
 
         rows.append({
             "sample_id": sample_id,
-            "species_common_name": sp["name"],
-            "species_scientific_name": sp["scientific"],
-            "species_height_max": height_max,
-            "species_k": species_k,
+            "species_common_name": str(rec.get("genus") or rec.get("scientific") or "").split()[0],
+            "species_scientific_name": rec.get("scientific") or "",
+            "species_height_max": sp["height_max"],
+            "species_k": sp["k"],
             "age_years": age_years,
             "pruning_count": pruning_count,
-            "soil_depth": soil_depth,
-            "soil_inclination": soil_inclination,
-            "soil_quality": soil_quality,
-            "soil_coverage": soil_coverage,
-            "annual_rainfall": annual_rainfall,
-            "altitude": altitude,
-            "avg_temperature": avg_temperature,
+            "soil_depth": env["soil_depth"],
+            "soil_inclination": env["soil_inclination"],
+            "soil_quality": env["soil_quality"],
+            "soil_coverage": env["soil_coverage"],
+            "annual_rainfall": env["annual_rainfall"],
+            "altitude": env["altitude"],
+            "avg_temperature": env["avg_temperature"],
             "has_fertilization": has_fertilization,
             "has_irrigation": has_irrigation,
             "nearby_trees_count": nearby_trees_count,
@@ -438,12 +626,12 @@ def generate_dataset(n_samples: int = 3000, seed: int = 42) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    print("MapTree: validando logica de crescimento")
-    test = simular_crescimento_fibonacci(2.0, 5.0, 0.15, altura_max=8.0)
-    assert test["meses_ate_o_fio"] is not None
-    assert test["altura_final"] >= 5.0
+    print("MapTree: dataset real-only")
+    df = generate_dataset()
+    if df.empty:
+        raise SystemExit("Nenhum registro real válido encontrado para treinar.")
 
-    df = generate_dataset(n_samples=3000)
-    df.to_csv("tree_dataset.csv", index=False)
-    print("Dataset salvo em tree_dataset.csv")
+    out = BASE_DIR / "tree_dataset.csv"
+    df.to_csv(out, index=False)
+    print(f"Dataset salvo em {out}")
     print(df.head())

@@ -27,7 +27,12 @@ from generate_data import (
     fibonacci_growth_modifier,
     canopy_competition_modifier,
     classify_risk,
-    WIRE_HEIGHT
+    soil_modifier,
+    climate_modifier,
+    management_modifier,
+    estimate_height,
+    estimate_annual_growth,
+    WIRE_HEIGHT,
 )
 
 # ─── Carregar modelos ─────────────────────────────────────────────────────────
@@ -227,12 +232,18 @@ def predict_wire_risk(req: TreePredictRequest):
     feature_names = models["base_features"]
     X_base = pd.DataFrame([[features[f] for f in feature_names]], columns=feature_names)
 
-    # 1. Estimar altura
-    estimated_height = float(models["height"].predict(X_base)[0])
-    annual_growth = max(0.0, float(models["annual_growth"].predict(X_base)[0]))
+    # 1. Estimar altura (determinístico contínuo, evita patamares iguais do ML em base pequena)
+    s_mod = soil_modifier(features["soil_depth"], features["soil_inclination"], req.soil.quality if req.soil else "REGULAR", features["soil_coverage"])
+    c_mod = climate_modifier(features["annual_rainfall"], features["altitude"], features["avg_temperature"])
+    m_mod = management_modifier(bool(features["has_fertilization"]), bool(features["has_irrigation"]))
+    comp = canopy_competition_modifier(int(features["nearby_trees_count"] or 0), float(features["avg_neighbor_distance"] or 999))
+    total_modifier = s_mod * c_mod * m_mod * features["fibonacci_modifier"] * comp["growth_modifier"]
 
-    # 2. Prever tempo ate o fio. A simulacao matematica define se a especie
-    # ainda tem potencial biologico para chegar no fio; o modelo estima o prazo.
+    k_species = float(req.species.growth_rate_k or 0.12)
+    estimated_height = estimate_height(req.age_years, req.species.height_average, k_species, total_modifier)
+    annual_growth = max(0.0, estimate_annual_growth(estimated_height, req.species.height_average, k_species, total_modifier))
+
+    # 2. Tempo ate o fio: modo determinístico (mais estável que ML com poucos positivos).
     simulacao_fib = simular_crescimento_fibonacci(
         altura_atual=estimated_height,
         altura_fio=req.wire_height,
@@ -241,17 +252,20 @@ def predict_wire_risk(req: TreePredictRequest):
         modifier=features["fibonacci_modifier"],
     )
 
+    # Horizonte operacional para poda (meses). Acima disso, tratar como longo prazo.
+    OPERATIONAL_HORIZON_MONTHS = 120
+
     if estimated_height >= req.wire_height:
         days_to_wire = 0
         will_reach_wire = True
     elif simulacao_fib["meses_ate_o_fio"] is None:
         days_to_wire = None
         will_reach_wire = False
+    elif simulacao_fib["meses_ate_o_fio"] > OPERATIONAL_HORIZON_MONTHS:
+        days_to_wire = None
+        will_reach_wire = False
     else:
-        X_wire = X_base.copy()
-        predicted_days = float(models["wire"].predict(X_wire)[0])
-        simulated_days = simulacao_fib["meses_ate_o_fio"] * 30
-        days_to_wire = max(0, min(predicted_days, simulated_days * 1.5))
+        days_to_wire = simulacao_fib["meses_ate_o_fio"] * 30
         will_reach_wire = True
 
     # 3. Classificar risco
@@ -285,7 +299,7 @@ def predict_wire_risk(req: TreePredictRequest):
         "height_next_year_m": round(estimated_height + annual_growth, 2),
         "wire_height_m": req.wire_height,
         "will_reach_wire": will_reach_wire,
-        "days_to_wire": round(days_to_wire) if will_reach_wire else None,
+        "days_to_wire": int(round(days_to_wire)) if (will_reach_wire and days_to_wire is not None) else None,
         "months_to_wire": round(days_to_wire / 30, 1) if will_reach_wire else None,
         "risk_status": risk_label,
         "risk_status_model": model_risk_label,

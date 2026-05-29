@@ -191,9 +191,20 @@ y_risk = df["risk_status"]
 le = LabelEncoder()
 y_risk_enc = le.fit_transform(y_risk)
 
+# Em bases pequenas/curadas, pode haver classe com 1 amostra.
+# Nesse caso, train_test_split com stratify quebra.
+class_counts = pd.Series(y_risk_enc).value_counts()
+can_stratify = (class_counts.min() >= 2)
+
 X_train_r, X_test_r, y_train_r, y_test_r = train_test_split(
-    X_risk, y_risk_enc, test_size=0.2, random_state=42, stratify=y_risk_enc
+    X_risk,
+    y_risk_enc,
+    test_size=0.2,
+    random_state=42,
+    stratify=y_risk_enc if can_stratify else None,
 )
+if not can_stratify:
+    print("⚠️  Classe rara detectada no risco (menos de 2 amostras). Treino sem stratify.")
 
 model_risk = RandomForestClassifier(
     n_estimators=200,
@@ -204,7 +215,9 @@ model_risk = RandomForestClassifier(
 model_risk.fit(X_train_r, y_train_r)
 
 y_pred_r = model_risk.predict(X_test_r)
-print(classification_report(y_test_r, y_pred_r, target_names=le.classes_))
+present_labels = sorted(set(y_test_r) | set(y_pred_r))
+present_names = [le.classes_[i] for i in present_labels]
+print(classification_report(y_test_r, y_pred_r, labels=present_labels, target_names=present_names, zero_division=0))
 
 # ─── Salvando os modelos ──────────────────────────────────────────────────────
 

@@ -27,30 +27,9 @@ OUTPUT_JSON     = "enriched_trees.json"
 SLEEP_BETWEEN   = 1.2   # segundos entre requests (respeitar rate limit)
 TIMEOUT         = 12    # segundos timeout por request
 
-# ─── Fallbacks Caatinga ────────────────────────────────────────────────────────
-# Valores médios de referência para Caatinga no Ceará
-# Usados quando a API está offline
-
-CAATINGA_SOIL_FALLBACK = {
-    "depth":       0.80,   # profundidade média do solo em m (Neossolo/Luvissolo)
-    "inclination": 5.0,    # inclinação média graus
-    "quality":     "REGULAR",
-    "coverage":    0.25,   # 25% impermeabilização (área urbana baixa densidade)
-
-    # Dados brutos para referência
-    "_source": "fallback_caatinga_ce",
-    "_clay_pct": 22.0,
-    "_sand_pct": 55.0,
-    "_silt_pct": 23.0,
-    "_ph":       6.1,
-}
-
-TABULEIRO_CLIMATE_FALLBACK = {
-    "annual_rainfall":  680.0,   # mm/ano — média histórica Tabuleiro do Norte
-    "avg_temperature":  27.8,    # °C
-    "altitude":         150.0,   # m (média da região)
-    "_source": "fallback_inmet_tabuleiro_norte",
-}
+# ─── Observação ────────────────────────────────────────────────────────────────
+# O pipeline agora evita inventar valores: se a API falhar, o registro é
+# ignorado em vez de receber fallback fictício.
 
 # ─── SoilGrids ─────────────────────────────────────────────────────────────────
 
@@ -116,12 +95,12 @@ def fetch_soil(lat: float, lon: float) -> dict:
         }
 
     except requests.exceptions.Timeout:
-        print(f"    ⚠️  SoilGrids timeout para ({lat}, {lon}) — usando fallback")
-        return CAATINGA_SOIL_FALLBACK
+        print(f"    ⚠️  SoilGrids timeout para ({lat}, {lon}) — sem fallback")
+        return None
 
     except Exception as e:
-        print(f"    ⚠️  SoilGrids erro: {e} — usando fallback")
-        return CAATINGA_SOIL_FALLBACK
+        print(f"    ⚠️  SoilGrids erro: {e} — sem fallback")
+        return None
 
 
 def _classify_soil_quality(clay, sand, ph) -> str:
@@ -213,20 +192,23 @@ def fetch_climate(lat: float, lon: float) -> dict:
         # Altitude: Open-Meteo retorna elevation
         altitude = data.get("elevation")
 
+        if annual_rain is None or avg_temp is None or altitude is None:
+            return None
+
         return {
-            "annual_rainfall":  round(annual_rain, 1) if annual_rain else TABULEIRO_CLIMATE_FALLBACK["annual_rainfall"],
-            "avg_temperature":  round(avg_temp, 1)    if avg_temp   else TABULEIRO_CLIMATE_FALLBACK["avg_temperature"],
-            "altitude":         round(altitude, 1)    if altitude   else TABULEIRO_CLIMATE_FALLBACK["altitude"],
+            "annual_rainfall":  round(annual_rain, 1),
+            "avg_temperature":  round(avg_temp, 1),
+            "altitude":         round(altitude, 1),
             "_source": "open_meteo",
         }
 
     except requests.exceptions.Timeout:
-        print(f"    ⚠️  Open-Meteo timeout para ({lat}, {lon}) — usando fallback")
-        return TABULEIRO_CLIMATE_FALLBACK
+        print(f"    ⚠️  Open-Meteo timeout para ({lat}, {lon}) — sem fallback")
+        return None
 
     except Exception as e:
-        print(f"    ⚠️  Open-Meteo erro: {e} — usando fallback")
-        return TABULEIRO_CLIMATE_FALLBACK
+        print(f"    ⚠️  Open-Meteo erro: {e} — sem fallback")
+        return None
 
 
 # ─── Espécies conhecidas (altura máxima) ──────────────────────────────────────
@@ -256,10 +238,10 @@ SPECIES_HEIGHT_MAP = {
     "DEFAULT":                   {"height": 8.0,  "k": 0.14},
 }
 
-def get_species_info(scientificname: str) -> dict:
+def get_species_info(scientificname: str):
     """Busca altura máxima e taxa de crescimento da espécie."""
     if pd.isna(scientificname) or not scientificname:
-        return SPECIES_HEIGHT_MAP["DEFAULT"]
+        return None
 
     # Busca exata primeiro
     if scientificname in SPECIES_HEIGHT_MAP:
@@ -271,7 +253,7 @@ def get_species_info(scientificname: str) -> dict:
         if key.startswith(genus):
             return SPECIES_HEIGHT_MAP[key]
 
-    return SPECIES_HEIGHT_MAP["DEFAULT"]
+    return None
 
 
 # ─── Processamento principal ──────────────────────────────────────────────────
@@ -310,6 +292,9 @@ def process_csv(input_path: str) -> list:
             soil_cache[coord_key] = fetch_soil(lat, lon)
             time.sleep(SLEEP_BETWEEN)
         soil = soil_cache[coord_key]
+        if soil is None:
+            print("    ⏭️  Sem dado real de solo; pulando registro")
+            continue
 
         # ── Clima ────────────────────────────────────────────────────────────────
         if coord_key not in climate_cache:
@@ -317,9 +302,15 @@ def process_csv(input_path: str) -> list:
             climate_cache[coord_key] = fetch_climate(lat, lon)
             time.sleep(SLEEP_BETWEEN)
         climate = climate_cache[coord_key]
+        if climate is None:
+            print("    ⏭️  Sem dado real de clima; pulando registro")
+            continue
 
         # ── Espécie ──────────────────────────────────────────────────────────────
         sp_info = get_species_info(scientific)
+        if sp_info is None:
+            print("    ⏭️  Espécie sem perfil validado; pulando registro")
+            continue
 
         # ── Montar objeto Tree (compatível com o schema Prisma) ──────────────────
         tree_obj = {
@@ -402,9 +393,9 @@ def save_output(records: list, output_path: str):
         "generated_at": datetime.now().isoformat(),
         "total_records": len(records),
         "sources": {
-            "soil":    "SoilGrids v2 REST API (ISRIC) / fallback Caatinga-CE",
-            "climate": "Open-Meteo Historical API / fallback INMET Tabuleiro do Norte",
-            "species": "Literatura florestal + TRY Plant Trait Database",
+            "soil":    "SoilGrids v2 REST API (ISRIC)",
+            "climate": "Open-Meteo Historical API",
+            "species": "Perfil validado localmente ou skip",
         },
         "trees": records,
     }
@@ -449,7 +440,7 @@ if __name__ == "__main__":
     print("Fontes:")
     print("  Solo  → SoilGrids v2 (ISRIC) — sem chave, gratuito")
     print("  Clima → Open-Meteo           — sem chave, gratuito")
-    print("  Fallback automático quando APIs offline\n")
+    print("  Sem fallback fictício: registros sem dado real são ignorados\n")
 
     records = process_csv(INPUT_CSV)
     save_output(records, OUTPUT_JSON)
