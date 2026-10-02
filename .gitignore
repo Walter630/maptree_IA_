@@ -1,0 +1,18 @@
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Logs e artefatos locais
+*.log
+
+# Sistema operacional / editor
+.DS_Store
+.idea/
+.vscode/

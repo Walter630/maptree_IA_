@@ -1,0 +1,6543 @@
+[
+  {
+    "id": "tab_Croton_b_2010.0",
+    "name": "Croton blanchetianus",
+    "family": "Euphorbiaceae",
+    "genus": "Croton",
+    "lat": -5.233333,
+    "lng": -38.116667,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2010,
+    "age_years": 16,
+    "prediction": {
+      "data_quality": "ok",
+      "environment_source": "local_real",
+      "wire_context": "URBAN_LOW_VOLTAGE",
+      "estimated_height_m": 4.4,
+      "annual_growth_m": 0.075,
+      "height_next_year_m": 4.48,
+      "wire_height_m": 8.0,
+      "will_reach_wire": false,
+      "days_to_wire": null,
+      "months_to_wire": null,
+      "risk_status": "NORMAL",
+      "species_profile": {
+        "height_max_m": 5.0,
+        "growth_rate_k": 0.25
+      },
+      "phyllotaxis": {
+        "golden_angle_deg": 137.5,
+        "branch_whorls": 5,
+        "fibonacci_stage": 5,
+        "symmetry_index": 0.7639
+      },
+      "modifiers_used": {
+        "soil": 0.5133,
+        "climate": 1.036,
+        "management": 1.0,
+        "pruning": 1.0,
+        "competition": 1.0,
+        "total": 0.5318
+      }
+    }
+  },
+  {
+    "id": "tab_Bauhinia_2014.0",
+    "name": "Bauhinia",
+    "family": "Fabaceae",
+    "genus": "Bauhinia",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "ok",
+      "environment_source": "local_real",
+      "wire_context": "URBAN_LOW_VOLTAGE",
+      "estimated_height_m": 4.73,
+      "annual_growth_m": 0.235,
+      "height_next_year_m": 4.97,
+      "wire_height_m": 8.0,
+      "will_reach_wire": false,
+      "days_to_wire": null,
+      "months_to_wire": null,
+      "risk_status": "NORMAL",
+      "species_profile": {
+        "height_max_m": 8.0,
+        "growth_rate_k": 0.14
+      },
+      "phyllotaxis": {
+        "golden_angle_deg": 137.5,
+        "branch_whorls": 5,
+        "fibonacci_stage": 5,
+        "symmetry_index": 0.7639
+      },
+      "modifiers_used": {
+        "soil": 0.5133,
+        "climate": 1.036,
+        "management": 1.0,
+        "pruning": 1.0,
+        "competition": 1.0,
+        "total": 0.5318
+      }
+    }
+  },
+  {
+    "id": "tab_Cordiera_2014.0",
+    "name": "Cordiera",
+    "family": "Rubiaceae",
+    "genus": "Cordiera",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Centrose_1987.0",
+    "name": "Centrosema pascuorum",
+    "family": "Fabaceae",
+    "genus": "Centrosema",
+    "lat": -5.254167,
+    "lng": -38.166667,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 1987,
+    "age_years": 39,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Stylosan_1987.0",
+    "name": "Stylosanthes humilis",
+    "family": "Fabaceae",
+    "genus": "Stylosanthes",
+    "lat": -5.266667,
+    "lng": -38.166667,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 1987,
+    "age_years": 39,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Auxemma__1977.0",
+    "name": "Auxemma glazioviana",
+    "family": "Boraginaceae",
+    "genus": "Auxemma",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 1977,
+    "age_years": 49,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "tab_Chamaecr_2007.0",
+    "name": "Chamaecrista",
+    "family": "Fabaceae",
+    "genus": "Chamaecrista",
+    "lat": -5.343264,
+    "lng": -37.9921,
+    "city": "Icapuí",
+    "state": "Ceará",
+    "year_collected": 2007,
+    "age_years": 19,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Centrose_1987.0",
+    "name": "Centrosema pascuorum",
+    "family": "Fabaceae",
+    "genus": "Centrosema",
+    "lat": -5.266667,
+    "lng": -38.166667,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 1987,
+    "age_years": 39,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Machaoni_2007.0",
+    "name": "Machaonia brasiliensis",
+    "family": "Rubiaceae",
+    "genus": "Machaonia",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2007,
+    "age_years": 19,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Apuleia__1957.0",
+    "name": "Apuleia leiocarpa",
+    "family": "Fabaceae",
+    "genus": "Apuleia",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 1957,
+    "age_years": 69,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "tab_Tephrosi_2013.0",
+    "name": "Tephrosia purpurea",
+    "family": "Fabaceae",
+    "genus": "Tephrosia",
+    "lat": -5.229047,
+    "lng": -38.159981,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Croton_b_2010.0",
+    "name": "Croton blanchetianus",
+    "family": "Euphorbiaceae",
+    "genus": "Croton",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2010,
+    "age_years": 16,
+    "prediction": {
+      "data_quality": "ok",
+      "environment_source": "local_real",
+      "wire_context": "URBAN_LOW_VOLTAGE",
+      "estimated_height_m": 4.4,
+      "annual_growth_m": 0.075,
+      "height_next_year_m": 4.48,
+      "wire_height_m": 8.0,
+      "will_reach_wire": false,
+      "days_to_wire": null,
+      "months_to_wire": null,
+      "risk_status": "NORMAL",
+      "species_profile": {
+        "height_max_m": 5.0,
+        "growth_rate_k": 0.25
+      },
+      "phyllotaxis": {
+        "golden_angle_deg": 137.5,
+        "branch_whorls": 5,
+        "fibonacci_stage": 5,
+        "symmetry_index": 0.7639
+      },
+      "modifiers_used": {
+        "soil": 0.5133,
+        "climate": 1.036,
+        "management": 1.0,
+        "pruning": 1.0,
+        "competition": 1.0,
+        "total": 0.5318
+      }
+    }
+  },
+  {
+    "id": "tab_Senna_ma_2003.0",
+    "name": "Senna martiana",
+    "family": "Fabaceae",
+    "genus": "Senna",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "tab_Senna_ma_1977.0",
+    "name": "Senna martiana",
+    "family": "Fabaceae",
+    "genus": "Senna",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 1977,
+    "age_years": 49,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "tab_Geoffroe_1999.0",
+    "name": "Geoffroea spinosa",
+    "family": "Fabaceae",
+    "genus": "Geoffroea",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 1999,
+    "age_years": 27,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "tab_Borreria_2015.0",
+    "name": "Borreria apodiensis",
+    "family": "Rubiaceae",
+    "genus": "Borreria",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2015,
+    "age_years": 11,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Heliotro_2014.0",
+    "name": "Heliotropium",
+    "family": "Boraginaceae",
+    "genus": "Heliotropium",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Combretu_2014.0",
+    "name": "Combretum leprosum",
+    "family": "Combretaceae",
+    "genus": "Combretum",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "tab_Cenostig_2014.0",
+    "name": "Cenostigma pyramidale",
+    "family": "Fabaceae",
+    "genus": "Cenostigma",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "tab_Anadenan_2006.0",
+    "name": "Anadenanthera colubrina cebil",
+    "family": "Fabaceae",
+    "genus": "Anadenanthera",
+    "lat": -5.24667,
+    "lng": -38.1306,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2006,
+    "age_years": 20,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "tab_Centrose_1987.0",
+    "name": "Centrosema pascuorum",
+    "family": "Fabaceae",
+    "genus": "Centrosema",
+    "lat": -5.2666667,
+    "lng": -38.1666667,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 1987,
+    "age_years": 39,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Borreria_2015.0",
+    "name": "Borreria apodiensis",
+    "family": "Rubiaceae",
+    "genus": "Borreria",
+    "lat": -5.304722,
+    "lng": -37.873611,
+    "city": "Limoeiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2015,
+    "age_years": 11,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Jatropha_2014.0",
+    "name": "Jatropha ribifolia",
+    "family": "Euphorbiaceae",
+    "genus": "Jatropha",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Cordiera_2014.0",
+    "name": "Cordiera",
+    "family": "Rubiaceae",
+    "genus": "Cordiera",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "tab_Croton_h_2014.0",
+    "name": "Croton heliotropiifolius",
+    "family": "Euphorbiaceae",
+    "genus": "Croton",
+    "lat": -5.421111,
+    "lng": -37.995,
+    "city": "Tabuleiro do Norte",
+    "state": "Ceará",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "ok",
+      "environment_source": "local_real",
+      "wire_context": "URBAN_LOW_VOLTAGE",
+      "estimated_height_m": 3.99,
+      "annual_growth_m": 0.126,
+      "height_next_year_m": 4.12,
+      "wire_height_m": 8.0,
+      "will_reach_wire": false,
+      "days_to_wire": null,
+      "months_to_wire": null,
+      "risk_status": "NORMAL",
+      "species_profile": {
+        "height_max_m": 5.0,
+        "growth_rate_k": 0.25
+      },
+      "phyllotaxis": {
+        "golden_angle_deg": 137.5,
+        "branch_whorls": 5,
+        "fibonacci_stage": 5,
+        "symmetry_index": 0.7639
+      },
+      "modifiers_used": {
+        "soil": 0.5133,
+        "climate": 1.036,
+        "management": 1.0,
+        "pruning": 1.0,
+        "competition": 1.0,
+        "total": 0.5318
+      }
+    }
+  },
+  {
+    "id": "gbif_6176519308",
+    "name": "Goeppertia Nees",
+    "family": "Marantaceae",
+    "genus": "Goeppertia",
+    "lat": -3.576389,
+    "lng": -39.585278,
+    "city": "Serra de Itacoatiara, trilha para a Pedra de Itacoatiara",
+    "state": "Ceara",
+    "year_collected": 2024,
+    "age_years": 2,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_6176519307",
+    "name": "Goeppertia Nees",
+    "family": "Marantaceae",
+    "genus": "Goeppertia",
+    "lat": -3.576389,
+    "lng": -39.585278,
+    "city": "Serra de Itacoatiara, trilha para a Pedra de Itacoatiara",
+    "state": "Ceara",
+    "year_collected": 2024,
+    "age_years": 2,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_6176519303",
+    "name": "Goeppertia Nees",
+    "family": "Marantaceae",
+    "genus": "Goeppertia",
+    "lat": -3.596389,
+    "lng": -41.194447,
+    "city": "ao lado do Posto Sao Francisco",
+    "state": "Ceara",
+    "year_collected": 2024,
+    "age_years": 2,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_6176519302",
+    "name": "Goeppertia Nees",
+    "family": "Marantaceae",
+    "genus": "Goeppertia",
+    "lat": -3.784917,
+    "lng": -38.774555,
+    "city": "Catuana",
+    "state": "Ceara",
+    "year_collected": 2024,
+    "age_years": 2,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_6176519301",
+    "name": "Goeppertia Nees",
+    "family": "Marantaceae",
+    "genus": "Goeppertia",
+    "lat": -3.576389,
+    "lng": -39.585278,
+    "city": "Serra de Itacoatiara, trilha para a Pedra de Itacoatiara",
+    "state": "Ceara",
+    "year_collected": 2024,
+    "age_years": 2,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5908553770",
+    "name": "Jacquemontia confusa Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Jacquemontia",
+    "lat": -7.254667,
+    "lng": -38.755139,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5213365328",
+    "name": "Varronia leucocephala (Moric.) J.S.Mill.",
+    "family": "Cordiaceae",
+    "genus": "Varronia",
+    "lat": -5.584972,
+    "lng": -38.261058,
+    "city": "Entrada sem nome, Borges",
+    "state": "Ceara",
+    "year_collected": 2025,
+    "age_years": 1,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "gbif_5213365327",
+    "name": "Varronia leucocephala (Moric.) J.S.Mill.",
+    "family": "Cordiaceae",
+    "genus": "Varronia",
+    "lat": -5.62175,
+    "lng": -38.287056,
+    "city": "Entrada sem nome, Borges",
+    "state": "Ceara",
+    "year_collected": 2025,
+    "age_years": 1,
+    "prediction": {
+      "data_quality": "sem_perfil_ou_idade",
+      "note": "Espécie sem perfil validado ou sem idade. Precisa de coleta de campo."
+    }
+  },
+  {
+    "id": "gbif_5132956310",
+    "name": "Cyathea pungens (Willd.) Domin",
+    "family": "Cyatheaceae",
+    "genus": "Cyathea",
+    "lat": -4.864454,
+    "lng": -65.29867,
+    "city": "Serra do Araripe",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5077551411",
+    "name": "Oncidium sprucei Lindl.",
+    "family": "Orchidaceae",
+    "genus": "Trichocentrum",
+    "lat": -3.958263,
+    "lng": -38.382792,
+    "city": "Banks of Rio Pacoty; 6 Km. S of Aquiraz",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5070682400",
+    "name": "Solanum crinitum Lam.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -3.904308,
+    "lng": -40.795335,
+    "city": "6 km. from Mocambo on road to Ibiapina",
+    "state": "Ceara",
+    "year_collected": 1972,
+    "age_years": 54,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5070681651",
+    "name": "Solanum crinitum Lam.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -3.904308,
+    "lng": -40.795335,
+    "city": "6 km. from Mocambo on road to Ibiapina",
+    "state": "Ceara",
+    "year_collected": 1972,
+    "age_years": 54,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5070678551",
+    "name": "Solanum crinitum Lam.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -3.904308,
+    "lng": -40.795335,
+    "city": "6 km. from Mocambo on road to Ibiapina",
+    "state": "Ceara",
+    "year_collected": 1972,
+    "age_years": 54,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5070677952",
+    "name": "Capsicum chinense Jacq.",
+    "family": "Solanaceae",
+    "genus": "Capsicum",
+    "lat": -6.8,
+    "lng": -39.533333,
+    "city": "Seeds from Ceara: Cariutaba",
+    "state": "Ceara",
+    "year_collected": 1974,
+    "age_years": 52,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5070677166",
+    "name": "Capsicum chinense Jacq.",
+    "family": "Solanaceae",
+    "genus": "Capsicum",
+    "lat": -7.166667,
+    "lng": -39.416667,
+    "city": "Seeds from Ceara: market in Creto.",
+    "state": "Ceara",
+    "year_collected": 1974,
+    "age_years": 52,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5070677163",
+    "name": "Capsicum chinense Jacq.",
+    "family": "Solanaceae",
+    "genus": "Capsicum",
+    "lat": -7.166667,
+    "lng": -39.416667,
+    "city": "Seeds from Ceara: market in Crato.",
+    "state": "Ceara",
+    "year_collected": 1974,
+    "age_years": 52,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5070674104",
+    "name": "Capsicum chinense Jacq.",
+    "family": "Solanaceae",
+    "genus": "Capsicum",
+    "lat": -3.716667,
+    "lng": -38.55,
+    "city": "Seeds from Ceara: market in Fortaleza",
+    "state": "Ceara",
+    "year_collected": 1974,
+    "age_years": 52,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5070674103",
+    "name": "Capsicum chinense Jacq.",
+    "family": "Solanaceae",
+    "genus": "Capsicum",
+    "lat": -7.166667,
+    "lng": -39.416667,
+    "city": "Seeds from Ceara: market in Crato",
+    "state": "Ceara",
+    "year_collected": 1974,
+    "age_years": 52,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_5053600344",
+    "name": "Vanilla palmarum (Salzm. ex Lindl.) Lindl.",
+    "family": "Orchidaceae",
+    "genus": "Vanilla",
+    "lat": -3.561944,
+    "lng": -41.09194,
+    "city": "Vicosa do Ceara",
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4978856301",
+    "name": "Wedelia Jacq.",
+    "family": "Asteraceae",
+    "genus": "Wedelia",
+    "lat": -4.088361,
+    "lng": -40.723724,
+    "city": "area de Cerrado rupestre",
+    "state": "Ceara",
+    "year_collected": 2023,
+    "age_years": 3,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4926460362",
+    "name": "Pavonia sidifolia Kunth",
+    "family": "Malvaceae",
+    "genus": "Pavonia",
+    "lat": -7.234444,
+    "lng": -39.40917,
+    "city": "Caririacu",
+    "state": "Ceara",
+    "year_collected": 2021,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4925458335",
+    "name": "Randia Houst. ex L.",
+    "family": "Rubiaceae",
+    "genus": "Randia",
+    "lat": -6.743056,
+    "lng": -40.321945,
+    "city": "Serra do Corcovado",
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4925458309",
+    "name": "Randia Houst. ex L.",
+    "family": "Rubiaceae",
+    "genus": "Randia",
+    "lat": -6.743056,
+    "lng": -40.321945,
+    "city": "Serra do Corcovado",
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4918819720",
+    "name": "Vidalia J.V.F.Lamouroux ex J.G.Agardh, 1863",
+    "family": "Rhodomelaceae",
+    "genus": "Vidalia",
+    "lat": -2.863,
+    "lng": -40.869,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4915890183",
+    "name": "Vidalia J.V.F.Lamouroux ex J.G.Agardh, 1863",
+    "family": "Rhodomelaceae",
+    "genus": "Vidalia",
+    "lat": -2.863,
+    "lng": -40.869,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4892627061",
+    "name": "Calliblepharis Kützing, 1843",
+    "family": "Cystocloniaceae",
+    "genus": "Calliblepharis",
+    "lat": -3.405278,
+    "lng": -39.03,
+    "city": "Paracuru - junto aos currais [=next to the corrals]. Est. Ceará.",
+    "state": "Ceara",
+    "year_collected": 1969,
+    "age_years": 57,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4095587588",
+    "name": "Chara zeylanica Willd.",
+    "family": "Characeae",
+    "genus": "Chara",
+    "lat": -3.722218,
+    "lng": -38.57569,
+    "city": "Urubu",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4095586232",
+    "name": "Chara zeylanica Willd.",
+    "family": "Characeae",
+    "genus": "Chara",
+    "lat": -4.098152,
+    "lng": -38.725082,
+    "city": "Lagoa Piami, mecyana",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4095583970",
+    "name": "Chara sejuncta A.Braun, 1845",
+    "family": "Characeae",
+    "genus": "Chara",
+    "lat": -3.912687,
+    "lng": -38.665894,
+    "city": "pond at base of dunes, Murbu",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4095583818",
+    "name": "Chara sejuncta A.Braun, 1845",
+    "family": "Characeae",
+    "genus": "Chara",
+    "lat": -5.680694,
+    "lng": -39.484375,
+    "city": "[precise locality unknown]",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4095582930",
+    "name": "Chara gymnopitys",
+    "family": "Characeae",
+    "genus": "Chara",
+    "lat": -4.367428,
+    "lng": -38.775757,
+    "city": "large lake a Kagado",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4095582892",
+    "name": "Chara gymnopitys",
+    "family": "Characeae",
+    "genus": "Chara",
+    "lat": -5.916667,
+    "lng": -39.016667,
+    "city": "Lagoa Pajucara 1 Km. east of Pajucara Station",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4002942315",
+    "name": "Borreria savannicola E.B.Souza, Nepom. & L.M.Miguel",
+    "family": "Rubiaceae",
+    "genus": "Spermacoce",
+    "lat": -3.163611,
+    "lng": -40.775555,
+    "city": "Ceara",
+    "state": "Ceara",
+    "year_collected": 2022,
+    "age_years": 4,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4002942313",
+    "name": "Borreria savannicola E.B.Souza, Nepom. & L.M.Miguel",
+    "family": "Rubiaceae",
+    "genus": "Spermacoce",
+    "lat": -3.186667,
+    "lng": -40.746666,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2019,
+    "age_years": 7,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4002942312",
+    "name": "Borreria savannicola E.B.Souza, Nepom. & L.M.Miguel",
+    "family": "Rubiaceae",
+    "genus": "Spermacoce",
+    "lat": -3.186389,
+    "lng": -40.744167,
+    "city": "Fr.",
+    "state": "Ceara",
+    "year_collected": 2019,
+    "age_years": 7,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4002942309",
+    "name": "Borreria savannicola E.B.Souza, Nepom. & L.M.Miguel",
+    "family": "Rubiaceae",
+    "genus": "Spermacoce",
+    "lat": -3.186389,
+    "lng": -40.743057,
+    "city": "Granja",
+    "state": "Ceara",
+    "year_collected": 2018,
+    "age_years": 8,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_4002942308",
+    "name": "Borreria savannicola E.B.Souza, Nepom. & L.M.Miguel",
+    "family": "Rubiaceae",
+    "genus": "Spermacoce",
+    "lat": -3.178889,
+    "lng": -40.754723,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2018,
+    "age_years": 8,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_3926147425",
+    "name": "Croton echioides Baill.",
+    "family": "Euphorbiaceae",
+    "genus": "Croton",
+    "lat": -6.66,
+    "lng": -40.68,
+    "city": "Ceara",
+    "state": "Ceara",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "ok",
+      "environment_source": "genero_real",
+      "wire_context": "URBAN_LOW_VOLTAGE",
+      "estimated_height_m": 3.99,
+      "annual_growth_m": 0.126,
+      "height_next_year_m": 4.12,
+      "wire_height_m": 8.0,
+      "will_reach_wire": false,
+      "days_to_wire": null,
+      "months_to_wire": null,
+      "risk_status": "NORMAL",
+      "species_profile": {
+        "height_max_m": 5.0,
+        "growth_rate_k": 0.25
+      },
+      "phyllotaxis": {
+        "golden_angle_deg": 137.5,
+        "branch_whorls": 5,
+        "fibonacci_stage": 5,
+        "symmetry_index": 0.7639
+      },
+      "modifiers_used": {
+        "soil": 0.5133,
+        "climate": 1.036,
+        "management": 1.0,
+        "pruning": 1.0,
+        "competition": 1.0,
+        "total": 0.5318
+      }
+    }
+  },
+  {
+    "id": "gbif_3926147391",
+    "name": "Croton echioides Baill.",
+    "family": "Euphorbiaceae",
+    "genus": "Croton",
+    "lat": -5.1361,
+    "lng": -40.909084,
+    "city": "Almas",
+    "state": "Ceara",
+    "year_collected": 2002,
+    "age_years": 24,
+    "prediction": {
+      "data_quality": "ok",
+      "environment_source": "genero_real",
+      "wire_context": "URBAN_LOW_VOLTAGE",
+      "estimated_height_m": 4.79,
+      "annual_growth_m": 0.026,
+      "height_next_year_m": 4.82,
+      "wire_height_m": 8.0,
+      "will_reach_wire": false,
+      "days_to_wire": null,
+      "months_to_wire": null,
+      "risk_status": "NORMAL",
+      "species_profile": {
+        "height_max_m": 5.0,
+        "growth_rate_k": 0.25
+      },
+      "phyllotaxis": {
+        "golden_angle_deg": 137.5,
+        "branch_whorls": 5,
+        "fibonacci_stage": 5,
+        "symmetry_index": 0.7639
+      },
+      "modifiers_used": {
+        "soil": 0.5133,
+        "climate": 1.036,
+        "management": 1.0,
+        "pruning": 1.0,
+        "competition": 1.0,
+        "total": 0.5318
+      }
+    }
+  },
+  {
+    "id": "gbif_3926147348",
+    "name": "Croton echioides Baill.",
+    "family": "Euphorbiaceae",
+    "genus": "Croton",
+    "lat": -3.8,
+    "lng": -41.066666,
+    "city": "Tiangua",
+    "state": "Ceara",
+    "year_collected": 1978,
+    "age_years": 48,
+    "prediction": {
+      "data_quality": "ok",
+      "environment_source": "genero_real",
+      "wire_context": "URBAN_LOW_VOLTAGE",
+      "estimated_height_m": 4.99,
+      "annual_growth_m": 0.001,
+      "height_next_year_m": 4.99,
+      "wire_height_m": 8.0,
+      "will_reach_wire": false,
+      "days_to_wire": null,
+      "months_to_wire": null,
+      "risk_status": "NORMAL",
+      "species_profile": {
+        "height_max_m": 5.0,
+        "growth_rate_k": 0.25
+      },
+      "phyllotaxis": {
+        "golden_angle_deg": 137.5,
+        "branch_whorls": 5,
+        "fibonacci_stage": 5,
+        "symmetry_index": 0.7639
+      },
+      "modifiers_used": {
+        "soil": 0.5133,
+        "climate": 1.036,
+        "management": 1.0,
+        "pruning": 1.0,
+        "competition": 1.0,
+        "total": 0.5318
+      }
+    }
+  },
+  {
+    "id": "gbif_3900840469",
+    "name": "Oedogonium inconspicuum Hirn",
+    "family": "Oedogoniaceae",
+    "genus": "Oedogonium",
+    "lat": -4.859048,
+    "lng": -38.17749,
+    "city": "Acude Santo Antonio des Russas",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_3900840405",
+    "name": "Oedogonium gunnii Wittr.",
+    "family": "Oedogoniaceae",
+    "genus": "Oedogonium",
+    "lat": -3.590949,
+    "lng": -38.777833,
+    "city": "Rio Cauipe, 1 kilometer west of Cauipe",
+    "state": "Ceara",
+    "year_collected": 1936,
+    "age_years": 90,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_3763228309",
+    "name": "Eugenia nordestina L.R.V.Santos & I.R.Costa",
+    "family": "Myrtaceae",
+    "genus": "Eugenia",
+    "lat": -6.728055,
+    "lng": -40.32111,
+    "city": "Dist. Barra",
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_3413050311",
+    "name": "Mitracarpus fernandesii E.L.Cabral, Sobrado & E.B.Souza",
+    "family": "Rubiaceae",
+    "genus": "Mitracarpus",
+    "lat": -4.050834,
+    "lng": -40.706944,
+    "city": "Distrito Bom Gosto",
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_3413050301",
+    "name": "Mitracarpus fernandesii E.L.Cabral, Sobrado & E.B.Souza",
+    "family": "Rubiaceae",
+    "genus": "Mitracarpus",
+    "lat": -4.050834,
+    "lng": -40.706944,
+    "city": "Distrito Bom Gosto",
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_3387505301",
+    "name": "Manihot glaziovii Müll.Arg.",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.466667,
+    "lng": -41.666667,
+    "city": "Fava",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_3118704313",
+    "name": "Hevea brasiliensis (Willd. ex A.Juss.) Müll.Arg.",
+    "family": "Euphorbiaceae",
+    "genus": "Hevea",
+    "lat": -10.0,
+    "lng": -67.833333,
+    "city": "30 km N de Rio Branco",
+    "state": "Ceara",
+    "year_collected": 1980,
+    "age_years": 46,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2997775351",
+    "name": "Talisia esculenta (A.St.-Hil.) Radlk.",
+    "family": "Sapindaceae",
+    "genus": "Talisia",
+    "lat": -5.65,
+    "lng": -35.5,
+    "city": "Ceara",
+    "state": "Ceara",
+    "year_collected": 1918,
+    "age_years": 108,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2997734987",
+    "name": "Paullinia pinnata L.",
+    "family": "Sapindaceae",
+    "genus": "Paullinia",
+    "lat": -6.9,
+    "lng": -38.95,
+    "city": "Rio Maranguapindo, Barro Vermelho, Municipio de Fortaleza.",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2997734986",
+    "name": "Paullinia pinnata L.",
+    "family": "Sapindaceae",
+    "genus": "Paullinia",
+    "lat": -4.0,
+    "lng": -38.75,
+    "city": "Aaude Sao Antonio do Buraco, Municipio de Maranguape",
+    "state": "Ceara",
+    "year_collected": 1935,
+    "age_years": 91,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2997501349",
+    "name": "Talisia esculenta (A.St.-Hil.) Radlk.",
+    "family": "Sapindaceae",
+    "genus": "Talisia",
+    "lat": -4.32,
+    "lng": -38.88,
+    "city": "Serra de Baturite",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2859390540",
+    "name": "Pavonia sidifolia Kunth",
+    "family": "Malvaceae",
+    "genus": "Pavonia",
+    "lat": -7.25,
+    "lng": -39.833333,
+    "city": "29 km W of Crato CE-090, Chapada do Araipe",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2859356739",
+    "name": "Passiflora galbana Mast.",
+    "family": "Passifloraceae",
+    "genus": "Passiflora",
+    "lat": -7.25,
+    "lng": -39.833333,
+    "city": "CE-090, 8 km W of Crato, slopes of Chapada do Araripe",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2807286023",
+    "name": "Cereus Mill.",
+    "family": "Cactaceae",
+    "genus": "Cereus",
+    "lat": -5.75,
+    "lng": -38.7,
+    "city": "89 km N of Itō, Br-116.",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2597529519",
+    "name": "Nymphaea lotus L.",
+    "family": "Nymphaeaceae",
+    "genus": "Nymphaea",
+    "lat": -4.706667,
+    "lng": -40.563056,
+    "city": "Rodovia BR 116.",
+    "state": "Ceara",
+    "year_collected": 2012,
+    "age_years": 14,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2439408807",
+    "name": "Diodia Gronov.",
+    "family": "Rubiaceae",
+    "genus": "Diodia",
+    "lat": -6.3667,
+    "lng": -39.3333,
+    "city": "Iguatu, Ceara.",
+    "state": "Ceara",
+    "year_collected": 1934,
+    "age_years": 92,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2436435501",
+    "name": "Malpighiaceae",
+    "family": "Malpighiaceae",
+    "genus": NaN,
+    "lat": -5.0,
+    "lng": -40.266667,
+    "city": "Tamburil [=Tamboril] & Valo. In Campo Geral [=Campos Gerais?].",
+    "state": "Ceara",
+    "year_collected": 1817,
+    "age_years": 209,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2436250080",
+    "name": "Palisada K.W.Nam, 2007",
+    "family": "Rhodomelaceae",
+    "genus": "Palisada",
+    "lat": -3.233333,
+    "lng": -39.233333,
+    "city": "Trairi, Guajiru beach.",
+    "state": "Ceara",
+    "year_collected": 1990,
+    "age_years": 36,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2434913706",
+    "name": "Poaceae",
+    "family": "Poaceae",
+    "genus": NaN,
+    "lat": -6.3667,
+    "lng": -39.3333,
+    "city": "Iguatu, Ceara.",
+    "state": "Ceara",
+    "year_collected": 1934,
+    "age_years": 92,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2434751371",
+    "name": "Malpighiaceae",
+    "family": "Malpighiaceae",
+    "genus": NaN,
+    "lat": -4.833333,
+    "lng": -40.316667,
+    "city": "Tamb. [=Tamboril] - Velo. Campo Gs [?=Campos Gerais].",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2422484674",
+    "name": "Dalechampia fernandesii G.L.Webster",
+    "family": "Euphorbiaceae",
+    "genus": "Dalechampia",
+    "lat": -3.78333,
+    "lng": -41.11667,
+    "city": "25 km southwest of Tianguá on Hwy BR 222",
+    "state": "Ceara",
+    "year_collected": 1986,
+    "age_years": 40,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2422446398",
+    "name": "Dalechampia fernandesii G.L.Webster",
+    "family": "Euphorbiaceae",
+    "genus": "Dalechampia",
+    "lat": -3.78333,
+    "lng": -41.11667,
+    "city": "25 km southwest of Tianguá on Hwy BR 222",
+    "state": "Ceara",
+    "year_collected": 1986,
+    "age_years": 40,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2284132226",
+    "name": "Ipomoea quamoclit L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.326944,
+    "lng": -39.350556,
+    "city": "Sítio Barro branco; sítio Cabeceiras",
+    "state": "Ceara",
+    "year_collected": 2016,
+    "age_years": 10,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270695695",
+    "name": "Psidium L.",
+    "family": "Myrtaceae",
+    "genus": "Psidium",
+    "lat": -3.9256,
+    "lng": -40.8877,
+    "city": "Ibiapina, Serra de Ibiapaba, Sitio Bieira",
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270694091",
+    "name": "Iresine portulacoides (A.St.-Hil.) Moq.",
+    "family": "Amaranthaceae",
+    "genus": "Gomphrena",
+    "lat": -3.703073,
+    "lng": -38.601845,
+    "city": "1-2 km from mouth of Rio Ceara, north edge of Fortaleza.",
+    "state": "Ceara",
+    "year_collected": 1980,
+    "age_years": 46,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270689187",
+    "name": "Eugenia L.",
+    "family": "Myrtaceae",
+    "genus": "Eugenia",
+    "lat": -4.395556,
+    "lng": -37.888889,
+    "city": "Beribéri; Parajurú. Crista de quatzito. Encosta da crista.",
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270686977",
+    "name": "Campomanesia aromatica (Aubl.) Griseb.",
+    "family": "Myrtaceae",
+    "genus": "Campomanesia",
+    "lat": -3.88333,
+    "lng": -38.45,
+    "city": "Olho D'agua, Mun. de Eusebio, vizinho a capital Fortaleza",
+    "state": "Ceara",
+    "year_collected": 2006,
+    "age_years": 20,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270684171",
+    "name": "Eugenia azeda Sobral",
+    "family": "Myrtaceae",
+    "genus": "Eugenia",
+    "lat": -4.492778,
+    "lng": -37.759167,
+    "city": "Aracati: Cumbi. Area de dunas, proximo a estacao de tratamento de aguas",
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270675329",
+    "name": "Eugenia punicifolia (Kunth) DC.",
+    "family": "Myrtaceae",
+    "genus": "Eugenia",
+    "lat": -3.75,
+    "lng": -41.0333,
+    "city": "Rodovia Tiangua-Terseina (BR-222) KM 4; Chapada da Serra da Ibiapaba.",
+    "state": "Ceara",
+    "year_collected": 1987,
+    "age_years": 39,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270594511",
+    "name": "Psidium oligospermum Mart. ex DC.",
+    "family": "Myrtaceae",
+    "genus": "Psidium",
+    "lat": -3.685,
+    "lng": -38.912,
+    "city": "Mun. Caucaia, \"Sargento Mor.\"",
+    "state": "Ceara",
+    "year_collected": 2006,
+    "age_years": 20,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270578172",
+    "name": "Psidium sobralianum Landrum & Proença",
+    "family": "Myrtaceae",
+    "genus": "Psidium",
+    "lat": -7.279167,
+    "lng": -39.606389,
+    "city": "Santana do Cariri, Santana/Canselao",
+    "state": "Ceara",
+    "year_collected": 2006,
+    "age_years": 20,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270577450",
+    "name": "Psidium cattleianum Afzel. ex Sabine",
+    "family": "Myrtaceae",
+    "genus": "Psidium",
+    "lat": -3.812468,
+    "lng": -38.478087,
+    "city": "Fortaleza, Casa Jose de Alencar [Museum]",
+    "state": "Ceara",
+    "year_collected": 2015,
+    "age_years": 11,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270570878",
+    "name": "Psidium sobralianum Landrum & Proença",
+    "family": "Myrtaceae",
+    "genus": "Psidium",
+    "lat": -7.3,
+    "lng": -39.47,
+    "city": "Chapada do Araripe",
+    "state": "Ceara",
+    "year_collected": 2012,
+    "age_years": 14,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270569989",
+    "name": "Psidium sobralianum Landrum & Proença",
+    "family": "Myrtaceae",
+    "genus": "Psidium",
+    "lat": -7.306435,
+    "lng": -39.470683,
+    "city": "Chapada do Araripe. Santana, Canselao sobral",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270558436",
+    "name": "Campomanesia aromatica (Aubl.) Griseb.",
+    "family": "Myrtaceae",
+    "genus": "Campomanesia",
+    "lat": -4.395556,
+    "lng": -37.888889,
+    "city": "Parajurú. Crista de quatzito. Encosta da crista.",
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270510489",
+    "name": "Mikania cordifolia (L.fil.) Willd.",
+    "family": "Asteraceae",
+    "genus": "Mikania",
+    "lat": -7.333333,
+    "lng": -39.083333,
+    "city": "Serra Maozinha.",
+    "state": "Ceara",
+    "year_collected": 1964,
+    "age_years": 62,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270482522",
+    "name": "Campomanesia aromatica (Aubl.) Griseb.",
+    "family": "Myrtaceae",
+    "genus": "Campomanesia",
+    "lat": -4.53611,
+    "lng": -37.7075,
+    "city": "Canoa Quebrada. Crista de quatzito. Encosta da crista.",
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270482179",
+    "name": "Bauhinia glabra Jacq.",
+    "family": "Fabaceae",
+    "genus": "Schnella",
+    "lat": -3.566155,
+    "lng": -41.091817,
+    "city": "Vicosa do Ceara.",
+    "state": "Ceara",
+    "year_collected": 1979,
+    "age_years": 47,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270474487",
+    "name": "Arachis sylvestris (A.Chev.) A.Chev.",
+    "family": "Fabaceae",
+    "genus": "Arachis",
+    "lat": -3.7,
+    "lng": -38.8333,
+    "city": "Mun. Caucaia. 3.9 km al este do rio Camipe entre Guaruru e Catuama, BR-222.",
+    "state": "Ceara",
+    "year_collected": 1987,
+    "age_years": 39,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2270474073",
+    "name": "Arachis dardani Krapov. & W.C.Greg.",
+    "family": "Fabaceae",
+    "genus": "Arachis",
+    "lat": -3.75,
+    "lng": -39.5333,
+    "city": "9.3 km W da entrada para Pitambeiras, entre Umirim e Itapage, BR-222",
+    "state": "Ceara",
+    "year_collected": 1987,
+    "age_years": 39,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248544269",
+    "name": "BOLD:ADN0449",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -4.0383,
+    "lng": -38.19324,
+    "city": "Caponga",
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248543333",
+    "name": "BOLD:AAT9382",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -4.0383,
+    "lng": -38.19324,
+    "city": "Caponga",
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248543262",
+    "name": "BOLD:AAO5677",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -3.68588,
+    "lng": -38.63255,
+    "city": "Caucaia",
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248542990",
+    "name": "BOLD:AAT9382",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -4.0383,
+    "lng": -38.19324,
+    "city": "Caponga",
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248542492",
+    "name": "BOLD:AAO5677",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -3.68588,
+    "lng": -38.63255,
+    "city": "Caucaia",
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248542169",
+    "name": "BOLD:AAT9382",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -4.0383,
+    "lng": -38.19324,
+    "city": "Caponga",
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248542100",
+    "name": "BOLD:AAO5677",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -3.40312,
+    "lng": -39.025,
+    "city": "Ronco do Mar Beach",
+    "state": "Ceara",
+    "year_collected": 2012,
+    "age_years": 14,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248541825",
+    "name": "BOLD:ADN0449",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -3.68567,
+    "lng": -38.63338,
+    "city": "Dois Coqueiros",
+    "state": "Ceara",
+    "year_collected": 2011,
+    "age_years": 15,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248541657",
+    "name": "BOLD:AAT9382",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -4.0383,
+    "lng": -38.19324,
+    "city": "Caponga",
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248541494",
+    "name": "BOLD:AAO5677",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -4.52462,
+    "lng": -37.69946,
+    "city": "Canoa Quebrada",
+    "state": "Ceara",
+    "year_collected": 2012,
+    "age_years": 14,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248541159",
+    "name": "BOLD:AAO5677",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -4.52462,
+    "lng": -37.69946,
+    "city": "Canoa Quebrada",
+    "state": "Ceara",
+    "year_collected": 2012,
+    "age_years": 14,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2248540977",
+    "name": "BOLD:AAT9382",
+    "family": "Cystocloniaceae",
+    "genus": "Hypnea",
+    "lat": -4.0383,
+    "lng": -38.19324,
+    "city": "Caponga",
+    "state": "Ceara",
+    "year_collected": 2013,
+    "age_years": 13,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_2243331724",
+    "name": "Eugenia pipensis A.R.Lourenço & B.S.Amorim",
+    "family": "Myrtaceae",
+    "genus": "Eugenia",
+    "lat": -4.286306,
+    "lng": -39.010556,
+    "city": "Sítio Jardim.",
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_215985762",
+    "name": "Acrocomia aculeata (Jacq.) Lodd. ex R.Keith",
+    "family": "Arecaceae",
+    "genus": "Acrocomia",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": "35 km W of Crato on CE-090. Disturbed roadside",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1931786818",
+    "name": "Tarenaya longicarpa Soares Neto & Roalson",
+    "family": "Cleomaceae",
+    "genus": "Tarenaya",
+    "lat": -7.418056,
+    "lng": -40.641944,
+    "city": "Lagoa dos Crioulos, Cariri",
+    "state": "Ceara",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1698900201",
+    "name": "Nymphaeaceae",
+    "family": "Nymphaeaceae",
+    "genus": NaN,
+    "lat": -7.0,
+    "lng": -38.0,
+    "city": "a dozen open cast pits close to the town of Nova Olinda, between Nova Olinda and Santana do Cariri",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1698900180",
+    "name": "Pluricarpellatia peltata Mohr et al., 2008",
+    "family": "Cabombaceae",
+    "genus": "Pluricarpellatia",
+    "lat": -7.0,
+    "lng": -38.0,
+    "city": "a dozen open cast pits close to the town of Nova Olinda, between Nova Olinda and Santana do Cariri",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1698728148",
+    "name": "Araripia florifera Mohr & Eklund, 2003",
+    "family": NaN,
+    "genus": "Araripia",
+    "lat": -7.125,
+    "lng": -39.700001,
+    "city": "from the stone quarries south of Nova Olinda",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563900918",
+    "name": "Helicophyllum torquatum (Hook.) Brid.",
+    "family": "Helicophyllaceae",
+    "genus": "Helicophyllum",
+    "lat": -3.53278,
+    "lng": -38.41083,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1990,
+    "age_years": 36,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563900915",
+    "name": "Frullania ericoides (Nees) Mont.",
+    "family": "Frullaniaceae",
+    "genus": "Frullania",
+    "lat": -3.53278,
+    "lng": -38.41083,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1990,
+    "age_years": 36,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563900882",
+    "name": "Helicophyllum torquatum (Hook.) Brid.",
+    "family": "Helicophyllaceae",
+    "genus": "Helicophyllum",
+    "lat": -3.53278,
+    "lng": -38.41083,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1990,
+    "age_years": 36,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563900720",
+    "name": "Calymperes palisotii Schwägr.",
+    "family": "Calymperaceae",
+    "genus": "Calymperes",
+    "lat": -3.43028,
+    "lng": -38.32361,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1990,
+    "age_years": 36,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563632671",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563630637",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563623571",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563618096",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563613906",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.166667,
+    "lng": -38.116667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563610133",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.75,
+    "lng": -39.783333,
+    "city": "Km 1 da BR 222",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563605360",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.666667,
+    "lng": -40.95,
+    "city": "Km 5 BR 222",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563594948",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.666667,
+    "lng": -40.95,
+    "city": "Km 5 BR 222",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563594857",
+    "name": "Zea mays L.",
+    "family": "Poaceae",
+    "genus": "Zea",
+    "lat": -5.0,
+    "lng": -38.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563585916",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.166667,
+    "lng": -38.116667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563581778",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.633333,
+    "lng": -39.033333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563566779",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563560919",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.166667,
+    "lng": -38.116667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563560743",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563560620",
+    "name": "Manihot caerulescens Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563560162",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.833333,
+    "lng": -40.733333,
+    "city": "Agarape",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563554180",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563544353",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.633333,
+    "lng": -39.033333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563529090",
+    "name": "Manihot pruinosa Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.266667,
+    "lng": -39.25,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563526572",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.666667,
+    "lng": -40.95,
+    "city": "Km 5 BR 222",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563526313",
+    "name": "Manihot pruinosa Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.633333,
+    "lng": -39.033333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563521971",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563520489",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.216667,
+    "lng": -38.083333,
+    "city": "12 km SE",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563519286",
+    "name": "Manihot pruinosa Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.75,
+    "lng": -39.783333,
+    "city": "Km 1 da BR 222",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563516907",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.666667,
+    "lng": -40.95,
+    "city": "Km 5 BR 222",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563510967",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.166667,
+    "lng": -38.116667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563504654",
+    "name": "Manihot pruinosa Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.75,
+    "lng": -39.783333,
+    "city": "Km 1 da BR 222",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563501659",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.75,
+    "lng": -39.783333,
+    "city": "Km 1 da BR 222",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563495657",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.733333,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563495155",
+    "name": "Zea mays L.",
+    "family": "Poaceae",
+    "genus": "Zea",
+    "lat": -5.0,
+    "lng": -38.0,
+    "city": "Limoeiro Do Norte-Km 60-Chapada Do Apodi",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563489351",
+    "name": "Zea mays L.",
+    "family": "Poaceae",
+    "genus": "Zea",
+    "lat": -5.0,
+    "lng": -38.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563487050",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.166667,
+    "lng": -38.116667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1563481535",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.633333,
+    "lng": -39.033333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1503029850",
+    "name": "Chamaecrista diphylla (L.) Greene",
+    "family": "Fabaceae",
+    "genus": "Chamaecrista",
+    "lat": -3.871667,
+    "lng": -38.377778,
+    "city": "Estrada para o Beach Park, entrada à esquerda na bifurcação",
+    "state": "Ceara",
+    "year_collected": 2011,
+    "age_years": 15,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1457573509",
+    "name": "Lejeunea trinitensis Lindenb.",
+    "family": "Lejeuneaceae",
+    "genus": "Lejeunea",
+    "lat": -3.53278,
+    "lng": -38.41083,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1990,
+    "age_years": 36,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1455398612",
+    "name": "Orthostichopsis tortipilis (Müll.Hal.) Broth.",
+    "family": "Pterobryaceae",
+    "genus": "Orthostichopsis",
+    "lat": -4.25056,
+    "lng": -39.02417,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1980,
+    "age_years": 46,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1455398596",
+    "name": "Spiridentopsis longissima (Raddi) Broth.",
+    "family": "Pterobryaceae",
+    "genus": "Spiridentopsis",
+    "lat": -3.53278,
+    "lng": -38.41083,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1993,
+    "age_years": 33,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1455398559",
+    "name": "Monoclea gottschei Lindb.",
+    "family": "Monocleaceae",
+    "genus": "Monoclea",
+    "lat": -3.53278,
+    "lng": -38.41083,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1990,
+    "age_years": 36,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1455398546",
+    "name": "Lejeunea flava (Sw.) Nees",
+    "family": "Lejeuneaceae",
+    "genus": "Lejeunea",
+    "lat": -4.19417,
+    "lng": -38.53056,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1990,
+    "age_years": 36,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1413052095",
+    "name": "Cheilolejeunea ovalis (Lindenb. & Gottsche) W.Ye, R.L.Zhu & Gradst.",
+    "family": "Lejeuneaceae",
+    "genus": "Cheilolejeunea",
+    "lat": -3.88556,
+    "lng": -38.72389,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2014,
+    "age_years": 12,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304916946",
+    "name": "Phaseolus vulgaris L.",
+    "family": "Fabaceae",
+    "genus": "Phaseolus",
+    "lat": -3.789484,
+    "lng": -38.51883,
+    "city": "Forteleza",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304916244",
+    "name": "Vigna unguiculata (L.) Walp.",
+    "family": "Fabaceae",
+    "genus": "Vigna",
+    "lat": -3.874179,
+    "lng": -41.010277,
+    "city": "Ubajara",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304898541",
+    "name": "Phaseolus lunatus L.",
+    "family": "Fabaceae",
+    "genus": "Phaseolus",
+    "lat": -3.789484,
+    "lng": -38.51883,
+    "city": "Forteleza",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304898533",
+    "name": "Phaseolus lunatus L.",
+    "family": "Fabaceae",
+    "genus": "Phaseolus",
+    "lat": -3.789484,
+    "lng": -38.51883,
+    "city": "Forteleza",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304898500",
+    "name": "Phaseolus lunatus L.",
+    "family": "Fabaceae",
+    "genus": "Phaseolus",
+    "lat": -3.789484,
+    "lng": -38.51883,
+    "city": "Forteleza",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304897090",
+    "name": "Arachis hypogaea L.",
+    "family": "Fabaceae",
+    "genus": "Arachis",
+    "lat": -7.229043,
+    "lng": -39.468136,
+    "city": "Public market, Crato",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304896830",
+    "name": "Arachis hypogaea L.",
+    "family": "Fabaceae",
+    "genus": "Arachis",
+    "lat": -6.764283,
+    "lng": -38.988415,
+    "city": "Lavras da Mangabeira",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304881259",
+    "name": "Vigna unguiculata (L.) Walp.",
+    "family": "Fabaceae",
+    "genus": "Vigna",
+    "lat": -3.789484,
+    "lng": -38.51883,
+    "city": "Forteleza",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304185073",
+    "name": "Panicum trichoides Sw.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -3.316667,
+    "lng": -41.416667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304184643",
+    "name": "Digitaria tenuis (Nees) Henrard",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": -7.25,
+    "lng": -39.833333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304182947",
+    "name": "Panicum sellowii Nees",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -7.066667,
+    "lng": -40.383333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304182939",
+    "name": "Panicum sciurotis Trin.",
+    "family": "Poaceae",
+    "genus": "Dichanthelium",
+    "lat": -7.066667,
+    "lng": -40.383333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304180869",
+    "name": "Panicum pilosum Rupr. ex Galeotti",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304180375",
+    "name": "Digitaria parva Swallen",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": -4.166667,
+    "lng": -40.766667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304179677",
+    "name": "Digitaria nuda Schumach.",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304179664",
+    "name": "Digitaria nuda Schumach.",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304179656",
+    "name": "Digitaria nuda Schumach.",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1304179644",
+    "name": "Digitaria nuda Schumach.",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": -4.333333,
+    "lng": -39.083333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302806338",
+    "name": "Panicum millegrana Poir.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -6.883333,
+    "lng": -39.2,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302806329",
+    "name": "Panicum millegrana Poir.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -6.883333,
+    "lng": -39.2,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302806320",
+    "name": "Panicum millegrana Poir.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -6.883333,
+    "lng": -39.2,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302805842",
+    "name": "Setaria megaphylla (Steud.) T.Durand & Schinz",
+    "family": "Poaceae",
+    "genus": "Setaria",
+    "lat": -6.883333,
+    "lng": -39.2,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302805834",
+    "name": "Setaria megaphylla (Steud.) T.Durand & Schinz",
+    "family": "Poaceae",
+    "genus": "Setaria",
+    "lat": -6.883333,
+    "lng": -39.2,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302804039",
+    "name": "Eleusine indica (L.) Gaertn.",
+    "family": "Poaceae",
+    "genus": "Eleusine",
+    "lat": -6.883333,
+    "lng": -39.2,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302803959",
+    "name": "Digitaria insularis (L.) Mez ex Ekman",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302803946",
+    "name": "Digitaria insularis (L.) Mez ex Ekman",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302803486",
+    "name": "Digitaria horizontalis Willd.",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302801220",
+    "name": "Panicum dichotomiflorum Michx.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -12.883333,
+    "lng": -41.3,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302801206",
+    "name": "Panicum dichotomiflorum Michx.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -12.883333,
+    "lng": -41.3,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302801181",
+    "name": "Panicum dichotomiflorum Michx.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -6.883333,
+    "lng": -39.2,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302800640",
+    "name": "Echinochloa crus-pavonis (Kunth) Schult.",
+    "family": "Poaceae",
+    "genus": "Echinochloa",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302800638",
+    "name": "Echinochloa crus-pavonis (Kunth) Schult.",
+    "family": "Poaceae",
+    "genus": "Echinochloa",
+    "lat": 0.0,
+    "lng": 0.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302800165",
+    "name": "Echinochloa colonum (L.) Link",
+    "family": "Poaceae",
+    "genus": "Echinochloa",
+    "lat": -7.25,
+    "lng": -39.833333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302800160",
+    "name": "Echinochloa colonum (L.) Link",
+    "family": "Poaceae",
+    "genus": "Echinochloa",
+    "lat": -7.25,
+    "lng": -39.833333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302799804",
+    "name": "Panicum chapadense Swallen",
+    "family": "Poaceae",
+    "genus": "Ocellochloa",
+    "lat": -6.883333,
+    "lng": -39.2,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302799801",
+    "name": "Panicum chapadense Swallen",
+    "family": "Poaceae",
+    "genus": "Ocellochloa",
+    "lat": -6.883333,
+    "lng": -39.2,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656698",
+    "name": "Citrullus lanatus subsp. lanatus",
+    "family": "Cucurbitaceae",
+    "genus": "Citrullus",
+    "lat": -7.531861,
+    "lng": -38.78825,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656672",
+    "name": "Ipomoea triloba L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -4.604217,
+    "lng": -39.401333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656653",
+    "name": "Ipomoea triloba L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.201167,
+    "lng": -37.786083,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656649",
+    "name": "Dioscorea Plum. ex L.",
+    "family": "Dioscoreaceae",
+    "genus": "Dioscorea",
+    "lat": -7.42,
+    "lng": -39.25,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656466",
+    "name": "Panicum trichoides Sw.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -5.083333,
+    "lng": -40.85,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2001,
+    "age_years": 25,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656450",
+    "name": "Panicum trichoides Sw.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -4.953417,
+    "lng": -39.021333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2000,
+    "age_years": 26,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656433",
+    "name": "Panicum trichoides Sw.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -4.953333,
+    "lng": -39.021333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2000,
+    "age_years": 26,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656415",
+    "name": "Panicum trichoides Sw.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -6.620267,
+    "lng": -40.186883,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1998,
+    "age_years": 28,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656400",
+    "name": "Panicum trichoides Sw.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -6.718167,
+    "lng": -40.2748,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656383",
+    "name": "Panicum trichoides Sw.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -4.331388,
+    "lng": -38.809722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656310",
+    "name": "Ipomoea verbascoidea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.600167,
+    "lng": -40.119167,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656277",
+    "name": "Ipomoea verbascoidea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.728056,
+    "lng": -40.321389,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656263",
+    "name": "Panicum trichoides Sw.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -7.258889,
+    "lng": -38.686667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656258",
+    "name": "Ipomoea verbascoidea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.730833,
+    "lng": -40.378333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1998,
+    "age_years": 28,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656242",
+    "name": "Panicum trichoides Sw.",
+    "family": "Poaceae",
+    "genus": "Panicum",
+    "lat": -7.480611,
+    "lng": -38.747278,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656239",
+    "name": "Ipomoea verbascoidea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.551111,
+    "lng": -40.263333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656218",
+    "name": "Ipomoea verbascoidea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.732222,
+    "lng": -40.325833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656197",
+    "name": "Ipomoea verbascoidea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.576111,
+    "lng": -40.290833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656178",
+    "name": "Ipomoea verbascoidea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.183333,
+    "lng": -37.816667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656146",
+    "name": "Solanum stipulaceum Willd. ex Roem. & Schult.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.72515,
+    "lng": -40.373683,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1998,
+    "age_years": 28,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302656019",
+    "name": "Prunus myrtifolia (L.) Urb.",
+    "family": "Rosaceae",
+    "genus": "Prunus",
+    "lat": -4.2175,
+    "lng": -38.92575,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655997",
+    "name": "Prunus myrtifolia (L.) Urb.",
+    "family": "Rosaceae",
+    "genus": "Prunus",
+    "lat": -4.2035,
+    "lng": -38.969367,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655994",
+    "name": "Ipomoea setifera Poir.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.18685,
+    "lng": -37.804183,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655977",
+    "name": "Prunus myrtifolia (L.) Urb.",
+    "family": "Rosaceae",
+    "genus": "Prunus",
+    "lat": -4.203617,
+    "lng": -38.969367,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655755",
+    "name": "Ipomoea subincana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.600167,
+    "lng": -40.119167,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655738",
+    "name": "Ipomoea setifera Poir.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -11.468889,
+    "lng": -37.814722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655734",
+    "name": "Ipomoea subincana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.723517,
+    "lng": -40.319467,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655691",
+    "name": "Ipomoea triloba L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.657633,
+    "lng": -40.1266,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655388",
+    "name": "Ipomoea sericophylla Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.616667,
+    "lng": -40.133333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655371",
+    "name": "Ipomoea sericophylla Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.1919,
+    "lng": -37.773767,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655349",
+    "name": "Ipomoea sericophylla Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.2022,
+    "lng": -37.81835,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655343",
+    "name": "Ilex sapotifolia Reissek",
+    "family": "Aquifoliaceae",
+    "genus": "Ilex",
+    "lat": -4.203617,
+    "lng": -38.969367,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655331",
+    "name": "Setaria setosa (Sw.) P.Beauv.",
+    "family": "Poaceae",
+    "genus": "Setaria",
+    "lat": -5.25,
+    "lng": -41.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2001,
+    "age_years": 25,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655327",
+    "name": "Ipomoea sericophylla Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.612367,
+    "lng": -40.208267,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655307",
+    "name": "Ipomoea sericophylla Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.200833,
+    "lng": -37.775167,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655251",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -4.853333,
+    "lng": -39.021333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2000,
+    "age_years": 26,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655230",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.616667,
+    "lng": -40.133333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655208",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.59,
+    "lng": -40.303833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655184",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.600167,
+    "lng": -40.119167,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2004,
+    "age_years": 22,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655157",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.590033,
+    "lng": -40.303833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655133",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.186668,
+    "lng": -37.804168,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655096",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.254667,
+    "lng": -38.755139,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302655077",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.480611,
+    "lng": -38.747222,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654949",
+    "name": "Dioscorea polygonoides Humb. & Bonpl. ex Willd.",
+    "family": "Dioscoreaceae",
+    "genus": "Dioscorea",
+    "lat": -5.183333,
+    "lng": -37.8,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654898",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.594444,
+    "lng": -40.306389,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654871",
+    "name": "Ipomoea rosea Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -4.166667,
+    "lng": -40.925,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2010,
+    "age_years": 16,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654758",
+    "name": "Ipomoea ramosissima (Poir.) Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.808083,
+    "lng": -39.080139,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654746",
+    "name": "Ipomoea quamoclit L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -4.331388,
+    "lng": -38.809722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654628",
+    "name": "Echinochloa polystachya (Kunth) Hitchc.",
+    "family": "Poaceae",
+    "genus": "Echinochloa",
+    "lat": -4.1855,
+    "lng": -39.101833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654566",
+    "name": "Pennisetum pedicellatum Trin.",
+    "family": "Poaceae",
+    "genus": "Cenchrus",
+    "lat": -4.953333,
+    "lng": -39.021333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2000,
+    "age_years": 26,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654550",
+    "name": "Pennisetum pedicellatum Trin.",
+    "family": "Poaceae",
+    "genus": "Cenchrus",
+    "lat": -4.331388,
+    "lng": -38.809722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654339",
+    "name": "Solanum paniculatum L.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -7.744778,
+    "lng": -39.055889,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654110",
+    "name": "Capsicum parvifolium Sendtn.",
+    "family": "Solanaceae",
+    "genus": "Capsicum",
+    "lat": -6.718167,
+    "lng": -40.2748,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654099",
+    "name": "Capsicum parvifolium Sendtn.",
+    "family": "Solanaceae",
+    "genus": "Capsicum",
+    "lat": -6.669117,
+    "lng": -40.17425,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654045",
+    "name": "Solanum paludosum Moric.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -4.331388,
+    "lng": -38.809722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302654023",
+    "name": "Solanum paniculatum L.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.720867,
+    "lng": -40.3757,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1998,
+    "age_years": 28,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653999",
+    "name": "Solanum paniculatum L.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.72515,
+    "lng": -40.373683,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1998,
+    "age_years": 28,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653991",
+    "name": "Solanum paniculatum L.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.716667,
+    "lng": -40.316667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653980",
+    "name": "Manihot esculenta subsp. flabellifolia (Pohl) Cif.",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -5.142117,
+    "lng": -40.913533,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653976",
+    "name": "Solanum paniculatum L.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.659767,
+    "lng": -40.17575,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653962",
+    "name": "Solanum paniculatum L.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.670967,
+    "lng": -40.175783,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653948",
+    "name": "Solanum paniculatum L.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.624533,
+    "lng": -40.12175,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653945",
+    "name": "Manihot esculenta subsp. flabellifolia (Pohl) Cif.",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -5.083333,
+    "lng": -40.85,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2001,
+    "age_years": 25,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653942",
+    "name": "Solanum palinacanthum Dunal",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.668817,
+    "lng": -40.174317,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653932",
+    "name": "Solanum paniculatum L.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -4.331388,
+    "lng": -38.809722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653919",
+    "name": "Solanum paniculatum L.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -7.15,
+    "lng": -39.35,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653759",
+    "name": "Digitaria nuda Schumach.",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": -7.258889,
+    "lng": -38.686667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653750",
+    "name": "Digitaria nuda Schumach.",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": -6.718167,
+    "lng": -40.2748,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653747",
+    "name": "Ipomoea nil (L.) Roth",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.662778,
+    "lng": -40.133333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653716",
+    "name": "Ipomoea nil (L.) Roth",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.657633,
+    "lng": -40.1266,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653712",
+    "name": "Ipomoea nil (L.) Roth",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.2,
+    "lng": -37.8,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1998,
+    "age_years": 28,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653709",
+    "name": "Ipomoea nil (L.) Roth",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.203611,
+    "lng": -37.819444,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653699",
+    "name": "Ipomoea nil (L.) Roth",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -3.7,
+    "lng": -40.35,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1995,
+    "age_years": 31,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653687",
+    "name": "Ipomoea nil (L.) Roth",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.616667,
+    "lng": -40.133333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653676",
+    "name": "Ipomoea nil (L.) Roth",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.609806,
+    "lng": -39.031472,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302653532",
+    "name": "Ficus luschnathiana (Miq.) Miq.",
+    "family": "Moraceae",
+    "genus": "Ficus",
+    "lat": -6.670967,
+    "lng": -40.175783,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302652393",
+    "name": "Mangifera indica L.",
+    "family": "Anacardiaceae",
+    "genus": "Mangifera",
+    "lat": -4.331388,
+    "lng": -38.809722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302652339",
+    "name": "Ipomoea incarnata (Vahl) Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.214667,
+    "lng": -37.808783,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302652334",
+    "name": "Ipomoea incarnata (Vahl) Choisy",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.183333,
+    "lng": -37.816667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302652238",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -5.194767,
+    "lng": -37.820617,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302652203",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -6.656483,
+    "lng": -40.850667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302652112",
+    "name": "Gossypium hirsutum L.",
+    "family": "Malvaceae",
+    "genus": "Gossypium",
+    "lat": -7.333333,
+    "lng": -39.366667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1972,
+    "age_years": 54,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302652102",
+    "name": "Ipomoea hederifolia L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.640778,
+    "lng": -38.896667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302652097",
+    "name": "Ipomoea hederifolia L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.616667,
+    "lng": -40.133333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302652086",
+    "name": "Ipomoea hederifolia L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.183333,
+    "lng": -37.816667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651988",
+    "name": "Ficus americana subsp. guianensis (Desv.) C.C.Berg",
+    "family": "Moraceae",
+    "genus": "Ficus",
+    "lat": -4.2845,
+    "lng": -39.006333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651858",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -6.600167,
+    "lng": -40.119167,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2004,
+    "age_years": 22,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651847",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.3,
+    "lng": -38.916667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1972,
+    "age_years": 54,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651838",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.2845,
+    "lng": -39.006333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651831",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.2035,
+    "lng": -38.969367,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2004,
+    "age_years": 22,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651822",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -5.186683,
+    "lng": -37.8042,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1998,
+    "age_years": 28,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651819",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.916667,
+    "lng": -38.666667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1972,
+    "age_years": 54,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651812",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -6.600278,
+    "lng": -40.120833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2004,
+    "age_years": 22,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651792",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.2175,
+    "lng": -38.92575,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2002,
+    "age_years": 24,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651771",
+    "name": "Ficus calyptroceras (Miq.) Miq.",
+    "family": "Moraceae",
+    "genus": "Ficus",
+    "lat": -4.331388,
+    "lng": -38.809722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651765",
+    "name": "Setaria parviflora (Poir.) Kerguélen",
+    "family": "Poaceae",
+    "genus": "Setaria",
+    "lat": -7.5065,
+    "lng": -38.771444,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651693",
+    "name": "Setaria parviflora (Poir.) Kerguélen",
+    "family": "Poaceae",
+    "genus": "Setaria",
+    "lat": -7.258889,
+    "lng": -38.686667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651670",
+    "name": "Setaria parviflora (Poir.) Kerguélen",
+    "family": "Poaceae",
+    "genus": "Setaria",
+    "lat": -7.57075,
+    "lng": -39.02075,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651473",
+    "name": "Panicum discrepans Döll",
+    "family": "Poaceae",
+    "genus": "Cyphonanthus",
+    "lat": -2.85455,
+    "lng": -40.4263,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2000,
+    "age_years": 26,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651267",
+    "name": "Dioscorea dodecaneura Vell.",
+    "family": "Dioscoreaceae",
+    "genus": "Dioscorea",
+    "lat": -5.191833,
+    "lng": -37.773667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651183",
+    "name": "Panicum discrepans Döll",
+    "family": "Poaceae",
+    "genus": "Cyphonanthus",
+    "lat": -2.8575,
+    "lng": -40.432778,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2000,
+    "age_years": 26,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651161",
+    "name": "Ficus enormis (Mart. ex Miq.) Mart.",
+    "family": "Moraceae",
+    "genus": "Ficus",
+    "lat": -7.254667,
+    "lng": -38.755139,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651147",
+    "name": "Manihot dichotoma Ule",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.972222,
+    "lng": -39.138888,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1998,
+    "age_years": 28,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302651025",
+    "name": "Solanum crinitum Lam.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -4.216667,
+    "lng": -40.783333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1979,
+    "age_years": 47,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650897",
+    "name": "Solanum crinitum Lam.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -5.65,
+    "lng": -40.7,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2002,
+    "age_years": 24,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650864",
+    "name": "Echinochloa colonum (L.) Link",
+    "family": "Poaceae",
+    "genus": "Echinochloa",
+    "lat": -6.396167,
+    "lng": -39.165333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650830",
+    "name": "Echinochloa colonum (L.) Link",
+    "family": "Poaceae",
+    "genus": "Echinochloa",
+    "lat": -4.1855,
+    "lng": -39.101833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650791",
+    "name": "Ipomoea coccinea L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.201944,
+    "lng": -37.788056,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650743",
+    "name": "Pennisetum ciliare (L.) Link",
+    "family": "Poaceae",
+    "genus": "Cenchrus",
+    "lat": -7.361112,
+    "lng": -39.875,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1990,
+    "age_years": 36,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650742",
+    "name": "Digitaria ciliaris (Retz.) Koeler",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": -4.1855,
+    "lng": -39.101833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650719",
+    "name": "Digitaria ciliaris (Retz.) Koeler",
+    "family": "Poaceae",
+    "genus": "Digitaria",
+    "lat": -7.57075,
+    "lng": -39.02075,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650714",
+    "name": "Ipomoea coccinea L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.201167,
+    "lng": -37.786083,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650682",
+    "name": "Pennisetum ciliare (L.) Link",
+    "family": "Poaceae",
+    "genus": "Cenchrus",
+    "lat": -7.432111,
+    "lng": -38.725583,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650641",
+    "name": "Ipomoea coccinea L.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.662778,
+    "lng": -40.133333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650558",
+    "name": "Ipomoea carnea Jacq.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.502639,
+    "lng": -38.747528,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2010,
+    "age_years": 16,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650526",
+    "name": "Solanum campaniforme Roem. & Schult.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -4.225,
+    "lng": -38.92575,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2002,
+    "age_years": 24,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650479",
+    "name": "Dioscorea campestris Griseb.",
+    "family": "Dioscoreaceae",
+    "genus": "Dioscorea",
+    "lat": -6.668667,
+    "lng": -40.174167,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650361",
+    "name": "Manihot caerulescens Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.233333,
+    "lng": -39.45,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1972,
+    "age_years": 54,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650328",
+    "name": "Solanum caavurana Vell.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -4.190283,
+    "lng": -38.939617,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2002,
+    "age_years": 24,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650314",
+    "name": "Solanum caavurana Vell.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -4.203617,
+    "lng": -38.969367,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650307",
+    "name": "Solanum caavurana Vell.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -4.225,
+    "lng": -38.908333,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2002,
+    "age_years": 24,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650292",
+    "name": "Solanum caavurana Vell.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -4.291633,
+    "lng": -38.9265,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2003,
+    "age_years": 23,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650195",
+    "name": "Ipomoea brasiliana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.183333,
+    "lng": -37.816667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650194",
+    "name": "Ipomoea brasiliana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.083333,
+    "lng": -40.85,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2001,
+    "age_years": 25,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650191",
+    "name": "Ipomoea brasiliana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.142,
+    "lng": -40.9135,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2005,
+    "age_years": 21,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650190",
+    "name": "Ipomoea brasiliana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.600167,
+    "lng": -40.119167,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2004,
+    "age_years": 22,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650188",
+    "name": "Ipomoea brasiliana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.723517,
+    "lng": -40.319467,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650186",
+    "name": "Ipomoea brasiliana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.57225,
+    "lng": -40.287833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650185",
+    "name": "Ipomoea brasiliana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.726,
+    "lng": -40.32215,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650170",
+    "name": "Ipomoea brasiliana (Choisy) Meisn.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.728056,
+    "lng": -40.321389,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650130",
+    "name": "Solanum baturitense Huber",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.726,
+    "lng": -40.32215,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650121",
+    "name": "Solanum baturitense Huber",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.668817,
+    "lng": -40.174317,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650112",
+    "name": "Solanum baturitense Huber",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.656483,
+    "lng": -40.125233,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650103",
+    "name": "Solanum baturitense Huber",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.669117,
+    "lng": -40.17425,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650089",
+    "name": "Solanum baturitense Huber",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.723517,
+    "lng": -40.319467,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650041",
+    "name": "Ipomoea bahiensis Willd. ex Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.083333,
+    "lng": -40.85,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2001,
+    "age_years": 25,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650037",
+    "name": "Ipomoea bahiensis Willd. ex Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.715278,
+    "lng": -39.036833,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650026",
+    "name": "Ipomoea bahiensis Willd. ex Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.2,
+    "lng": -37.816667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650024",
+    "name": "Ipomoea bahiensis Willd. ex Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.600167,
+    "lng": -40.119167,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2004,
+    "age_years": 22,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650015",
+    "name": "Ipomoea bahiensis Willd. ex Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.201167,
+    "lng": -37.786083,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650014",
+    "name": "Ipomoea bahiensis Willd. ex Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.590833,
+    "lng": -39.024778,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302650012",
+    "name": "Ipomoea bahiensis Willd. ex Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -4.331388,
+    "lng": -38.809722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649982",
+    "name": "Ipomoea bahiensis Willd. ex Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -4.568889,
+    "lng": -38.003056,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2007,
+    "age_years": 19,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649860",
+    "name": "Ipomoea asarifolia (Desr.) Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.142083,
+    "lng": -38.602194,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2010,
+    "age_years": 16,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649853",
+    "name": "Ipomoea asarifolia (Desr.) Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -4.331388,
+    "lng": -38.809722,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2008,
+    "age_years": 18,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649850",
+    "name": "Ipomoea asarifolia (Desr.) Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.083333,
+    "lng": -40.85,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2001,
+    "age_years": 25,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649843",
+    "name": "Ipomoea asarifolia (Desr.) Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.432111,
+    "lng": -38.725583,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649832",
+    "name": "Ipomoea asarifolia (Desr.) Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -6.726,
+    "lng": -40.322,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649826",
+    "name": "Ipomoea asarifolia (Desr.) Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.829417,
+    "lng": -39.076417,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2010,
+    "age_years": 16,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649825",
+    "name": "Ipomoea asarifolia (Desr.) Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -5.502639,
+    "lng": -38.747528,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2010,
+    "age_years": 16,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649820",
+    "name": "Ipomoea asarifolia (Desr.) Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.698578,
+    "lng": -38.998094,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2010,
+    "age_years": 16,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649815",
+    "name": "Ipomoea asarifolia (Desr.) Roem. & Schult.",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "lat": -7.590833,
+    "lng": -39.024778,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649676",
+    "name": "Piper arboreum Aubl.",
+    "family": "Piperaceae",
+    "genus": "Piper",
+    "lat": -7.233333,
+    "lng": -39.5,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1983,
+    "age_years": 43,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649620",
+    "name": "Coffea arabica L.",
+    "family": "Rubiaceae",
+    "genus": "Coffea",
+    "lat": -4.015833,
+    "lng": -40.846667,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2010,
+    "age_years": 16,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649605",
+    "name": "Coffea arabica L.",
+    "family": "Rubiaceae",
+    "genus": "Coffea",
+    "lat": -3.803889,
+    "lng": -40.908889,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649421",
+    "name": "Solanum americanum Mill.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -7.641194,
+    "lng": -38.897139,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 2009,
+    "age_years": 17,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649391",
+    "name": "Solanum americanum Mill.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.659767,
+    "lng": -40.17575,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1996,
+    "age_years": 30,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649365",
+    "name": "Solanum americanum Mill.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.620267,
+    "lng": -40.186883,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1998,
+    "age_years": 28,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302649177",
+    "name": "Solanum agrarium Sendtn.",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "lat": -6.568733,
+    "lng": -40.0502,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": 1997,
+    "age_years": 29,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302392024",
+    "name": "Zea mays L.",
+    "family": "Poaceae",
+    "genus": "Zea",
+    "lat": -5.0,
+    "lng": -38.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302391984",
+    "name": "Zea mays L.",
+    "family": "Poaceae",
+    "genus": "Zea",
+    "lat": -5.0,
+    "lng": -38.0,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302391981",
+    "name": "Zea mays L.",
+    "family": "Poaceae",
+    "genus": "Zea",
+    "lat": -5.0,
+    "lng": -38.0,
+    "city": "Limoeiro Do Norte-Km 60-Chapada Do Apodi",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302319257",
+    "name": "Manihot pruinosa Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.26,
+    "lng": -39.25,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302319254",
+    "name": "Manihot pruinosa Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.63,
+    "lng": -39.03,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302319203",
+    "name": "Manihot pruinosa Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.75,
+    "lng": -39.78,
+    "city": "Km 1 da BR 222",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302319186",
+    "name": "Manihot pruinosa Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.75,
+    "lng": -39.78,
+    "city": "Km 1 da BR 222",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318529",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.63,
+    "lng": -39.03,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318492",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.63,
+    "lng": -39.03,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318480",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -7.63,
+    "lng": -39.03,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318474",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.16,
+    "lng": -38.11,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318445",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.66,
+    "lng": -40.95,
+    "city": "Km 5 BR 222",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318443",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318432",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318430",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.75,
+    "lng": -39.78,
+    "city": "Km 1 da BR 222",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318429",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318427",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.16,
+    "lng": -38.11,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318422",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.21,
+    "lng": -38.08,
+    "city": "12 km SE",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318421",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318414",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.16,
+    "lng": -38.11,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318413",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318412",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.16,
+    "lng": -38.11,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318408",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -4.16,
+    "lng": -38.11,
+    "city": NaN,
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318403",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.83,
+    "lng": -40.73,
+    "city": "Agarape",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318393",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318391",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.75,
+    "lng": -39.78,
+    "city": "Km 1 da BR 222",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318388",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318387",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318384",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318377",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.66,
+    "lng": -40.95,
+    "city": "Km 5 BR 222",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318368",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.66,
+    "lng": -40.95,
+    "city": "Km 5 BR 222",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302318358",
+    "name": "Manihot esculenta Crantz",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.66,
+    "lng": -40.95,
+    "city": "Km 5 BR 222",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1302317346",
+    "name": "Manihot caerulescens Pohl",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.73,
+    "lng": -41.0,
+    "city": "Sitic Palmeira-Comprida",
+    "state": "Ceara",
+    "year_collected": null,
+    "age_years": 5,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1300512166",
+    "name": "Manihot carthagenensis subsp. glaziovii (Müll.Arg.) Allem",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.666667,
+    "lng": -39.55,
+    "city": "2 km a oeste de Itafaje ao longo da BR-222 rumo a Fortaleza.",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  },
+  {
+    "id": "gbif_1300512145",
+    "name": "Manihot epruinosa Pax & K.Hoffm.",
+    "family": "Euphorbiaceae",
+    "genus": "Manihot",
+    "lat": -3.75,
+    "lng": -39.783333,
+    "city": "Serra do Serrote Pelado a 2 km do Centro da Cidade.",
+    "state": "Ceara",
+    "year_collected": 1985,
+    "age_years": 41,
+    "prediction": {
+      "data_quality": "nao_arborea",
+      "note": "Gênero/família fora da curadoria arbórea (provável erva/arbusto). Sem predição de altura."
+    }
+  }
+]

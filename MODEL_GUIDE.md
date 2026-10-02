@@ -31,7 +31,7 @@ Este documento explica como o modelo calcula altura, crescimento, risco de fio e
 - `avg_neighbor_distance`: distancia media ate arvores vizinhas em metros.
 - `wire_context`: tipo aproximado de rede/localidade.
 - `wire_height`: altura do fio usada no calculo, em metros.
-- `fibonacci_modifier`: ajuste moderado de vigor apos podas.
+- `pruning_modifier`: ajuste de vigor apos podas (antes chamado `fibonacci_modifier`).
 - `canopy_ratio`: relacao largura/altura da copa.
 - `soil_modifier`: multiplicador calculado a partir do solo.
 - `climate_modifier`: multiplicador calculado a partir do clima.
@@ -44,36 +44,39 @@ Este documento explica como o modelo calcula altura, crescimento, risco de fio e
 - `risk_status`: `NORMAL`, `UNDER_OBSERVATION`, `TO_PRUNE` ou `CRITICAL`.
 - `will_reach_wire`: `1` se a arvore pode atingir o fio; `0` caso contrario.
 
-## Modelos treinados
+## Motor de predicao (deterministico)
 
-- `model_height.pkl`: estima `estimated_height`.
-- `model_annual_growth.pkl`: estima `annual_growth_m`.
-- `model_wire_days.pkl`: estima `days_to_wire`.
-- `model_risk.pkl`: classifica `risk_status`.
-- `base_features.pkl`: lista de campos usados pelos modelos base.
-- `risk_features.pkl`: lista de campos usados pelo classificador de risco.
+A versao 2.0 **nao usa modelos de ML treinados** (`.pkl`). A predicao usa o
+modelo botanico de Von Bertalanffy, calculado em tempo real. Isso porque o alvo
+historico (`estimated_height`) e CALCULADO, nao medido em campo: treinar um ML
+para imitar uma formula so adicionava ruido e resultados fora de contexto.
 
-## Como treinar
+Funcoes principais (em `generate_data.py`):
 
-1. Atualize ou gere os dados reais:
+- `estimate_height()`: altura atual pela curva de Von Bertalanffy.
+- `estimate_annual_growth()`: crescimento esperado nos proximos 12 meses.
+- `simular_crescimento_mensal()`: simula mes a mes ate o fio.
+- `classify_risk()`: regra deterministica de risco (trava de seguranca).
+- `soil_modifier()`, `climate_modifier()`, `management_modifier()`,
+  `pruning_vigor_modifier()`, `canopy_competition_modifier()`: modificadores.
+- `phyllotaxis_canopy()`: filotaxia (arranjo de galhos / angulo aureo),
+  usada so para formato de copa, SEPARADA da altura.
+
+## Como rodar
+
+1. Atualize ou gere os dados reais (opcional, requer internet):
 
 ```bash
 python3 enrich_soil_climate.py
 ```
 
-2. Gere o dataset de treino:
+2. Gere o dataset de analise (opcional):
 
 ```bash
 python3 generate_data.py
 ```
 
-3. Treine os modelos:
-
-```bash
-python3 train_models.py
-```
-
-4. Teste a API:
+3. Suba a API:
 
 ```bash
 python3 api.py
@@ -81,14 +84,29 @@ python3 api.py
 
 Depois abra `http://localhost:8000/docs`.
 
+4. Rode os testes de coerencia:
+
+```bash
+pytest -q
+```
+
 ## Como a previsao funciona
 
 1. A API recebe idade, especie, solo, clima, manejo, vizinhanca e altura do fio.
-2. `build_features()` monta as features na mesma ordem do treino.
-3. O modelo estima altura atual e crescimento anual.
-4. A simulacao matematica verifica se a especie ainda tem potencial de atingir o fio.
-5. O modelo estima prazo ate o fio.
-6. A regra deterministica `classify_risk()` aplica uma trava de seguranca para nao reduzir risco de arvore proxima do fio.
+2. `compute_growth()` calcula os modificadores e a altura atual (Von Bertalanffy).
+3. `compute_wire_timeline()` simula mes a mes se/quando a arvore atinge o fio,
+   com horizonte operacional de 120 meses.
+4. `classify_risk()` aplica a trava de seguranca de risco.
+5. `phyllotaxis_canopy()` descreve o formato da copa, sem afetar a altura.
+
+## Sobre a filotaxia (Fibonacci / angulo aureo)
+
+A sequencia de Fibonacci e o angulo aureo (137.5 graus) descrevem o ARRANJO
+ESPACIAL dos galhos (filotaxia) — um fenomeno real de botanica. Isso explica o
+formato/densidade da copa, nao a velocidade de crescimento em altura. Por isso,
+na versao 2.0 a filotaxia virou `phyllotaxis_canopy()` e saiu da formula de
+altura. O antigo `fibonacci_growth_modifier` na verdade so penalizava o vigor
+conforme o numero de podas; isso agora e `pruning_vigor_modifier()`.
 
 ## Validacao de localidades e duplicidade
 
@@ -117,6 +135,10 @@ Isso evita treinar varias vezes a mesma arvore ou o mesmo ponto de coleta. Para 
 
 ## O que ainda precisa melhorar
 
+- **PRIORIDADE: coletar altura MEDIDA em campo** (~50-100 arvores). Hoje a
+  validacao e so de coerencia fisica (ver `tests/`). Com altura real da para
+  medir o erro em metros (MAE) e, so entao, avaliar se um modelo de ML supera a
+  formula. Enquanto o alvo for calculado, ML nao ajuda.
 - Validar `species_height_max` e `species_k` com bibliografia por especie.
 - Trocar alturas de fio aproximadas por norma local da distribuidora/ABNT.
 - Adicionar campo de tensao/tipo de rede real: baixa tensao, media tensao, ramal, travessia.

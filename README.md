@@ -2,6 +2,13 @@
 
 API em FastAPI para estimar crescimento de árvores, risco de alcançar fiação e apoio a rotas de poda.
 
+## Documentação
+
+- `INSTALL.md` — instalação passo a passo (Windows/Linux), como testar e conectar o backend.
+- `DADOS.md` — quais dados a IA usa e por que cada um importa para a predição.
+- `MODEL_GUIDE.md` — como o modelo calcula altura, crescimento e risco.
+- `CHANGES.md` — histórico de mudanças (v1 → v2) para a equipe estudar.
+
 ## Requisitos
 
 - Python 3.10 ou superior
@@ -80,15 +87,30 @@ python -m pip install -r requirements.txt
 
 > Linux: não use `--break-system-packages` se estiver com `.venv` ativo. Esse parâmetro só deve ser usado em casos específicos e pode causar problemas no Python do sistema.
 
-### 4. Gerar dataset e treinar modelos
+### 4. (Opcional) Gerar dataset de análise
 
 ```bash
 python generate_data.py
-python train_models.py
 ```
 
-O primeiro comando cria/atualiza `tree_dataset.csv`.  
-O segundo treina os modelos e salva os arquivos em `models/`.
+Cria/atualiza `tree_dataset.csv` a partir dos dados reais. **Não é mais
+necessário treinar modelos**: a predição usa o motor botânico determinístico
+(Von Bertalanffy), que não precisa de etapa de treino. O dataset serve apenas
+para análise/auditoria.
+
+Para rodar a IA sobre os seus dados reais já existentes na pasta e gerar um
+arquivo com predições atualizadas:
+
+```bash
+python run_predictions.py                 # usa arvores_mapeadas.json → arvores_preditas.json
+python run_predictions.py --wire-height 6.0
+```
+
+> **Altura do fio**: o padrão é **8 m** (travessia/rodovia, caso da cidade
+> atendida). Dá para mudar por requisição (`wire_height` no corpo), por variável
+> de ambiente `MAPTREE_WIRE_HEIGHT`, ou por contexto automático em
+> `WIRE_HEIGHT_BY_CONTEXT` (pedestre 5.5 m, urbana 6.0 m, travessia 6.5 m,
+> rural 7.0 m, rodovia 8.0 m). Ajuste conforme a norma da sua distribuidora.
 
 ### 5. Subir a API
 
@@ -112,8 +134,6 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python generate_data.py
-python train_models.py
 python api.py
 ```
 
@@ -125,8 +145,6 @@ py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python generate_data.py
-python train_models.py
 python api.py
 ```
 
@@ -138,9 +156,13 @@ py -m venv .venv
 .venv\Scripts\activate.bat
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python generate_data.py
-python train_models.py
 python api.py
+```
+
+### Rodar os testes
+
+```bash
+pytest -q
 ```
 
 ## Problemas Comuns
@@ -235,19 +257,33 @@ Endpoint principal — use este no NestJS.
     "ratio_width_height": 1.0,
     "nearby_competition": false
   },
-  "fibonacci_info": {
-    "pruning_cycle_index": 2,
-    "growth_modifier": 0.8571,
-    "golden_angle_deg": 137.5
+  "phyllotaxis": {
+    "golden_angle_deg": 137.5,
+    "branch_whorls": 3,
+    "fibonacci_stage": 3,
+    "symmetry_index": 0.7639
+  },
+  "modifiers_used": {
+    "soil": 0.70,
+    "climate": 1.03,
+    "management": 1.0,
+    "pruning": 0.89,
+    "competition": 0.99,
+    "total": 0.63
   }
 }
 ```
+
+> `phyllotaxis` descreve o **arranjo espacial dos galhos** (ângulo áureo de
+> 137.5° e sequência de Fibonacci). É informação de formato de copa e **não**
+> entra no cálculo da altura. A altura usa só idade, espécie, solo, clima,
+> manejo e competição.
 
 ### POST /optimize-route
 Retorna rota ótima para equipe de poda.
 
 ### GET /health
-Healthcheck da API e dos modelos.
+Healthcheck da API (confirma que o motor determinístico está ativo).
 
 ---
 
@@ -276,10 +312,14 @@ Baseado nos pilares do Jarbas (Fito):
 | **Planta** | espécie, idade, podas realizadas |
 | **Manejo** | adubação, irrigação |
 | **Clima** | chuva anual, altitude, temperatura média |
-| **Fibonacci** | padrão de ramificação (ângulo áureo 137.5°) |
 | **Competição** | árvores vizinhas → formato da copa |
+| **Filotaxia** | arranjo de galhos (ângulo áureo 137.5°) — só formato de copa, **separado da altura** |
 
 ### Fórmula base (Von Bertalanffy modificada):
 ```
-h = h_max × (1 - e^(-k × idade)) × mod_solo × mod_clima × mod_manejo × mod_fibonacci × mod_competição
+h = h_max × (1 - e^(-k × idade)) × mod_solo × mod_clima × mod_manejo × mod_poda × mod_competição
 ```
+
+A filotaxia (Fibonacci / ângulo áureo) descreve o **arranjo espacial dos
+galhos** e é reportada à parte, no campo `phyllotaxis`. Ela não multiplica a
+altura, porque é um conceito espacial, não temporal.

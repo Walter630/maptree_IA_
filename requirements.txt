@@ -1,6 +1,20 @@
-fastapi==0.111.0
-uvicorn==0.29.0
-scikit-learn==1.4.2
-pandas==2.2.2
-numpy==1.26.4
-joblib==1.4.0
+# MapTree IA - dependencias
+# Pins com faixa compativel (>=,<) para funcionar em Linux, Windows e macOS
+# e em versoes recentes do Python (3.10+). Evita travar numa versao antiga
+# que nao instala em outra maquina.
+
+# API
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.7,<3.0
+
+# Dados
+pandas>=2.2,<3.0
+numpy>=1.26,<3.0
+
+# Enriquecimento (solo/clima via APIs reais)
+requests>=2.32,<3.0
+
+# Testes
+pytest>=8.2,<9.0
+httpx>=0.27,<1.0

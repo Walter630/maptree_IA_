@@ -16,8 +16,6 @@ from __future__ import annotations
 
 import math
 import os
-import random
-from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
@@ -35,13 +33,25 @@ BASE_DIR = Path(__file__).resolve().parent
 CURRENT_YEAR = datetime.now().year
 
 GOLDEN_ANGLE = 137.5
-WIRE_HEIGHT = 6.5
+
+# Altura minima dos condutores ao solo, por tipo de local (metros).
+# Valores de referencia da pratica brasileira, alinhados a ABNT NBR 15688/16615
+# e PRODIST (ANEEL). Ajuste conforme a norma da SUA distribuidora local.
+#   - sem trafego de veiculos (acesso a pessoas): ~5.5 m
+#   - ruas/vias urbanas (BT/MT): ~6.0 m
+#   - travessia de ruas/avenidas, trafego: ~6.5-7.0 m
+#   - rodovias / travessias de estrada: ~8.0 m
 WIRE_HEIGHT_BY_CONTEXT = {
-    "URBAN_LOW_VOLTAGE": 5.5,
-    "URBAN_MEDIUM_VOLTAGE": 6.0,
+    "PEDESTRIAN_ONLY": 5.5,
+    "URBAN_LOW_VOLTAGE": 6.0,
+    "URBAN_MEDIUM_VOLTAGE": 6.5,
     "RURAL_DISTRIBUTION": 7.0,
     "ROAD_CROSSING": 8.0,
 }
+
+# Padrao da cidade atendida (Tabuleiro do Norte/CE): 8 m (travessia/rodovia).
+# Pode ser sobrescrito por variavel de ambiente MAPTREE_WIRE_HEIGHT.
+WIRE_HEIGHT = float(os.environ.get("MAPTREE_WIRE_HEIGHT", "8.0"))
 FIBONACCI = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 PHI = (1 + math.sqrt(5)) / 2
 
@@ -97,17 +107,63 @@ def _norm_text(value: Any) -> str:
     return str(value).strip().lower() if _is_valid_number(value) else ""
 
 
-def fibonacci_growth_modifier(pruning_count: int) -> float:
-    """Multiplicador suave baseado no número de podas registradas."""
+def pruning_vigor_modifier(pruning_count: int) -> float:
+    """
+    Efeito da poda sobre o vigor de crescimento.
+
+    Botanica: poda repetida reduz a area foliar e o vigor da arvore, entao o
+    crescimento em altura tende a desacelerar levemente a cada ciclo. Este
+    modificador NAO e filotaxia (arranjo de galhos) -- isso e tratado por
+    `phyllotaxis_canopy()`. Aqui so modelamos o efeito da poda no crescimento.
+
+    Retorna um multiplicador entre 0.72 (muitas podas) e 1.0 (sem poda).
+    """
     pruning_count = max(0, int(pruning_count or 0))
     if pruning_count == 0:
         return 1.0
+    return round(max(0.72, 1.0 - pruning_count * 0.055), 4)
 
-    cycle = pruning_count % len(FIBONACCI)
-    ratio = FIBONACCI[cycle] / FIBONACCI[cycle - 1] if cycle > 0 else PHI
-    balance = 1.0 + ((ratio / PHI) - 1.0) * 0.08
-    pruning_penalty = max(0.72, 1.0 - pruning_count * 0.055)
-    return round(min(1.08, max(0.65, pruning_penalty * balance)), 4)
+
+# Compatibilidade retroativa: codigo antigo pode importar este nome.
+# Mantem o mesmo comportamento do novo modificador de poda.
+fibonacci_growth_modifier = pruning_vigor_modifier
+
+
+def phyllotaxis_canopy(branch_count: int | None = None, pruning_count: int = 0) -> dict:
+    """
+    Filotaxia de verdade: descreve o ARRANJO ESPACIAL dos galhos usando o
+    angulo aureo (137.5 graus) e a sequencia de Fibonacci.
+
+    Isto responde "como a copa se organiza", nao "quando a arvore atinge o fio".
+    Por isso fica separado da predicao de altura.
+
+    - golden_angle_deg: angulo entre galhos sucessivos na filotaxia espiral.
+    - branch_whorls: numero de galhos considerados (observado ou estimado).
+    - fibonacci_stage: termo de Fibonacci mais proximo da contagem de galhos
+      (padrao comum de ramificacao em muitas especies).
+    - symmetry_index: 0..1, quao proximo o arranjo esta de um espiral aureo
+      ideal; valores altos indicam copa mais regular/equilibrada.
+    """
+    # Sem contagem observada, estimamos uma faixa tipica de ramificacao.
+    if branch_count is None:
+        branch_count = max(1, 5 - int(pruning_count or 0))
+    branch_count = max(1, int(branch_count))
+
+    # Termo de Fibonacci mais proximo da contagem de galhos.
+    nearest_fib = min(FIBONACCI, key=lambda f: abs(f - branch_count))
+
+    # Posicao angular acumulada dos galhos pela espiral do angulo aureo.
+    # O quao "regular" (proximo do ideal aureo) e o arranjo.
+    ideal_ratio = 1.0 / PHI  # ~0.618, fracao aurea de uma volta
+    actual_ratio = (GOLDEN_ANGLE / 360.0)
+    symmetry_index = round(1.0 - abs(actual_ratio - ideal_ratio), 4)
+
+    return {
+        "golden_angle_deg": GOLDEN_ANGLE,
+        "branch_whorls": branch_count,
+        "fibonacci_stage": nearest_fib,
+        "symmetry_index": symmetry_index,
+    }
 
 
 def soil_modifier(depth: float, inclination: float, quality: str, coverage: float) -> float:
@@ -186,7 +242,7 @@ def classify_risk(estimated_height: float, wire_height: float, days_to_wire: flo
     return "NORMAL"
 
 
-def simular_crescimento_fibonacci(
+def simular_crescimento_mensal(
     altura_atual: float,
     altura_fio: float,
     taxa_k: float,
@@ -194,7 +250,14 @@ def simular_crescimento_fibonacci(
     modifier: float = 1.0,
     max_months: int = 1200,
 ) -> dict:
-    """Simula crescimento mensal até o fio usando parâmetros reais/derivados."""
+    """
+    Simula o crescimento mensal ate o fio pelo modelo de Von Bertalanffy.
+
+    Cada mes a arvore cresce uma fracao do que ainda falta para o maximo
+    (crescimento saturante). Nao usa Fibonacci: o arranjo de galhos nao
+    influencia a altura ao longo do tempo. Retorna meses ate o fio ou None
+    quando a especie nao tem potencial de alcanca-lo.
+    """
     if altura_atual >= altura_fio:
         return {"meses_ate_o_fio": 0, "altura_final": round(altura_atual, 2), "historico": []}
 
@@ -205,8 +268,7 @@ def simular_crescimento_fibonacci(
     meses = 0
     altura = float(altura_atual)
     historico = []
-    fib_mod = fibonacci_growth_modifier(0)
-    monthly_k = max(0.001, float(taxa_k) * float(modifier) * fib_mod) / 12.0
+    monthly_k = max(0.001, float(taxa_k) * float(modifier)) / 12.0
 
     while altura < altura_fio and meses < max_months:
         remaining = max(effective_max - altura, 0)
@@ -223,6 +285,10 @@ def simular_crescimento_fibonacci(
         return {"meses_ate_o_fio": None, "altura_final": round(altura, 2), "historico": historico}
 
     return {"meses_ate_o_fio": meses, "altura_final": round(altura, 2), "historico": historico}
+
+
+# Compatibilidade retroativa com o nome antigo.
+simular_crescimento_fibonacci = simular_crescimento_mensal
 
 
 class RealCatalog:
@@ -565,17 +631,17 @@ def generate_dataset(n_samples: int = 3000) -> pd.DataFrame:
         avg_neighbor_distance = 999.0
         wire_context, wire_height = choose_wire_context(rec.get("locality"))
 
-        fib_mod = fibonacci_growth_modifier(pruning_count)
+        pruning_mod = pruning_vigor_modifier(pruning_count)
         s_mod = soil_modifier(env["soil_depth"], env["soil_inclination"], env["soil_quality"], env["soil_coverage"])
         c_mod = climate_modifier(env["annual_rainfall"], env["altitude"], env["avg_temperature"])
         m_mod = management_modifier(bool(has_fertilization), bool(has_irrigation))
         canopy = canopy_competition_modifier(nearby_trees_count, avg_neighbor_distance)
-        total_modifier = round(s_mod * c_mod * m_mod * fib_mod * canopy["growth_modifier"], 4)
+        total_modifier = round(s_mod * c_mod * m_mod * pruning_mod * canopy["growth_modifier"], 4)
 
         estimated_height = estimate_height(age_years, sp["height_max"], sp["k"], total_modifier)
         annual_growth_m = estimate_annual_growth(estimated_height, sp["height_max"], sp["k"], total_modifier)
         height_next_year = round(min(sp["height_max"] * 1.03, estimated_height + annual_growth_m), 2)
-        future = simular_crescimento_fibonacci(
+        future = simular_crescimento_mensal(
             estimated_height,
             wire_height,
             sp["k"],
@@ -608,7 +674,7 @@ def generate_dataset(n_samples: int = 3000) -> pd.DataFrame:
             "avg_neighbor_distance": avg_neighbor_distance,
             "wire_context": wire_context,
             "wire_height": wire_height,
-            "fibonacci_modifier": fib_mod,
+            "pruning_modifier": pruning_mod,
             "canopy_ratio": canopy["canopy_ratio"],
             "soil_modifier": s_mod,
             "climate_modifier": c_mod,
