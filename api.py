@@ -17,9 +17,10 @@ Rotas:
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 from typing import Optional
 import math
+from datetime import date, timedelta
 
 # ─── Funções do motor de crescimento (determinístico) ────────────────────────
 
@@ -120,6 +121,36 @@ class RouteOptimizeRequest(BaseModel):
     trees: list[TreeLocation]
     start_lat: Optional[float] = None
     start_lng: Optional[float] = None
+
+
+class ClearanceObservation(BaseModel):
+    """Medição datada da distância entre a copa e o condutor/zona definida."""
+    observed_at: date = Field(..., description="Data da medição em campo")
+    clearance_m: float = Field(..., ge=0, description="Distância medida em metros")
+    method: Optional[str] = Field(None, description="Método de medição")
+    uncertainty_m: Optional[float] = Field(None, gt=0, description="Incerteza estimada em metros")
+
+
+class ClearanceAssessmentRequest(BaseModel):
+    """Histórico observado para estimar tendência de aproximação à rede."""
+    tree_id: str = Field(..., min_length=1)
+    observations: list[ClearanceObservation] = Field(..., min_length=1)
+    threshold_m: float = Field(..., gt=0, description="Limite de afastamento aprovado, em metros")
+    threshold_approved: bool = Field(False, description="Confirma que o limite veio da concessionária/profissional responsável")
+    threshold_source: Optional[str] = Field(None, description="Fonte/versão que aprovou o limite")
+    max_projection_days: int = Field(365, ge=1, le=3650)
+    max_measurement_age_days: int = Field(180, ge=1, le=3650)
+
+    @model_validator(mode="after")
+    def validate_observations(self):
+        dates = [item.observed_at for item in self.observations]
+        if len(dates) != len(set(dates)):
+            raise ValueError("Cada medição deve ter uma data única")
+        if dates != sorted(dates):
+            raise ValueError("As medições devem estar em ordem cronológica")
+        if any(observed_at > date.today() for observed_at in dates):
+            raise ValueError("A data da medição não pode estar no futuro")
+        return self
 
 
 # ─── Núcleo de predição (determinístico) ──────────────────────────────────────
@@ -297,6 +328,89 @@ def predict_wire_risk(req: TreePredictRequest):
         },
         "modifiers_used": g["modifiers"],
     }
+
+
+@app.post("/assess-clearance")
+def assess_clearance(req: ClearanceAssessmentRequest):
+    """Avalia medições reais e, quando possível, projeta a tendência linear observada.
+
+    Esta projeção é preliminar e não substitui vistoria ou validação operacional.
+    O endpoint não usa altura estimada da árvore nem valores padrão de solo/clima.
+    """
+    latest = req.observations[-1]
+    result = {
+        "tree_id": req.tree_id,
+        "assessed_at": date.today().isoformat(),
+        "measurement_count": len(req.observations),
+        "latest_measurement_age_days": (date.today() - latest.observed_at).days,
+        "latest_observation": {
+            "observed_at": latest.observed_at.isoformat(),
+            "clearance_m": latest.clearance_m,
+            "method": latest.method,
+            "uncertainty_m": latest.uncertainty_m,
+        },
+        "threshold_m": req.threshold_m,
+        "threshold_approved": req.threshold_approved,
+        "threshold_source": req.threshold_source,
+        "prediction_status": "UNAVAILABLE",
+        "days_to_threshold": None,
+        "projected_date": None,
+        "observed_trend_m_per_year": None,
+        "confidence": "LOW",
+        "method": "linear_trend_from_field_observations",
+        "requires_professional_review": True,
+        "reason_codes": [],
+    }
+
+    if not req.threshold_approved or not req.threshold_source or not req.threshold_source.strip():
+        result["prediction_status"] = "THRESHOLD_NOT_APPROVED"
+        result["reason_codes"].append("APPROVED_THRESHOLD_AND_SOURCE_REQUIRED")
+        return result
+
+    if result["latest_measurement_age_days"] > req.max_measurement_age_days:
+        result["prediction_status"] = "STALE_MEASUREMENT"
+        result["reason_codes"].append("LATEST_MEASUREMENT_EXCEEDS_CONFIGURED_MAX_AGE")
+        return result
+
+    if latest.clearance_m <= req.threshold_m:
+        result["prediction_status"] = "AT_OR_WITHIN_THRESHOLD"
+        result["days_to_threshold"] = 0
+        result["reason_codes"].append("CURRENT_MEASUREMENT_AT_OR_WITHIN_APPROVED_THRESHOLD")
+        return result
+
+    if len(req.observations) < 2:
+        result["prediction_status"] = "NEEDS_MORE_MEASUREMENTS"
+        result["reason_codes"].append("AT_LEAST_TWO_DATED_MEASUREMENTS_REQUIRED")
+        return result
+
+    first_day = req.observations[0].observed_at
+    x = [(item.observed_at - first_day).days for item in req.observations]
+    y = [item.clearance_m for item in req.observations]
+    mean_x = sum(x) / len(x)
+    mean_y = sum(y) / len(y)
+    variance_x = sum((value - mean_x) ** 2 for value in x)
+    slope_per_day = sum((xv - mean_x) * (yv - mean_y) for xv, yv in zip(x, y)) / variance_x
+    result["observed_trend_m_per_year"] = round(slope_per_day * 365.25, 4)
+
+    if slope_per_day >= 0:
+        result["prediction_status"] = "NO_APPROACH_OBSERVED"
+        result["reason_codes"].append("MEASUREMENTS_DO_NOT_SHOW_DECREASING_CLEARANCE")
+        return result
+
+    days = math.ceil((latest.clearance_m - req.threshold_m) / -slope_per_day)
+    if days > req.max_projection_days:
+        result["prediction_status"] = "OUTSIDE_PROJECTION_HORIZON"
+        result["reason_codes"].append("PROJECTED_CROSSING_OUTSIDE_CONFIGURED_HORIZON")
+        return result
+
+    result["prediction_status"] = "PRELIMINARY_PROJECTION"
+    result["days_to_threshold"] = days
+    result["projected_date"] = (latest.observed_at + timedelta(days=days)).isoformat()
+    result["reason_codes"].append("PROJECTION_EXTRAPOLATES_OBSERVED_LINEAR_TREND")
+    result["reason_codes"].append("FIELD_VALIDATION_REQUIRED_BEFORE_OPERATIONAL_USE")
+    if any(item.uncertainty_m is not None for item in req.observations):
+        result["reason_codes"].append("MEASUREMENT_UNCERTAINTY_REPORTED_BUT_NOT_PROPAGATED")
+    return result
 
 
 @app.post("/optimize-route")

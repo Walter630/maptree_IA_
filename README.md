@@ -282,6 +282,17 @@ Endpoint principal — use este no NestJS.
 ### POST /optimize-route
 Retorna rota ótima para equipe de poda.
 
+### POST /assess-clearance
+Avalia medições datadas da distância entre copa e rede. Com limite aprovado e
+ao menos duas medições, pode devolver uma **projeção linear preliminar** da
+tendência observada. Toda projeção tem confiança baixa e requer revisão
+profissional; não é previsão validada nem ordem automática de poda. Consulte
+`MODEL_GUIDE.md` para o contrato e estados possíveis.
+
+O endpoint antigo `/predict-wire-risk` continua disponível, mas estima quando a
+altura calculada da árvore alcançaria uma altura de fio configurada. Não calcula
+a distância geométrica real da copa aos condutores.
+
 ### GET /health
 Healthcheck da API (confirma que o motor determinístico está ativo).
 

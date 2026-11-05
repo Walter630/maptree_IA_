@@ -5,6 +5,7 @@
 
 # API
 fastapi>=0.115,<1.0
+starlette>=0.46.2,<1.0  # Starlette 1.x TestClient is incompatible with httpx in this project
 uvicorn[standard]>=0.30,<1.0
 pydantic>=2.7,<3.0
 

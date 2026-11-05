@@ -6,6 +6,7 @@ Rodar: pytest -q
 """
 
 import pytest
+from datetime import date, timedelta
 from fastapi.testclient import TestClient
 
 from api import app
@@ -84,3 +85,93 @@ def test_optimize_route_prioriza_poda():
     ids = [s["tree_id"] for s in body["route"]]
     assert "a" not in ids  # NORMAL não entra na rota
     assert body["route"][0]["tree_id"] == "b"  # CRITICAL primeiro
+
+
+def test_assess_clearance_sem_limite_aprovado_nao_projeta():
+    d1 = date.today() - timedelta(days=150)
+    d2 = date.today() - timedelta(days=30)
+    body = client.post("/assess-clearance", json={
+        "tree_id": "arvore-1",
+        "threshold_m": 2.0,
+        "threshold_approved": False,
+        "observations": [
+            {"observed_at": d1.isoformat(), "clearance_m": 5.0},
+            {"observed_at": d2.isoformat(), "clearance_m": 4.0},
+        ],
+    }).json()
+    assert body["prediction_status"] == "THRESHOLD_NOT_APPROVED"
+    assert body["days_to_threshold"] is None
+
+
+def test_assess_clearance_requer_medicoes_repetidas():
+    recent_date = date.today() - timedelta(days=20)
+    body = client.post("/assess-clearance", json={
+        "tree_id": "arvore-1",
+        "threshold_m": 2.0,
+        "threshold_approved": True,
+        "threshold_source": "limite-validado-v1",
+        "observations": [{"observed_at": recent_date.isoformat(), "clearance_m": 5.0}],
+    }).json()
+    assert body["prediction_status"] == "NEEDS_MORE_MEASUREMENTS"
+    assert body["days_to_threshold"] is None
+
+
+def test_assess_clearance_projeta_tendencia_como_preliminar():
+    d1 = date.today() - timedelta(days=150)
+    d2 = date.today() - timedelta(days=30)
+    body = client.post("/assess-clearance", json={
+        "tree_id": "arvore-1",
+        "threshold_m": 3.0,
+        "threshold_approved": True,
+        "threshold_source": "limite-validado-v1",
+        "observations": [
+            {"observed_at": d1.isoformat(), "clearance_m": 6.0},
+            {"observed_at": d2.isoformat(), "clearance_m": 5.0},
+        ],
+    }).json()
+    assert body["prediction_status"] == "PRELIMINARY_PROJECTION"
+    assert body["days_to_threshold"] > 0
+    assert body["confidence"] == "LOW"
+    assert body["requires_professional_review"] is True
+    assert body["projected_date"] is not None
+
+
+def test_assess_clearance_medição_no_limite_pede_revisao():
+    recent_date = date.today() - timedelta(days=10)
+    body = client.post("/assess-clearance", json={
+        "tree_id": "arvore-1",
+        "threshold_m": 2.0,
+        "threshold_approved": True,
+        "threshold_source": "limite-validado-v1",
+        "observations": [{"observed_at": recent_date.isoformat(), "clearance_m": 1.5}],
+    }).json()
+    assert body["prediction_status"] == "AT_OR_WITHIN_THRESHOLD"
+    assert body["days_to_threshold"] == 0
+    assert body["requires_professional_review"] is True
+
+
+def test_assess_clearance_bloqueia_medicao_antiga():
+    old_date = date.today() - timedelta(days=200)
+    body = client.post("/assess-clearance", json={
+        "tree_id": "arvore-1",
+        "threshold_m": 2.0,
+        "threshold_approved": True,
+        "threshold_source": "limite-validado-v1",
+        "observations": [{"observed_at": old_date.isoformat(), "clearance_m": 5.0}],
+    }).json()
+    assert body["prediction_status"] == "STALE_MEASUREMENT"
+    assert body["days_to_threshold"] is None
+
+
+def test_assess_clearance_rejeita_datas_duplicadas():
+    response = client.post("/assess-clearance", json={
+        "tree_id": "arvore-1",
+        "threshold_m": 2.0,
+        "threshold_approved": True,
+        "threshold_source": "limite-validado-v1",
+        "observations": [
+            {"observed_at": "2025-01-01", "clearance_m": 5.0},
+            {"observed_at": "2025-01-01", "clearance_m": 4.0},
+        ],
+    })
+    assert response.status_code == 422

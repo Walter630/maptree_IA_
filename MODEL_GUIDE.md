@@ -99,6 +99,56 @@ pytest -q
 4. `classify_risk()` aplica a trava de seguranca de risco.
 5. `phyllotaxis_canopy()` descreve o formato da copa, sem afetar a altura.
 
+## Avaliação de afastamento por medições de campo (API nova)
+
+`POST /assess-clearance` recebe um histórico cronológico de medições da distância
+entre a copa e o condutor/zona definida. Exige `tree_id`, `threshold_m` e pelo
+menos uma observação com data e distância em metros. O limite só é usado quando
+`threshold_approved=true` e `threshold_source` identifica sua origem/versão.
+
+- Uma medição não gera prazo: retorna `NEEDS_MORE_MEASUREMENTS`.
+- Limite não aprovado ou sem fonte: retorna `THRESHOLD_NOT_APPROVED`.
+- Medição mais recente além da validade configurada (`max_measurement_age_days`,
+  padrão 180 dias): retorna `STALE_MEASUREMENT` e não projeta.
+- Distância atual igual ou menor que o limite aprovado: retorna
+  `AT_OR_WITHIN_THRESHOLD`, com revisão profissional necessária.
+- Duas ou mais medições com afastamento diminuindo podem gerar
+  `PRELIMINARY_PROJECTION`, usando extrapolação linear da tendência observada.
+- Tendência estável/aumentando retorna `NO_APPROACH_OBSERVED`; projeção além do
+  horizonte configurado retorna `OUTSIDE_PROJECTION_HORIZON`.
+
+Toda projeção tem confiança `LOW` e `requires_professional_review=true`. Ela é
+preliminar e não está validada contra resultados futuros. O endpoint não consulta
+nem salva dados e não substitui levantamento da geometria da rede. A integração
+deve persistir medições datadas no backend principal e enviar o histórico dessa
+árvore. Não usar `PRELIMINARY_PROJECTION` como ordem automática de poda.
+O booleano `threshold_approved` é uma declaração do chamador: o endpoint não
+autentica nem verifica a concessionária/fonte. O backend integrador deve controlar
+quem cadastra e aprova limites. `uncertainty_m` é registrada, mas ainda não é
+propagada para a projeção.
+
+Exemplo:
+
+```json
+{
+  "tree_id": "arvore-123",
+  "threshold_m": 2.0,
+  "threshold_approved": true,
+  "threshold_source": "concessionaria/limite-v1",
+  "max_projection_days": 365,
+  "max_measurement_age_days": 180,
+  "observations": [
+    {"observed_at": "2025-01-10", "clearance_m": 5.4, "method": "medidor"},
+    {"observed_at": "2025-07-10", "clearance_m": 4.8, "method": "medidor"}
+  ]
+}
+```
+
+Os endpoints antigos `/predict-height` e `/predict-wire-risk` foram mantidos
+para compatibilidade. `/predict-wire-risk` ainda compara altura estimada da
+árvore com uma altura de fio configurada e usa valores padrão de ambiente; seu
+`days_to_wire` não representa distância medida da copa aos condutores.
+
 ## Sobre a filotaxia (Fibonacci / angulo aureo)
 
 A sequencia de Fibonacci e o angulo aureo (137.5 graus) descrevem o ARRANJO
